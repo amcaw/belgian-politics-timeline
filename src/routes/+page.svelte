@@ -15,6 +15,7 @@
 
 	let metric = $state<Metric>('votes');
 	let view = $state<'results' | 'power' | 'powerStream' | 'lines'>('power');
+	let linesPower = $state(false); // Blocs view: highlight only governing periods
 
 	const metrics: Metric[] = ['seats', 'votes'];
 
@@ -75,12 +76,20 @@
 				{/each}
 			</div>
 		{/if}
+
+		{#if view === 'lines'}
+			<div class="toggle-group">
+				<span class="toggle-label">Affichage&nbsp;:</span>
+				<button class:active={!linesPower} onclick={() => (linesPower = false)}>Tous</button>
+				<button class:active={linesPower} onclick={() => (linesPower = true)}>Au pouvoir</button>
+			</div>
+		{/if}
 	</div>
 
 	{#if view === 'power'}
 		<GovernanceGantt />
 	{:else if view === 'lines'}
-		<LineChart {metric} />
+		<LineChart {metric} powerMode={linesPower} />
 	{:else}
 		<Timeline {metric} powerMode={view === 'powerStream'} />
 	{/if}

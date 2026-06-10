@@ -1,8 +1,18 @@
 <script lang="ts">
 	import * as d3 from 'd3';
-	import { ELECTIONS, share, party, type Metric } from './data';
+	import CoalitionHeader from './CoalitionHeader.svelte';
+	import {
+		ELECTIONS,
+		share,
+		party,
+		isGoverning,
+		GOVERNMENTS,
+		govYear,
+		type Government,
+		type Metric
+	} from './data';
 
-	let { metric = 'seats' }: { metric?: Metric } = $props();
+	let { metric = 'seats', powerMode = false }: { metric?: Metric; powerMode?: boolean } = $props();
 
 	// Stepped multi-line chart: a party's share is the RESULT of an election and
 	// stays constant during the whole legislature, then steps at the next election
@@ -47,16 +57,20 @@
 	const slope = perElection * 0.26; // half-width of the (rounded) transition
 	const legEnd = (i: number) => (i < years.length - 1 ? xi(i + 1) : xi(i) + perElection);
 
-	// the centerline (polyline) of a party's ribbon, per contiguous run of presence
-	function centerRuns(id: string): { x: number; y: number }[][] {
+	const presentAt = (i: number, id: string) => shareAt(i, id) > 0;
+	const governingAt = (i: number, id: string) => isGoverning(ELECTIONS[i].date, id);
+
+	// centerline (polyline) of a party's ribbon, per contiguous run where `mask` is
+	// true (defaults to presence; pass a governing mask for the power view).
+	function centerRuns(id: string, mask?: (i: number) => boolean): { x: number; y: number }[][] {
+		const ok = mask ?? ((i: number) => presentAt(i, id));
 		const runs: { x: number; y: number }[][] = [];
 		let run: { x: number; y: number }[] = [];
-		const present: boolean[] = years.map((_, i) => shareAt(i, id) > 0);
 		for (let i = 0; i < years.length; i++) {
-			if (!present[i]) { if (run.length) { runs.push(run); run = []; } continue; }
+			if (!ok(i)) { if (run.length) { runs.push(run); run = []; } continue; }
 			const yi = y(shareAt(i, id));
-			const left = i === 0 || !present[i - 1] ? xi(i) : xi(i) + slope;
-			const right = i === years.length - 1 || !present[i + 1] ? legEnd(i) : xi(i + 1) - slope;
+			const left = i === 0 || !ok(i - 1) ? xi(i) : xi(i) + slope;
+			const right = i === years.length - 1 || !ok(i + 1) ? legEnd(i) : xi(i + 1) - slope;
 			run.push({ x: left, y: yi }, { x: right, y: yi });
 		}
 		if (run.length) runs.push(run);
@@ -79,6 +93,26 @@
 	function ribbonsOf(id: string): string[] {
 		return centerRuns(id).map(ribbon);
 	}
+	// power view: ribbons only over the legislatures the party was in government
+	function governingRibbonsOf(id: string): string[] {
+		return centerRuns(id, (i) => presentAt(i, id) && governingAt(i, id)).map(ribbon);
+	}
+
+	// government featured in the header (power view): the one at the hovered
+	// legislature, else the most recent.
+	let hoverYear = $state<number | null>(null);
+	const featured = $derived.by((): Government | undefined => {
+		if (hoverYear != null) {
+			const e = ELECTIONS.find((x) => x.year === hoverYear);
+			if (e) {
+				const g = GOVERNMENTS.filter((x) => x.electionDate === e.date).sort(
+					(a, b) => govYear(a) - govYear(b)
+				)[0];
+				if (g) return g;
+			}
+		}
+		return GOVERNMENTS[GOVERNMENTS.length - 1];
+	});
 
 	// label position: at the last legislature where the party is present
 	function endLabel(id: string) {
@@ -93,11 +127,16 @@
 	let tip = $state<{ x: number; y: number; id: string; year: number; v: number } | null>(null);
 	function move(id: string, i: number, ev: MouseEvent) {
 		hovered = id;
+		hoverYear = years[i];
 		tip = { x: ev.clientX, y: ev.clientY, id, year: years[i], v: shareAt(i, id) };
 	}
-	function leave() { hovered = null; tip = null; }
+	function leave() { hovered = null; tip = null; hoverYear = null; }
 	const pct = (s: number) => (s * 100).toFixed(1) + '%';
 </script>
+
+{#if powerMode && featured}
+	<CoalitionHeader {featured} />
+{/if}
 
 <div class="line-wrap">
 	<svg viewBox="0 0 {width} {height}" {width} {height} role="img"
@@ -115,14 +154,23 @@
 				<text class="year" x={xi(i)} y={-12} class:year-active={tip?.year === e.year}>{e.year}</text>
 			{/each}
 
-			<!-- one constant-thickness ribbon per party (blocks linked into a flow) -->
+			<!-- one constant-thickness ribbon per party (blocks linked into a flow).
+			     In power mode: grey over the whole presence, colour only the
+			     legislatures the party was in government. -->
 			{#each allIds as id (id)}
 				{@const p = party(id)}
 				{@const dim = hovered && hovered !== id}
 				{#each ribbonsOf(id) as d (d)}
-					<path {d} fill={p.color} class="ribbon" class:dim class:hl={hovered === id}
+					<path {d} fill={powerMode ? 'var(--band-muted)' : p.color}
+						class="ribbon" class:dim class:hl={!powerMode && hovered === id}
 						role="presentation" />
 				{/each}
+				{#if powerMode}
+					{#each governingRibbonsOf(id) as d (d)}
+						<path {d} fill={p.color} class="ribbon gov" class:dim class:hl={hovered === id}
+							role="presentation" />
+					{/each}
+				{/if}
 				<!-- per-legislature hover hit-areas -->
 				{#each ELECTIONS as e, i}
 					{#if shareAt(i, id) > 0}
