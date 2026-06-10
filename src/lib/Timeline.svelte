@@ -1,6 +1,7 @@
 <script lang="ts">
 	import * as d3 from 'd3';
 	import { base } from '$app/paths';
+	import CoalitionHeader from './CoalitionHeader.svelte';
 	import {
 		ELECTIONS,
 		share,
@@ -159,24 +160,34 @@
 	// we colour the span [i, i+1] when the party is in election i's coalition (and
 	// a half-span before the first governing election for a clean leading edge).
 	function governingRuns(s: d3.Series<Record<string, number>, string>): string[] {
+		const n = ELECTIONS.length;
 		const gov = ELECTIONS.map((e) => isGoverning(e.date, s.key));
 		const paths: string[] = [];
-		const pt = (i: number) => ({ x: x(years[i]), y0: yScale(s[i][0]), y1: yScale(s[i][1]) });
+		// sample the band edges at a (possibly fractional) election index
+		const sampleX = (f: number) => {
+			const i = Math.floor(f), t = f - i;
+			if (i >= n - 1) return x(years[n - 1]);
+			return x(years[i]) + t * (x(years[i + 1]) - x(years[i]));
+		};
+		const sampleY = (f: number, edge: 0 | 1) => {
+			const i = Math.floor(f), t = f - i;
+			if (i >= n - 1) return yScale(s[n - 1][edge]);
+			return yScale(s[i][edge]) + t * (yScale(s[i + 1][edge]) - yScale(s[i][edge]));
+		};
 		let i = 0;
-		while (i < ELECTIONS.length) {
+		while (i < n) {
 			if (!gov[i]) { i++; continue; }
 			const start = i;
-			while (i < ELECTIONS.length && gov[i]) i++;
+			while (i < n && gov[i]) i++;
 			const end = i - 1; // inclusive last governing election
-			// build a polygon from start..min(end+1, last) so the colour reaches into
-			// the next legislature it actually governed through
-			const lo = start;
-			const hi = Math.min(end + (end + 1 < ELECTIONS.length && gov[end] ? 1 : 0), ELECTIONS.length - 1);
-			const idx = [];
-			for (let k = lo; k <= hi; k++) idx.push(k);
-			if (idx.length === 1 && hi + 1 < ELECTIONS.length) idx.push(hi + 1); // ensure width
-			const top = idx.map((k) => { const q = pt(k); return `${q.x},${q.y1}`; });
-			const bot = idx.slice().reverse().map((k) => { const q = pt(k); return `${q.x},${q.y0}`; });
+			// extend a half-step beyond each end so every run has visible width,
+			// including a run that ends at the last election (2024).
+			const lo = Math.max(0, start - 0.5);
+			const hi = Math.min(n - 1, end + 0.5);
+			const steps = Math.max(2, Math.ceil((hi - lo) * 2) + 1);
+			const fs = Array.from({ length: steps }, (_, k) => lo + ((hi - lo) * k) / (steps - 1));
+			const top = fs.map((f) => `${sampleX(f)},${sampleY(f, 1)}`);
+			const bot = fs.slice().reverse().map((f) => `${sampleX(f)},${sampleY(f, 0)}`);
 			paths.push('M' + top.join(' L') + ' L' + bot.join(' L') + ' Z');
 		}
 		return paths;
@@ -310,6 +321,10 @@
 	const showHint = $derived(canScroll && scrolled < 24);
 </script>
 
+{#if powerMode && (selectedGov ?? rankGov)}
+	<CoalitionHeader featured={(selectedGov ?? rankGov)!} isCurrent={!selectedGov} />
+{/if}
+
 <div class="layout">
 	<div class="chart-col">
 		{#if showHint}
@@ -422,7 +437,8 @@
 		</div>
 	</div>
 
-	<!-- live ranking / government panel -->
+	<!-- live ranking / government panel (results view only; power view uses the top header) -->
+	{#if !powerMode}
 	<aside class="rank">
 		{#if selectedGov}
 			<!-- selected government detail -->
@@ -476,6 +492,7 @@
 			<div class="rank-hint">Cliquez un Premier ministre pour voir sa coalition</div>
 		{/if}
 	</aside>
+	{/if}
 
 	{#if tip}
 		{@const p = party(tip.id)}

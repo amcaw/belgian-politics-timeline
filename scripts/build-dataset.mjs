@@ -60,24 +60,31 @@ const CARTEL_SPLITS = {
 const normWiki = (raw) => WIKI_MAP[raw.trim().toUpperCase()] ?? 'other';
 
 // ---- API label mapping (for VOTE share only) ----
+// NOTE: keys are matched case-INSENSITIVELY (raw.toUpperCase()), so write keys
+// in upper case. Liberals are mapped to lib-unitary here and shifted to pvv for
+// 1974+ by the transition logic below (mirrors the seat convention).
 const API_MAP = {
 	'PSC/CVP': 'cd-unitary', CVP: 'cvp', 'CD&V': 'cdv', PSC: 'psc', CDH: 'cdh',
 	'LES ENGAGÉS': 'engages',
 	'SOCIALISTISCHE PARTIJ/ P': 'sp-unitary', 'BSP/PSB': 'sp-unitary', 'PSB-BSP': 'sp-unitary',
-	BSP: 'sp', PSB: 'ps', 'PSB(BRUX)': 'ps', 'PSB(LUX)': 'ps', SP: 'sp', 'SP.A': 'spa',
-	VOORUIT: 'vooruit', PS: 'ps',
-	'PARTI LIBERALE/LIBERALE': 'lib-unitary', 'PVV/PLP': 'lib-unitary', PLP: 'lib-unitary',
-	'PLP(BRUX).': 'lib-unitary', PVV: 'pvv', VLD: 'vld', OPENVLD: 'openvld', 'OPEN VLD': 'openvld',
+	BSP: 'sp', PSB: 'ps', 'PSB(BRUX)': 'ps', 'PSB(LUX)': 'ps',
+	'BSP RODE LEEUWEN': 'sp-unitary', 'RODE LEEUW': 'sp-unitary',
+	SP: 'sp', 'SP.A': 'spa', VOORUIT: 'vooruit', PS: 'ps',
+	'PARTI LIBERALE/LIBERALE': 'lib-unitary', 'PVV/PLP': 'lib-unitary', 'PVV-PLP': 'lib-unitary',
+	PLP: 'lib-unitary', 'PLP(BRUX).': 'lib-unitary',
+	PVV: 'pvv', VLD: 'vld', OPENVLD: 'openvld', 'OPEN VLD': 'openvld',
 	PRL: 'prl', PRLW: 'prl', MR: 'mr',
-	VOLKSUNIE: 'vu', VU: 'vu', 'N-VA': 'nva',
+	VOLKSUNIE: 'vu', VU: 'vu', 'VU-ID': 'vu', "VU (VOLKSUNIE)": 'vu',
+	'CHRISTELIJKE VLAAMSE VOL': 'vu', 'N-VA': 'nva',
 	AGALEV: 'agalev', GROEN: 'groen', 'GROEN!': 'groen', ECOLO: 'ecolo',
 	'VLAAMS BLOK': 'vlaamsblok', 'VLAAMS BELANG': 'vlaamsbelang', FN: 'fn',
-	'KPB/PCB': 'kpb', PCB: 'kpb', KP: 'kpb', PC: 'kpb', COMMUNIST: 'kpb', PVDA: 'ptb',
-	FDF: 'fdf', 'FDF/PPW': 'fdf', DÉFI: 'fdf', RW: 'rw',
+	'KPB/PCB': 'kpb', PCB: 'kpb', KP: 'kpb', PC: 'kpb', 'PCB/BKP': 'kpb',
+	COMMUNIST: 'kpb', COMMUNISTEN: 'kpb',
+	PVDA: 'ptb', 'PTB*PVDA-GO !': 'ptb', 'PTB-PVDA': 'ptb', 'PVDA+': 'ptb',
+	FDF: 'fdf', 'FDF/PPW': 'fdf', DÉFI: 'fdf', DEFI: 'fdf', RW: 'rw',
+	'RASSEMBLEMENT NATIONAL': 'rw', 'FRONT WALLON': 'rw', 'FRONT WALLON DES TRAVAIL': 'rw',
 	'LIJST DEDECKER': 'ld', ROSSEM: 'rossem', 'PARTI POPULAIRE': 'pp',
-	'RAD/UDRT': 'udrt', 'UDRT/RA': 'udrt', UDB: 'udb',
-	// API transition fragments fold into the unitary cartel to match seats convention
-	'PSC/CVP': 'cd-unitary', 'PVV/PLP': 'lib-unitary', 'FDF-RW': 'fdf', 'PSB(BRUX)': 'ps'
+	'RAD/UDRT': 'udrt', 'UDRT/RA': 'udrt', UDB: 'udb'
 };
 const normApi = (raw) => API_MAP[raw.trim().toUpperCase()] ?? 'other';
 
@@ -111,14 +118,22 @@ const out = wikiYears.map((dt) => {
 	// unitary through 1978, split from 1981.
 	const cdUnitaryYears = new Set([1946, 1949, 1950, 1954, 1958, 1961, 1965, 1968, 1971]);
 	const spUnitaryYears = new Set([1946, 1949, 1950, 1954, 1958, 1961, 1965, 1968, 1971, 1974, 1977, 1978]);
+	const libUnitaryYears = new Set([1946, 1949, 1950, 1954, 1958, 1961, 1965, 1968, 1971]);
+	// fold wing ids into the unitary cartel during the transition years (applied to
+	// BOTH seats and votes so the two sources stay aligned)
+	const transition = (id) => {
+		if (cdUnitaryYears.has(year) && (id === 'cvp' || id === 'psc')) return 'cd-unitary';
+		if (spUnitaryYears.has(year) && (id === 'sp' || id === 'ps')) return 'sp-unitary';
+		if (libUnitaryYears.has(year) && (id === 'pvv' || id === 'prl')) return 'lib-unitary';
+		// after the split year, a unitary-liberal vote label belongs to the Flemish PVV
+		if (!libUnitaryYears.has(year) && id === 'lib-unitary') return 'pvv';
+		return id;
+	};
 
 	const seatAgg = new Map();
 	const addSeat = (id, n) => seatAgg.set(id, (seatAgg.get(id) ?? 0) + n);
 	for (const p of w.parties) {
-		let id = normWiki(p.party);
-		// fold wing ids back into the unitary cartel during transition years
-		if (cdUnitaryYears.has(year) && (id === 'cvp' || id === 'psc')) id = 'cd-unitary';
-		if (spUnitaryYears.has(year) && (id === 'sp' || id === 'ps')) id = 'sp-unitary';
+		let id = transition(normWiki(p.party));
 		const split = CARTEL_SPLITS[id];
 		if (split) {
 			const parts = splitInto(p.seats, split);
@@ -136,7 +151,8 @@ const out = wikiYears.map((dt) => {
 		'CD&V NVA': [{ id: 'cdv', share: 0.8 }, { id: 'nva', share: 0.2 }],
 		'sp.a-spirit': [{ id: 'spa', share: 1.0 }],
 		'PRL-FDF': [{ id: 'prl', share: 0.8 }, { id: 'fdf', share: 0.2 }],
-		'FDF-RW': [{ id: 'fdf', share: 0.5 }, { id: 'rw', share: 0.5 }]
+		'FDF-RW': [{ id: 'fdf', share: 0.5 }, { id: 'rw', share: 0.5 }],
+		'FDF-PLDP': [{ id: 'fdf', share: 1.0 }] // 1974 FDF list
 	};
 	const voteAgg = new Map();
 	const apiE = apiByYear[String(year)];
@@ -150,10 +166,7 @@ const out = wikiYears.map((dt) => {
 				for (const c of cartel) addVote(c.id, Math.round(p.votes * c.share));
 				continue;
 			}
-			let id = normApi(p.partyLabel);
-			if (cdUnitaryYears.has(year) && (id === 'cvp' || id === 'psc')) id = 'cd-unitary';
-			if (spUnitaryYears.has(year) && (id === 'sp' || id === 'ps')) id = 'sp-unitary';
-			addVote(id, p.votes);
+			addVote(transition(normApi(p.partyLabel)), p.votes);
 		}
 	}
 
