@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import Timeline from '$lib/Timeline.svelte';
 	import GovernanceGantt from '$lib/GovernanceGantt.svelte';
+	import LineChart from '$lib/LineChart.svelte';
 	import Legend from '$lib/Legend.svelte';
 	import Methodology from '$lib/Methodology.svelte';
 	import {
@@ -13,7 +14,7 @@
 	} from '$lib/data';
 
 	let metric = $state<Metric>('votes');
-	let view = $state<'results' | 'power' | 'powerStream'>('power');
+	let view = $state<'results' | 'power' | 'powerStream' | 'lines'>('power');
 
 	const metrics: Metric[] = ['seats', 'votes'];
 
@@ -61,6 +62,7 @@
 			<button class:active={view === 'results'} onclick={() => (view = 'results')}>Résultats</button>
 			<button class:active={view === 'power'} onclick={() => (view = 'power')}>Au pouvoir</button>
 			<button class:active={view === 'powerStream'} onclick={() => (view = 'powerStream')}>Au pouvoir (flux)</button>
+			<button class:active={view === 'lines'} onclick={() => (view = 'lines')}>Blocs</button>
 		</div>
 
 		{#if view !== 'power'}
@@ -77,6 +79,8 @@
 
 	{#if view === 'power'}
 		<GovernanceGantt />
+	{:else if view === 'lines'}
+		<LineChart {metric} />
 	{:else}
 		<Timeline {metric} powerMode={view === 'powerStream'} />
 	{/if}

@@ -189,18 +189,16 @@
 		const stack = d3
 			.stack<Record<string, number>>()
 			.keys(allIds)
-			.offset(d3.stackOffsetSilhouette) // centered streamgraph
+			// expand = each column normalised to fill [0,1]: since the parties sum
+			// to ~100 % of the chamber, the top and bottom edges are STRAIGHT (0 %
+			// and 100 %), not the wavy silhouette of a centered streamgraph.
+			.offset(d3.stackOffsetExpand)
 			.order(d3.stackOrderNone); // keep our family order
 		return stack(denseRows);
 	});
 
-	// vertical scale: map the stacked extent to innerH
-	const yScale = $derived.by(() => {
-		const flat = stacked.flat(2).filter((v) => typeof v === 'number') as number[];
-		const ext = d3.extent(flat) as [number, number];
-		const m = Math.max(Math.abs(ext[0]), Math.abs(ext[1])) || 1;
-		return d3.scaleLinear().domain([-m, m]).range([innerH, 0]);
-	});
+	// vertical scale: 0 %..100 % mapped to the full height (flat top & bottom)
+	const yScale = $derived(d3.scaleLinear().domain([0, 1]).range([innerH, 0]));
 
 	const area = $derived(
 		d3
