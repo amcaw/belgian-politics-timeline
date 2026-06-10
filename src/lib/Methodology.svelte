@@ -87,9 +87,39 @@
 				lisible.
 			</li>
 			<li>
-				<strong>Mode « Au pouvoir » :</strong> seule la coalition formée juste après chaque élection
-				est représentée. Les remaniements et changements de gouvernement survenus en cours de
-				législature (fréquents en Belgique) ne sont pas affichés.
+				<strong>Deux vues distinctes.</strong> « Résultats » montre le poids de chaque parti
+				<em>issu de l'élection</em> (sièges ou voix). « Au pouvoir » montre, gouvernement par
+				gouvernement, quels partis composaient la coalition et avec combien de sièges.
+			</li>
+			<li>
+				<strong>Sièges de coalition = à la formation du gouvernement.</strong> Dans la vue « Au
+				pouvoir », les sièges affichés sont ceux que chaque parti détenait au moment où le
+				gouvernement s'est formé — qui peuvent différer du résultat électoral à cause des
+				transfuges et des changements de nom de parti entre l'élection et l'investiture (ex. la
+				coalition De Wever compte N-VA&nbsp;23 / MR&nbsp;18 à la formation, alors que l'élection de
+				2024 donnait N-VA&nbsp;24 / MR&nbsp;20). Source&nbsp;: les articles de législature de
+				Wikipédia, recoupés gouvernement par gouvernement.
+			</li>
+			<li>
+				<strong>Tous les gouvernements sont représentés</strong> (pas seulement un par élection)&nbsp;:
+				la frise des Premiers ministres et la vue « Au pouvoir » incluent chaque gouvernement
+				fédéral 1946-2024, y compris les remaniements en cours de législature.
+			</li>
+			<li>
+				<strong>La filiation des partis est suivie explicitement.</strong> Une table de filiation
+				relie chaque parti à ses ancêtres et successeurs&nbsp;: renommages (PSC → cdH → Les Engagés ;
+				SP → sp.a → Vooruit ; PVV → VLD → Open Vld), scissions (le parti chrétien unitaire → CVP +
+				PSC en 1968) et fusions (FDF → MR). C'est ce qui permet de voir Les Engagés comme la suite
+				naturelle du cdH, lui-même issu du PSC — et de calculer l'« ancienneté au pouvoir » d'un
+				parti en additionnant les années de toute sa lignée, malgré les changements de nom.
+			</li>
+			<li>
+				<strong>Source de la filiation&nbsp;:</strong> elle reprend la généalogie de référence
+				<em>Timeline of Belgian political parties</em> (les couleurs en proviennent aussi), recoupée
+				avec les articles Wikipédia de chaque parti pour dater précisément renommages, scissions et
+				fusions. Les couleurs suivent les conventions usuelles des partis belges (orange = démocrates-
+				chrétiens, rouge = socialistes, bleu = libéraux, jaune = nationalistes flamands, vert =
+				écologistes, etc.).
 			</li>
 		</ul>
 

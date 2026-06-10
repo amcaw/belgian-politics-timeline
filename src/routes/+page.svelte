@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Timeline from '$lib/Timeline.svelte';
+	import GovernanceGantt from '$lib/GovernanceGantt.svelte';
 	import Legend from '$lib/Legend.svelte';
 	import Methodology from '$lib/Methodology.svelte';
 	import { METRIC_LABELS, type Metric } from '$lib/data';
 
 	let metric = $state<Metric>('votes');
+	let view = $state<'results' | 'power'>('power');
 
 	const metrics: Metric[] = ['seats', 'votes'];
 </script>
@@ -18,22 +20,34 @@
 		<h1>Qui gouverne la Belgique&nbsp;?</h1>
 		<p class="subtitle">
 			Les partis à la Chambre des représentants, 1946 → 2024 ·
-			<span class="hint-inline">cliquez un Premier ministre pour voir sa coalition</span>
+			<span class="hint-inline">cliquez un Premier ministre pour sa coalition</span>
 		</p>
 	</header>
 
 	<div class="controls">
 		<div class="toggle-group">
-			<span class="toggle-label">Mesure&nbsp;:</span>
-			{#each metrics as m}
-				<button class:active={metric === m} onclick={() => (metric = m)}>
-					{METRIC_LABELS[m]}
-				</button>
-			{/each}
+			<span class="toggle-label">Vue&nbsp;:</span>
+			<button class:active={view === 'results'} onclick={() => (view = 'results')}>Résultats</button>
+			<button class:active={view === 'power'} onclick={() => (view = 'power')}>Au pouvoir</button>
 		</div>
+
+		{#if view === 'results'}
+			<div class="toggle-group">
+				<span class="toggle-label">Mesure&nbsp;:</span>
+				{#each metrics as m}
+					<button class:active={metric === m} onclick={() => (metric = m)}>
+						{METRIC_LABELS[m]}
+					</button>
+				{/each}
+			</div>
+		{/if}
 	</div>
 
-	<Timeline {metric} />
+	{#if view === 'results'}
+		<Timeline {metric} />
+	{:else}
+		<GovernanceGantt />
+	{/if}
 
 	<Legend />
 

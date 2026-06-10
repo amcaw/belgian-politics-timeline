@@ -7,7 +7,21 @@
     "partyId": "ps",
     "photo": "/pm/Achille_Van_Acker.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_II",
-    "electionDate": "1946-02-17"
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "sp-unitary",
+        "seats": 64
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 33
+      },
+      {
+        "id": "kpb",
+        "seats": 9
+      }
+    ]
   },
   {
     "name": "Paul-Henri Spaak",
@@ -17,7 +31,13 @@
     "partyId": "ps",
     "photo": "/pm/Paul-Henri_Spaak.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_I",
-    "electionDate": "1946-02-17"
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "sp-unitary",
+        "seats": 66
+      }
+    ]
   },
   {
     "name": "Achille Van Acker",
@@ -27,7 +47,21 @@
     "partyId": "ps",
     "photo": "/pm/Achille_Van_Acker.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_III",
-    "electionDate": "1946-02-17"
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "sp-unitary",
+        "seats": 66
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 20
+      },
+      {
+        "id": "kpb",
+        "seats": 23
+      }
+    ]
   },
   {
     "name": "Camille Huysmans",
@@ -37,7 +71,21 @@
     "partyId": "ps",
     "photo": "/pm/Camille_Huysmans.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Huysmans",
-    "electionDate": "1946-02-17"
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "sp-unitary",
+        "seats": 69
+      },
+      {
+        "id": "kpb",
+        "seats": 23
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 17
+      }
+    ]
   },
   {
     "name": "Paul-Henri Spaak",
@@ -47,7 +95,17 @@
     "partyId": "ps",
     "photo": "/pm/Paul-Henri_Spaak.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_II",
-    "electionDate": "1946-02-17"
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 92
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 69
+      }
+    ]
   },
   {
     "name": "Gaston Eyskens",
@@ -57,7 +115,17 @@
     "partyId": "psc",
     "photo": "/pm/Gaston_Eyskens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Eyskens_I",
-    "electionDate": "1949-06-26"
+    "electionDate": "1949-06-26",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 105
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 29
+      }
+    ]
   },
   {
     "name": "Jean Duvieusart",
@@ -67,7 +135,13 @@
     "partyId": "psc",
     "photo": "/pm/Jean_Duvieusart.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Duvieusart",
-    "electionDate": "1950-06-04"
+    "electionDate": "1950-06-04",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 108
+      }
+    ]
   },
   {
     "name": "Joseph Pholien",
@@ -77,7 +151,13 @@
     "partyId": "psc",
     "photo": "/pm/Joseph_Pholien.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Pholien",
-    "electionDate": "1950-06-04"
+    "electionDate": "1950-06-04",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 108
+      }
+    ]
   },
   {
     "name": "Jean Van Houtte",
@@ -87,7 +167,13 @@
     "partyId": "psc",
     "photo": "/pm/Jean_Van_Houtte.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Houtte",
-    "electionDate": "1950-06-04"
+    "electionDate": "1950-06-04",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 108
+      }
+    ]
   },
   {
     "name": "Achille Van Acker",
@@ -97,7 +183,17 @@
     "partyId": "ps",
     "photo": "/pm/Achille_Van_Acker.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_IV",
-    "electionDate": "1954-04-11"
+    "electionDate": "1954-04-11",
+    "coalition": [
+      {
+        "id": "sp-unitary",
+        "seats": 86
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 25
+      }
+    ]
   },
   {
     "name": "Gaston Eyskens",
@@ -107,7 +203,13 @@
     "partyId": "psc",
     "photo": "/pm/Gaston_Eyskens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_II",
-    "electionDate": "1958-06-01"
+    "electionDate": "1958-06-01",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 104
+      }
+    ]
   },
   {
     "name": "Théo Lefèvre",
@@ -117,7 +219,17 @@
     "partyId": "psc",
     "photo": "/pm/Théo_Lefèvre.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Lefèvre",
-    "electionDate": "1961-03-26"
+    "electionDate": "1961-03-26",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 96
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 84
+      }
+    ]
   },
   {
     "name": "Pierre Harmel",
@@ -127,7 +239,17 @@
     "partyId": "psc",
     "photo": "/pm/Pierre_Harmel.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Harmel",
-    "electionDate": "1965-05-23"
+    "electionDate": "1965-05-23",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 77
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 64
+      }
+    ]
   },
   {
     "name": "Paul Vanden Boeynants",
@@ -137,7 +259,17 @@
     "partyId": "psc",
     "photo": "/pm/Paul_Vanden_Boeynants.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Vanden_Boeynants_I",
-    "electionDate": "1965-05-23"
+    "electionDate": "1965-05-23",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 77
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 48
+      }
+    ]
   },
   {
     "name": "Gaston Eyskens",
@@ -147,7 +279,17 @@
     "partyId": "cvp",
     "photo": "/pm/Gaston_Eyskens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_III",
-    "electionDate": "1968-03-31"
+    "electionDate": "1968-03-31",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 69
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 59
+      }
+    ]
   },
   {
     "name": "Gaston Eyskens",
@@ -157,7 +299,17 @@
     "partyId": "cvp",
     "photo": "/pm/Gaston_Eyskens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_IV",
-    "electionDate": "1971-11-07"
+    "electionDate": "1971-11-07",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 67
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 61
+      }
+    ]
   },
   {
     "name": "Edmond Leburton",
@@ -167,7 +319,29 @@
     "partyId": "ps",
     "photo": "/pm/Edmond_Leburton.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leburton",
-    "electionDate": "1971-11-07"
+    "electionDate": "1971-11-07",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 47
+      },
+      {
+        "id": "psc",
+        "seats": 20
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 61
+      },
+      {
+        "id": "pvv",
+        "seats": 18
+      },
+      {
+        "id": "prl",
+        "seats": 16
+      }
+    ]
   },
   {
     "name": "Leo Tindemans",
@@ -177,7 +351,21 @@
     "partyId": "cvp",
     "photo": "/pm/Leo_Tindemans.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_I",
-    "electionDate": "1974-03-10"
+    "electionDate": "1974-03-10",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 50
+      },
+      {
+        "id": "psc",
+        "seats": 22
+      },
+      {
+        "id": "pvv",
+        "seats": 30
+      }
+    ]
   },
   {
     "name": "Leo Tindemans",
@@ -187,7 +375,29 @@
     "partyId": "cvp",
     "photo": "/pm/Leo_Tindemans.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_II",
-    "electionDate": "1977-04-17"
+    "electionDate": "1977-04-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 56
+      },
+      {
+        "id": "psc",
+        "seats": 24
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 62
+      },
+      {
+        "id": "vu",
+        "seats": 20
+      },
+      {
+        "id": "fdf",
+        "seats": 15
+      }
+    ]
   },
   {
     "name": "Paul Vanden Boeynants",
@@ -197,7 +407,29 @@
     "partyId": "psc",
     "photo": "/pm/Paul_Vanden_Boeynants.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Vanden_Boeynants_II",
-    "electionDate": "1977-04-17"
+    "electionDate": "1977-04-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 56
+      },
+      {
+        "id": "psc",
+        "seats": 24
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 62
+      },
+      {
+        "id": "vu",
+        "seats": 20
+      },
+      {
+        "id": "fdf",
+        "seats": 11
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -207,7 +439,29 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_I",
-    "electionDate": "1978-12-17"
+    "electionDate": "1978-12-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 57
+      },
+      {
+        "id": "ps",
+        "seats": 32
+      },
+      {
+        "id": "sp",
+        "seats": 26
+      },
+      {
+        "id": "psc",
+        "seats": 25
+      },
+      {
+        "id": "fdf",
+        "seats": 11
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -217,7 +471,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_II",
-    "electionDate": "1978-12-17"
+    "electionDate": "1978-12-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 57
+      },
+      {
+        "id": "ps",
+        "seats": 32
+      },
+      {
+        "id": "sp",
+        "seats": 26
+      },
+      {
+        "id": "psc",
+        "seats": 25
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -227,7 +499,33 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_III",
-    "electionDate": "1978-12-17"
+    "electionDate": "1978-12-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 57
+      },
+      {
+        "id": "ps",
+        "seats": 32
+      },
+      {
+        "id": "sp",
+        "seats": 26
+      },
+      {
+        "id": "psc",
+        "seats": 25
+      },
+      {
+        "id": "pvv",
+        "seats": 22
+      },
+      {
+        "id": "prl",
+        "seats": 15
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -237,7 +535,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_IV",
-    "electionDate": "1978-12-17"
+    "electionDate": "1978-12-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 57
+      },
+      {
+        "id": "ps",
+        "seats": 32
+      },
+      {
+        "id": "sp",
+        "seats": 26
+      },
+      {
+        "id": "psc",
+        "seats": 25
+      }
+    ]
   },
   {
     "name": "Mark Eyskens",
@@ -247,7 +563,25 @@
     "partyId": "cvp",
     "photo": "/pm/Mark_Eyskens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Mark_Eyskens",
-    "electionDate": "1978-12-17"
+    "electionDate": "1978-12-17",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 57
+      },
+      {
+        "id": "ps",
+        "seats": 32
+      },
+      {
+        "id": "sp",
+        "seats": 26
+      },
+      {
+        "id": "psc",
+        "seats": 25
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -257,7 +591,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_V",
-    "electionDate": "1981-11-08"
+    "electionDate": "1981-11-08",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 43
+      },
+      {
+        "id": "psc",
+        "seats": 18
+      },
+      {
+        "id": "pvv",
+        "seats": 28
+      },
+      {
+        "id": "prl",
+        "seats": 24
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -267,7 +619,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VI",
-    "electionDate": "1985-10-13"
+    "electionDate": "1985-10-13",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 49
+      },
+      {
+        "id": "prl",
+        "seats": 24
+      },
+      {
+        "id": "pvv",
+        "seats": 22
+      },
+      {
+        "id": "psc",
+        "seats": 20
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -277,7 +647,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VII",
-    "electionDate": "1985-10-13"
+    "electionDate": "1985-10-13",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 49
+      },
+      {
+        "id": "prl",
+        "seats": 24
+      },
+      {
+        "id": "pvv",
+        "seats": 22
+      },
+      {
+        "id": "psc",
+        "seats": 20
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -287,7 +675,29 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VIII",
-    "electionDate": "1987-12-13"
+    "electionDate": "1987-12-13",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 43
+      },
+      {
+        "id": "ps",
+        "seats": 40
+      },
+      {
+        "id": "sp",
+        "seats": 32
+      },
+      {
+        "id": "psc",
+        "seats": 18
+      },
+      {
+        "id": "vu",
+        "seats": 16
+      }
+    ]
   },
   {
     "name": "Wilfried Martens",
@@ -297,7 +707,25 @@
     "partyId": "cvp",
     "photo": "/pm/Wilfried_Martens.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_IX",
-    "electionDate": "1987-12-13"
+    "electionDate": "1987-12-13",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 43
+      },
+      {
+        "id": "ps",
+        "seats": 40
+      },
+      {
+        "id": "sp",
+        "seats": 32
+      },
+      {
+        "id": "psc",
+        "seats": 18
+      }
+    ]
   },
   {
     "name": "Jean-Luc Dehaene",
@@ -307,7 +735,25 @@
     "partyId": "cvp",
     "photo": "/pm/Jean-Luc_Dehaene.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Dehaene_I",
-    "electionDate": "1991-11-24"
+    "electionDate": "1991-11-24",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 39
+      },
+      {
+        "id": "ps",
+        "seats": 35
+      },
+      {
+        "id": "sp",
+        "seats": 28
+      },
+      {
+        "id": "psc",
+        "seats": 18
+      }
+    ]
   },
   {
     "name": "Jean-Luc Dehaene",
@@ -317,7 +763,25 @@
     "partyId": "cvp",
     "photo": "/pm/Jean-Luc_Dehaene.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Dehaene_II",
-    "electionDate": "1995-05-21"
+    "electionDate": "1995-05-21",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 29
+      },
+      {
+        "id": "ps",
+        "seats": 21
+      },
+      {
+        "id": "sp",
+        "seats": 20
+      },
+      {
+        "id": "psc",
+        "seats": 12
+      }
+    ]
   },
   {
     "name": "Guy Verhofstadt",
@@ -327,7 +791,33 @@
     "partyId": "vld",
     "photo": "/pm/Guy_Verhofstadt.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_I",
-    "electionDate": "1999-06-13"
+    "electionDate": "1999-06-13",
+    "coalition": [
+      {
+        "id": "vld",
+        "seats": 23
+      },
+      {
+        "id": "ps",
+        "seats": 19
+      },
+      {
+        "id": "prl",
+        "seats": 18
+      },
+      {
+        "id": "sp",
+        "seats": 14
+      },
+      {
+        "id": "ecolo",
+        "seats": 11
+      },
+      {
+        "id": "agalev",
+        "seats": 9
+      }
+    ]
   },
   {
     "name": "Guy Verhofstadt",
@@ -337,7 +827,29 @@
     "partyId": "vld",
     "photo": "/pm/Guy_Verhofstadt.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_II",
-    "electionDate": "2003-05-18"
+    "electionDate": "2003-05-18",
+    "coalition": [
+      {
+        "id": "vld",
+        "seats": 25
+      },
+      {
+        "id": "ps",
+        "seats": 25
+      },
+      {
+        "id": "mr",
+        "seats": 24
+      },
+      {
+        "id": "spa",
+        "seats": 22
+      },
+      {
+        "id": "spirit",
+        "seats": 1
+      }
+    ]
   },
   {
     "name": "Guy Verhofstadt",
@@ -347,7 +859,29 @@
     "partyId": "openvld",
     "photo": "/pm/Guy_Verhofstadt.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_III",
-    "electionDate": "2007-06-10"
+    "electionDate": "2007-06-10",
+    "coalition": [
+      {
+        "id": "cdv",
+        "seats": 25
+      },
+      {
+        "id": "mr",
+        "seats": 23
+      },
+      {
+        "id": "ps",
+        "seats": 20
+      },
+      {
+        "id": "openvld",
+        "seats": 18
+      },
+      {
+        "id": "cdh",
+        "seats": 10
+      }
+    ]
   },
   {
     "name": "Yves Leterme",
@@ -357,7 +891,33 @@
     "partyId": "cdv",
     "photo": "/pm/Yves_Leterme.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leterme_I",
-    "electionDate": "2007-06-10"
+    "electionDate": "2007-06-10",
+    "coalition": [
+      {
+        "id": "cdv",
+        "seats": 23
+      },
+      {
+        "id": "nva",
+        "seats": 7
+      },
+      {
+        "id": "mr",
+        "seats": 23
+      },
+      {
+        "id": "openvld",
+        "seats": 18
+      },
+      {
+        "id": "ps",
+        "seats": 20
+      },
+      {
+        "id": "cdh",
+        "seats": 10
+      }
+    ]
   },
   {
     "name": "Herman Van Rompuy",
@@ -367,7 +927,29 @@
     "partyId": "cdv",
     "photo": "/pm/Herman_Van_Rompuy.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Rompuy",
-    "electionDate": "2007-06-10"
+    "electionDate": "2007-06-10",
+    "coalition": [
+      {
+        "id": "cdv",
+        "seats": 23
+      },
+      {
+        "id": "mr",
+        "seats": 23
+      },
+      {
+        "id": "openvld",
+        "seats": 18
+      },
+      {
+        "id": "ps",
+        "seats": 20
+      },
+      {
+        "id": "cdh",
+        "seats": 10
+      }
+    ]
   },
   {
     "name": "Yves Leterme",
@@ -377,7 +959,29 @@
     "partyId": "cdv",
     "photo": "/pm/Yves_Leterme.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leterme_II",
-    "electionDate": "2007-06-10"
+    "electionDate": "2007-06-10",
+    "coalition": [
+      {
+        "id": "cdv",
+        "seats": 23
+      },
+      {
+        "id": "openvld",
+        "seats": 18
+      },
+      {
+        "id": "mr",
+        "seats": 23
+      },
+      {
+        "id": "ps",
+        "seats": 20
+      },
+      {
+        "id": "cdh",
+        "seats": 10
+      }
+    ]
   },
   {
     "name": "Elio Di Rupo",
@@ -387,7 +991,33 @@
     "partyId": "ps",
     "photo": "/pm/Elio_Di_Rupo.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Di_Rupo",
-    "electionDate": "2010-06-13"
+    "electionDate": "2010-06-13",
+    "coalition": [
+      {
+        "id": "ps",
+        "seats": 26
+      },
+      {
+        "id": "cdv",
+        "seats": 17
+      },
+      {
+        "id": "mr",
+        "seats": 15
+      },
+      {
+        "id": "spa",
+        "seats": 13
+      },
+      {
+        "id": "openvld",
+        "seats": 13
+      },
+      {
+        "id": "cdh",
+        "seats": 9
+      }
+    ]
   },
   {
     "name": "Charles Michel",
@@ -397,7 +1027,25 @@
     "partyId": "mr",
     "photo": "/pm/Charles_Michel.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Michel_I",
-    "electionDate": "2014-05-25"
+    "electionDate": "2014-05-25",
+    "coalition": [
+      {
+        "id": "nva",
+        "seats": 33
+      },
+      {
+        "id": "mr",
+        "seats": 20
+      },
+      {
+        "id": "cdv",
+        "seats": 18
+      },
+      {
+        "id": "openvld",
+        "seats": 14
+      }
+    ]
   },
   {
     "name": "Charles Michel",
@@ -407,7 +1055,21 @@
     "partyId": "mr",
     "photo": "/pm/Charles_Michel.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Michel_II",
-    "electionDate": "2014-05-25"
+    "electionDate": "2014-05-25",
+    "coalition": [
+      {
+        "id": "mr",
+        "seats": 20
+      },
+      {
+        "id": "cdv",
+        "seats": 18
+      },
+      {
+        "id": "openvld",
+        "seats": 14
+      }
+    ]
   },
   {
     "name": "Sophie Wilmès",
@@ -417,7 +1079,21 @@
     "partyId": "mr",
     "photo": "/pm/Sophie_Wilmès.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Wilmès_I",
-    "electionDate": "2019-05-26"
+    "electionDate": "2019-05-26",
+    "coalition": [
+      {
+        "id": "mr",
+        "seats": 14
+      },
+      {
+        "id": "cdv",
+        "seats": 12
+      },
+      {
+        "id": "openvld",
+        "seats": 12
+      }
+    ]
   },
   {
     "name": "Sophie Wilmès",
@@ -427,7 +1103,21 @@
     "partyId": "mr",
     "photo": "/pm/Sophie_Wilmès.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Wilmès_II",
-    "electionDate": "2019-05-26"
+    "electionDate": "2019-05-26",
+    "coalition": [
+      {
+        "id": "mr",
+        "seats": 14
+      },
+      {
+        "id": "cdv",
+        "seats": 12
+      },
+      {
+        "id": "openvld",
+        "seats": 12
+      }
+    ]
   },
   {
     "name": "Alexander De Croo",
@@ -437,7 +1127,37 @@
     "partyId": "openvld",
     "photo": "/pm/Alexander_De_Croo.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_De_Croo",
-    "electionDate": "2019-05-26"
+    "electionDate": "2019-05-26",
+    "coalition": [
+      {
+        "id": "ps",
+        "seats": 19
+      },
+      {
+        "id": "mr",
+        "seats": 14
+      },
+      {
+        "id": "ecolo",
+        "seats": 13
+      },
+      {
+        "id": "openvld",
+        "seats": 12
+      },
+      {
+        "id": "cdv",
+        "seats": 12
+      },
+      {
+        "id": "spa",
+        "seats": 9
+      },
+      {
+        "id": "groen",
+        "seats": 8
+      }
+    ]
   },
   {
     "name": "Bart De Wever",
@@ -447,6 +1167,28 @@
     "partyId": "nva",
     "photo": "/pm/Bart_De_Wever.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_De_Wever",
-    "electionDate": "2024-06-09"
+    "electionDate": "2024-06-09",
+    "coalition": [
+      {
+        "id": "nva",
+        "seats": 23
+      },
+      {
+        "id": "mr",
+        "seats": 18
+      },
+      {
+        "id": "engages",
+        "seats": 15
+      },
+      {
+        "id": "vooruit",
+        "seats": 13
+      },
+      {
+        "id": "cdv",
+        "seats": 11
+      }
+    ]
   }
 ]

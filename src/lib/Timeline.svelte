@@ -138,10 +138,10 @@
 			.x((_, i) => x(years[i]))
 			.y0((d) => yScale(d[0]))
 			.y1((d) => yScale(d[1]))
-			// monotone: the curve passes THROUGH each election point with no
-			// overshoot, so a party at 0 seats is genuinely 0 (no "ghost" bands in
-			// the governing-only view). curveBasis only approximates the points.
-			.curve(d3.curveMonotoneX)
+			// straight segments between elections: no spline overshoot, no bands
+			// that appear to overlap — exactly the seat/vote share at each election,
+			// linearly interpolated. Clearer than any curved interpolation.
+			.curve(d3.curveLinear)
 	);
 
 	// label anchor: place the label at the election where THIS band is thickest,
@@ -220,6 +220,7 @@
 		return (0.299 * c.r + 0.587 * c.g + 0.114 * c.b) / 255 > 0.62 ? '#1a1a1a' : '#fff';
 	}
 	const pct = (s: number) => (s * 100).toFixed(1) + '%';
+	const fmtDate = (iso: string) => { const [y, m, d] = iso.split('-'); return `${d}/${m}/${y}`; };
 
 	// hovered government portrait (by government name), drives the panel focus
 	let govHover = $state<string | null>(null);
@@ -384,7 +385,7 @@
 					<div class="rank-pm-role">Gouvernement {selectedGov.government}</div>
 				</div>
 			</div>
-			<div class="rank-meta">Entrée en fonction&nbsp;: {selectedGov.startDate}</div>
+			<div class="rank-meta">Entrée en fonction&nbsp;: {fmtDate(selectedGov.startDate)}</div>
 			<div class="rank-sub">Coalition</div>
 			<div class="coal-chips">
 				{#each coal as id (id)}
