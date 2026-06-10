@@ -159,10 +159,11 @@
 	// governed. The coalition formed after election i rules until election i+1, so
 	// we colour the span [i, i+1] when the party is in election i's coalition (and
 	// a half-span before the first governing election for a clean leading edge).
-	function governingRuns(s: d3.Series<Record<string, number>, string>): string[] {
+	interface GovRun { d: string; key: string; startYear: number; endYear: number }
+	function governingRuns(s: d3.Series<Record<string, number>, string>): GovRun[] {
 		const n = ELECTIONS.length;
 		const gov = ELECTIONS.map((e) => isGoverning(e.date, s.key));
-		const paths: string[] = [];
+		const runs: GovRun[] = [];
 		// sample the band edges at a (possibly fractional) election index
 		const sampleX = (f: number) => {
 			const i = Math.floor(f), t = f - i;
@@ -188,10 +189,17 @@
 			const fs = Array.from({ length: steps }, (_, k) => lo + ((hi - lo) * k) / (steps - 1));
 			const top = fs.map((f) => `${sampleX(f)},${sampleY(f, 1)}`);
 			const bot = fs.slice().reverse().map((f) => `${sampleX(f)},${sampleY(f, 0)}`);
-			paths.push('M' + top.join(' L') + ' L' + bot.join(' L') + ' Z');
+			runs.push({
+				d: 'M' + top.join(' L') + ' L' + bot.join(' L') + ' Z',
+				key: `${s.key}@${years[start]}`,
+				startYear: years[start],
+				endYear: years[end]
+			});
 		}
-		return paths;
+		return runs;
 	}
+	// the governing run (period) currently hovered, for per-period highlighting
+	let hoveredRun = $state<string | null>(null);
 
 	// label anchor: place the label at the election where THIS band is thickest,
 	// but only among elections where the party actually has a non-zero share, and
@@ -255,7 +263,7 @@
 			year: nearestYear(vbX)
 		};
 	}
-	function leave() { hovered = null; tip = null; }
+	function leave() { hovered = null; tip = null; hoveredRun = null; }
 
 	function seatsAt(year: number, id: string) {
 		return ELECTIONS.find((e) => e.year === year)?.parties.find((p) => p.id === id)?.seats ?? 0;
@@ -411,14 +419,19 @@
 					/>
 				{/each}
 
-				<!-- power-stream overlay: colour only the legislatures each party governed -->
+				<!-- power-stream overlay: colour only the legislatures each party governed.
+				     Each governing PERIOD is independently hoverable (so hovering N-VA in
+				     2024 does not light up N-VA in 2014). -->
 				{#if powerMode}
 					{#each stacked as s (s.key + '-gov')}
 						{@const p = party(s.key)}
-						{#each governingRuns(s) as d, i (i)}
-							<path d={d} fill={p.color} class="band gov-run"
-								class:dim={hovered && hovered !== s.key}
-								role="presentation" onmousemove={(ev) => move(s.key, ev)} />
+						{#each governingRuns(s) as run (run.key)}
+							<path d={run.d} fill={p.color} class="band gov-run"
+								class:dim={hoveredRun && hoveredRun !== run.key}
+								role="presentation"
+								onmouseenter={() => (hoveredRun = run.key)}
+								onmouseleave={() => (hoveredRun = null)}
+								onmousemove={(ev) => move(s.key, ev)} />
 						{/each}
 					{/each}
 				{/if}
