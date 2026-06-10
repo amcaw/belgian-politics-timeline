@@ -1,0 +1,4730 @@
+[
+  {
+    "date": "1946-02-17",
+    "electionId": 40936,
+    "totalSeats": 202,
+    "totalValidVotes": 2365638,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 92,
+        "votes": 1006293
+      },
+      {
+        "partyId": 303354,
+        "partyLabel": "Socialistische Partij/ P",
+        "seats": 66,
+        "votes": 746738
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 23,
+        "votes": 300099
+      },
+      {
+        "partyId": 303198,
+        "partyLabel": "Parti Liberale/Liberale",
+        "seats": 16,
+        "votes": 211143
+      },
+      {
+        "partyId": 303261,
+        "partyLabel": "Kartel Lib Soc",
+        "seats": 4,
+        "votes": 37844
+      },
+      {
+        "partyId": 303355,
+        "partyLabel": "UDB",
+        "seats": 1,
+        "votes": 51095
+      },
+      {
+        "partyId": 303359,
+        "partyLabel": "Union des métiers",
+        "seats": 0,
+        "votes": 3360
+      },
+      {
+        "partyId": 303375,
+        "partyLabel": "FRENSSEN",
+        "seats": 0,
+        "votes": 2480
+      },
+      {
+        "partyId": 303269,
+        "partyLabel": "onafh/isolés",
+        "seats": 0,
+        "votes": 2407
+      },
+      {
+        "partyId": 303387,
+        "partyLabel": "Parti dUnite Wallonne",
+        "seats": 0,
+        "votes": 1774
+      },
+      {
+        "partyId": 303376,
+        "partyLabel": "MOUVEMENT POP BELGE",
+        "seats": 0,
+        "votes": 865
+      },
+      {
+        "partyId": 303377,
+        "partyLabel": "RESISTANTS",
+        "seats": 0,
+        "votes": 676
+      },
+      {
+        "partyId": 303388,
+        "partyLabel": "Indépendants",
+        "seats": 0,
+        "votes": 378
+      },
+      {
+        "partyId": 303374,
+        "partyLabel": "Classes Moyennes",
+        "seats": 0,
+        "votes": 274
+      },
+      {
+        "partyId": 303378,
+        "partyLabel": "BELG LIBRE INDEPENDANT",
+        "seats": 0,
+        "votes": 212
+      }
+    ]
+  },
+  {
+    "date": "1949-06-26",
+    "electionId": 40935,
+    "totalSeats": 212,
+    "totalValidVotes": 5030883,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 105,
+        "votes": 2190895
+      },
+      {
+        "partyId": 303354,
+        "partyLabel": "Socialistische Partij/ P",
+        "seats": 66,
+        "votes": 1496539
+      },
+      {
+        "partyId": 303198,
+        "partyLabel": "Parti Liberale/Liberale",
+        "seats": 29,
+        "votes": 767180
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 12,
+        "votes": 376765
+      },
+      {
+        "partyId": 303362,
+        "partyLabel": "Vlaamse Concentratie",
+        "seats": 0,
+        "votes": 103896
+      },
+      {
+        "partyId": 303246,
+        "partyLabel": "Middenstand/Classes Moye",
+        "seats": 0,
+        "votes": 45721
+      },
+      {
+        "partyId": 303226,
+        "partyLabel": "Onafh. Partij",
+        "seats": 0,
+        "votes": 20450
+      },
+      {
+        "partyId": 303269,
+        "partyLabel": "onafh/isolés",
+        "seats": 0,
+        "votes": 6745
+      },
+      {
+        "partyId": 303366,
+        "partyLabel": "Union commerçants",
+        "seats": 0,
+        "votes": 6709
+      },
+      {
+        "partyId": 303395,
+        "partyLabel": "Nat Belg Verzameling",
+        "seats": 0,
+        "votes": 6077
+      },
+      {
+        "partyId": 303301,
+        "partyLabel": "Unité walonne",
+        "seats": 0,
+        "votes": 5852
+      },
+      {
+        "partyId": 303393,
+        "partyLabel": "Défence du Luxembourg",
+        "seats": 0,
+        "votes": 2024
+      },
+      {
+        "partyId": 303380,
+        "partyLabel": "COSMOCRATEN",
+        "seats": 0,
+        "votes": 685
+      },
+      {
+        "partyId": 303381,
+        "partyLabel": "LUMIERE",
+        "seats": 0,
+        "votes": 680
+      },
+      {
+        "partyId": 303379,
+        "partyLabel": "SYND GENER INDEP",
+        "seats": 0,
+        "votes": 610
+      },
+      {
+        "partyId": 303383,
+        "partyLabel": "PARTI PATRIOTIQUE BELGE",
+        "seats": 0,
+        "votes": 55
+      }
+    ]
+  },
+  {
+    "date": "1950-06-14",
+    "electionId": 40934,
+    "totalSeats": 212,
+    "totalValidVotes": 4942807,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 108,
+        "votes": 2356608
+      },
+      {
+        "partyId": 303354,
+        "partyLabel": "Socialistische Partij/ P",
+        "seats": 73,
+        "votes": 1705781
+      },
+      {
+        "partyId": 303198,
+        "partyLabel": "Parti Liberale/Liberale",
+        "seats": 20,
+        "votes": 556102
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 7,
+        "votes": 234541
+      },
+      {
+        "partyId": 303261,
+        "partyLabel": "Kartel Lib Soc",
+        "seats": 4,
+        "votes": 87252
+      },
+      {
+        "partyId": 303380,
+        "partyLabel": "COSMOCRATEN",
+        "seats": 0,
+        "votes": 1535
+      },
+      {
+        "partyId": 303383,
+        "partyLabel": "PARTI PATRIOTIQUE BELGE",
+        "seats": 0,
+        "votes": 656
+      },
+      {
+        "partyId": 303269,
+        "partyLabel": "onafh/isolés",
+        "seats": 0,
+        "votes": 332
+      }
+    ]
+  },
+  {
+    "date": "1954-04-11",
+    "electionId": 40933,
+    "totalSeats": 212,
+    "totalValidVotes": 5160486,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 95,
+        "votes": 2123408
+      },
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 82,
+        "votes": 1927015
+      },
+      {
+        "partyId": 303198,
+        "partyLabel": "Parti Liberale/Liberale",
+        "seats": 24,
+        "votes": 626983
+      },
+      {
+        "partyId": 303261,
+        "partyLabel": "Kartel Lib Soc",
+        "seats": 5,
+        "votes": 108175
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 4,
+        "votes": 184108
+      },
+      {
+        "partyId": 303200,
+        "partyLabel": "Christelijke Vlaamse Vol",
+        "seats": 1,
+        "votes": 113632
+      },
+      {
+        "partyId": 303207,
+        "partyLabel": "Rassemblement Social Chr",
+        "seats": 1,
+        "votes": 42979
+      },
+      {
+        "partyId": 303245,
+        "partyLabel": "Radio AnTWERP",
+        "seats": 0,
+        "votes": 10177
+      },
+      {
+        "partyId": 303246,
+        "partyLabel": "Middenstand/Classes Moye",
+        "seats": 0,
+        "votes": 9729
+      },
+      {
+        "partyId": 303265,
+        "partyLabel": "Universeel volk",
+        "seats": 0,
+        "votes": 3139
+      },
+      {
+        "partyId": 303223,
+        "partyLabel": "ancien combattants",
+        "seats": 0,
+        "votes": 1839
+      },
+      {
+        "partyId": 303272,
+        "partyLabel": "Van Wonterghem",
+        "seats": 0,
+        "votes": 1817
+      },
+      {
+        "partyId": 303275,
+        "partyLabel": "Dissidence lib",
+        "seats": 0,
+        "votes": 1807
+      },
+      {
+        "partyId": 303209,
+        "partyLabel": "Parti Social Indépendant",
+        "seats": 0,
+        "votes": 1613
+      },
+      {
+        "partyId": 303312,
+        "partyLabel": "Liste Hubert",
+        "seats": 0,
+        "votes": 1143
+      },
+      {
+        "partyId": 303313,
+        "partyLabel": "Liste Camus",
+        "seats": 0,
+        "votes": 1001
+      },
+      {
+        "partyId": 303218,
+        "partyLabel": "union indépendant",
+        "seats": 0,
+        "votes": 884
+      },
+      {
+        "partyId": 303212,
+        "partyLabel": "Mouvement Européen",
+        "seats": 0,
+        "votes": 581
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 0,
+        "votes": 456
+      },
+      {
+        "partyId": 303269,
+        "partyLabel": "onafh/isolés",
+        "seats": 0,
+        "votes": 246
+      },
+      {
+        "partyId": 303319,
+        "partyLabel": "Médiateur",
+        "seats": 0,
+        "votes": 191
+      }
+    ]
+  },
+  {
+    "date": "1958-06-01",
+    "electionId": 40932,
+    "totalSeats": 212,
+    "totalValidVotes": 5302353,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 104,
+        "votes": 2465549
+      },
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 80,
+        "votes": 1897646
+      },
+      {
+        "partyId": 303198,
+        "partyLabel": "Parti Liberale/Liberale",
+        "seats": 20,
+        "votes": 585999
+      },
+      {
+        "partyId": 303261,
+        "partyLabel": "Kartel Lib Soc",
+        "seats": 5,
+        "votes": 111284
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 2,
+        "votes": 100145
+      },
+      {
+        "partyId": 303197,
+        "partyLabel": "Volksunie",
+        "seats": 1,
+        "votes": 104823
+      },
+      {
+        "partyId": 303317,
+        "partyLabel": "andere/autres",
+        "seats": 0,
+        "votes": 36907
+      }
+    ]
+  },
+  {
+    "date": "1961-03-26",
+    "electionId": 40931,
+    "totalSeats": 212,
+    "totalValidVotes": 5265025,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 96,
+        "votes": 2182642
+      },
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 84,
+        "votes": 1933424
+      },
+      {
+        "partyId": 303195,
+        "partyLabel": "PVV/PLP",
+        "seats": 20,
+        "votes": 649376
+      },
+      {
+        "partyId": 303197,
+        "partyLabel": "Volksunie",
+        "seats": 5,
+        "votes": 182407
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 5,
+        "votes": 162238
+      },
+      {
+        "partyId": 303269,
+        "partyLabel": "onafh/isolés",
+        "seats": 1,
+        "votes": 46244
+      },
+      {
+        "partyId": 303236,
+        "partyLabel": "Rassemblement national",
+        "seats": 1,
+        "votes": 42450
+      },
+      {
+        "partyId": 303226,
+        "partyLabel": "Onafh. Partij",
+        "seats": 0,
+        "votes": 33174
+      },
+      {
+        "partyId": 303238,
+        "partyLabel": "Nat Unie Onafh.",
+        "seats": 0,
+        "votes": 12252
+      },
+      {
+        "partyId": 303232,
+        "partyLabel": "Nationale partij",
+        "seats": 0,
+        "votes": 4375
+      },
+      {
+        "partyId": 303276,
+        "partyLabel": "Liberal diss",
+        "seats": 0,
+        "votes": 3956
+      },
+      {
+        "partyId": 303281,
+        "partyLabel": "Waalse eenheid",
+        "seats": 0,
+        "votes": 3466
+      },
+      {
+        "partyId": 303304,
+        "partyLabel": "Alleenstaande",
+        "seats": 0,
+        "votes": 3101
+      },
+      {
+        "partyId": 303248,
+        "partyLabel": "Zelfstandig",
+        "seats": 0,
+        "votes": 2307
+      },
+      {
+        "partyId": 303219,
+        "partyLabel": "Bloc Francoph",
+        "seats": 0,
+        "votes": 1824
+      },
+      {
+        "partyId": 303247,
+        "partyLabel": "Gekavemus",
+        "seats": 0,
+        "votes": 604
+      },
+      {
+        "partyId": 303291,
+        "partyLabel": "Onafh. Travailleurs",
+        "seats": 0,
+        "votes": 551
+      },
+      {
+        "partyId": 303265,
+        "partyLabel": "Universeel volk",
+        "seats": 0,
+        "votes": 480
+      },
+      {
+        "partyId": 303303,
+        "partyLabel": "Ec Groep",
+        "seats": 0,
+        "votes": 154
+      }
+    ]
+  },
+  {
+    "date": "1965-05-23",
+    "electionId": 40930,
+    "totalSeats": 212,
+    "totalValidVotes": 5181935,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 77,
+        "votes": 1785211
+      },
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 64,
+        "votes": 1465503
+      },
+      {
+        "partyId": 303195,
+        "partyLabel": "PVV/PLP",
+        "seats": 48,
+        "votes": 1119991
+      },
+      {
+        "partyId": 303197,
+        "partyLabel": "Volksunie",
+        "seats": 12,
+        "votes": 346860
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 6,
+        "votes": 236721
+      },
+      {
+        "partyId": 303097,
+        "partyLabel": "FDF",
+        "seats": 3,
+        "votes": 68966
+      },
+      {
+        "partyId": 303293,
+        "partyLabel": "Front Wallon",
+        "seats": 1,
+        "votes": 24245
+      },
+      {
+        "partyId": 303315,
+        "partyLabel": "Front Wallon des Travail",
+        "seats": 1,
+        "votes": 23582
+      },
+      {
+        "partyId": 303253,
+        "partyLabel": "Communisten",
+        "seats": 0,
+        "votes": 41674
+      },
+      {
+        "partyId": 303255,
+        "partyLabel": "De Socialist",
+        "seats": 0,
+        "votes": 14937
+      },
+      {
+        "partyId": 303211,
+        "partyLabel": "Parti Catholique/Katholi",
+        "seats": 0,
+        "votes": 14007
+      },
+      {
+        "partyId": 303277,
+        "partyLabel": "Vlaamse Volkspartij",
+        "seats": 0,
+        "votes": 13451
+      },
+      {
+        "partyId": 303286,
+        "partyLabel": "Parti Communiste Wallon",
+        "seats": 0,
+        "votes": 13321
+      },
+      {
+        "partyId": 303215,
+        "partyLabel": "PCB/BKP",
+        "seats": 0,
+        "votes": 10590
+      },
+      {
+        "partyId": 303287,
+        "partyLabel": "Union Travailliste Indép",
+        "seats": 0,
+        "votes": 8680
+      },
+      {
+        "partyId": 303228,
+        "partyLabel": "Vlaamse Democraten",
+        "seats": 0,
+        "votes": 7983
+      },
+      {
+        "partyId": 303294,
+        "partyLabel": "PSI",
+        "seats": 0,
+        "votes": 7941
+      },
+      {
+        "partyId": 303290,
+        "partyLabel": "Front Démocratique Wallo",
+        "seats": 0,
+        "votes": 5709
+      },
+      {
+        "partyId": 303254,
+        "partyLabel": "Afzonderlijk",
+        "seats": 0,
+        "votes": 4762
+      },
+      {
+        "partyId": 303233,
+        "partyLabel": "Union Francophone",
+        "seats": 0,
+        "votes": 3776
+      },
+      {
+        "partyId": 303262,
+        "partyLabel": "Nat Partij Zelfstandigen",
+        "seats": 0,
+        "votes": 3089
+      },
+      {
+        "partyId": 303240,
+        "partyLabel": "Protection Animaux",
+        "seats": 0,
+        "votes": 2543
+      },
+      {
+        "partyId": 303237,
+        "partyLabel": "Parti Travailliste belge",
+        "seats": 0,
+        "votes": 2237
+      },
+      {
+        "partyId": 303295,
+        "partyLabel": "Rassemblement Indépendan",
+        "seats": 0,
+        "votes": 2213
+      },
+      {
+        "partyId": 303194,
+        "partyLabel": "Parti National",
+        "seats": 0,
+        "votes": 1889
+      },
+      {
+        "partyId": 303270,
+        "partyLabel": "Retour à Liège",
+        "seats": 0,
+        "votes": 1552
+      },
+      {
+        "partyId": 303221,
+        "partyLabel": "PSI/OSP",
+        "seats": 0,
+        "votes": 1507
+      },
+      {
+        "partyId": 303278,
+        "partyLabel": "Unie der Zelfstandigen",
+        "seats": 0,
+        "votes": 1014
+      },
+      {
+        "partyId": 303316,
+        "partyLabel": "Classes Moyennes Indépen",
+        "seats": 0,
+        "votes": 958
+      },
+      {
+        "partyId": 303252,
+        "partyLabel": "KAGANOVEMUS",
+        "seats": 0,
+        "votes": 890
+      },
+      {
+        "partyId": 303330,
+        "partyLabel": "Isolé",
+        "seats": 0,
+        "votes": 493
+      },
+      {
+        "partyId": 303306,
+        "partyLabel": "Communistes trotsky",
+        "seats": 0,
+        "votes": 385
+      },
+      {
+        "partyId": 303322,
+        "partyLabel": "Union Nouv Résistance",
+        "seats": 0,
+        "votes": 309
+      }
+    ]
+  },
+  {
+    "date": "1968-03-31",
+    "electionId": 40929,
+    "totalSeats": 212,
+    "totalValidVotes": 5177952,
+    "parties": [
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 69,
+        "votes": 1643785
+      },
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 59,
+        "votes": 1344407
+      },
+      {
+        "partyId": 303195,
+        "partyLabel": "PVV/PLP",
+        "seats": 47,
+        "votes": 1080894
+      },
+      {
+        "partyId": 303197,
+        "partyLabel": "Volksunie",
+        "seats": 20,
+        "votes": 506697
+      },
+      {
+        "partyId": 303097,
+        "partyLabel": "FDF",
+        "seats": 6,
+        "votes": 154023
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 6,
+        "votes": 151421
+      },
+      {
+        "partyId": 303201,
+        "partyLabel": "Communist",
+        "seats": 5,
+        "votes": 165678
+      },
+      {
+        "partyId": 303203,
+        "partyLabel": "VDB/CVP",
+        "seats": 0,
+        "votes": 236283
+      },
+      {
+        "partyId": 303006,
+        "partyLabel": "BSP",
+        "seats": 0,
+        "votes": 58700
+      },
+      {
+        "partyId": 303210,
+        "partyLabel": "RODE LEEUW",
+        "seats": 0,
+        "votes": 46065
+      },
+      {
+        "partyId": 303036,
+        "partyLabel": "PCB",
+        "seats": 0,
+        "votes": 4947
+      },
+      {
+        "partyId": 303282,
+        "partyLabel": "TRAV.WAL",
+        "seats": 0,
+        "votes": 3474
+      },
+      {
+        "partyId": 303214,
+        "partyLabel": "KOM(PEK)",
+        "seats": 0,
+        "votes": 3119
+      },
+      {
+        "partyId": 303227,
+        "partyLabel": "ULS",
+        "seats": 0,
+        "votes": 2694
+      },
+      {
+        "partyId": 303267,
+        "partyLabel": "RLiège",
+        "seats": 0,
+        "votes": 1933
+      },
+      {
+        "partyId": 303249,
+        "partyLabel": "SOC.BEW.VL",
+        "seats": 0,
+        "votes": 1922
+      },
+      {
+        "partyId": 303250,
+        "partyLabel": "KAGANO",
+        "seats": 0,
+        "votes": 1634
+      },
+      {
+        "partyId": 303308,
+        "partyLabel": "DIERENBES.",
+        "seats": 0,
+        "votes": 1608
+      },
+      {
+        "partyId": 303220,
+        "partyLabel": "ONAF.SOC",
+        "seats": 0,
+        "votes": 1264
+      },
+      {
+        "partyId": 303285,
+        "partyLabel": "KOM(WAL)",
+        "seats": 0,
+        "votes": 964
+      },
+      {
+        "partyId": 303251,
+        "partyLabel": "Z.KLEUR",
+        "seats": 0,
+        "votes": 723
+      },
+      {
+        "partyId": 303279,
+        "partyLabel": "VL.KOM",
+        "seats": 0,
+        "votes": 702
+      },
+      {
+        "partyId": 303305,
+        "partyLabel": "F.U.POP",
+        "seats": 0,
+        "votes": 572
+      },
+      {
+        "partyId": 303296,
+        "partyLabel": "TROTSKYST.",
+        "seats": 0,
+        "votes": 289
+      },
+      {
+        "partyId": 303283,
+        "partyLabel": "SH",
+        "seats": 0,
+        "votes": 198
+      },
+      {
+        "partyId": 303324,
+        "partyLabel": "RJB",
+        "seats": 0,
+        "votes": 161
+      },
+      {
+        "partyId": 303299,
+        "partyLabel": "TRAV.IND.",
+        "seats": 0,
+        "votes": 78
+      }
+    ]
+  },
+  {
+    "date": "1971-11-07",
+    "electionId": 40928,
+    "totalSeats": 212,
+    "totalValidVotes": 5281631,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 40,
+        "votes": 967701
+      },
+      {
+        "partyId": 303006,
+        "partyLabel": "BSP",
+        "seats": 25,
+        "votes": 623395
+      },
+      {
+        "partyId": 303204,
+        "partyLabel": "PSB",
+        "seats": 25,
+        "votes": 549483
+      },
+      {
+        "partyId": 303197,
+        "partyLabel": "Volksunie",
+        "seats": 21,
+        "votes": 586917
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 16,
+        "votes": 392130
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 15,
+        "votes": 327393
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 12,
+        "votes": 306606
+      },
+      {
+        "partyId": 303196,
+        "partyLabel": "PSC/CVP",
+        "seats": 12,
+        "votes": 292101
+      },
+      {
+        "partyId": 303039,
+        "partyLabel": "FDF-RW",
+        "seats": 12,
+        "votes": 286639
+      },
+      {
+        "partyId": 303235,
+        "partyLabel": "PLP",
+        "seats": 11,
+        "votes": 275776
+      },
+      {
+        "partyId": 303208,
+        "partyLabel": "PSB(BRUX)",
+        "seats": 7,
+        "votes": 162852
+      },
+      {
+        "partyId": 303195,
+        "partyLabel": "PVV/PLP",
+        "seats": 4,
+        "votes": 107615
+      },
+      {
+        "partyId": 303210,
+        "partyLabel": "RODE LEEUW",
+        "seats": 4,
+        "votes": 104040
+      },
+      {
+        "partyId": 293021,
+        "partyLabel": "PC",
+        "seats": 4,
+        "votes": 91726
+      },
+      {
+        "partyId": 303202,
+        "partyLabel": "PLP(BRUX).",
+        "seats": 3,
+        "votes": 90134
+      },
+      {
+        "partyId": 303199,
+        "partyLabel": "KP",
+        "seats": 1,
+        "votes": 67487
+      },
+      {
+        "partyId": 303216,
+        "partyLabel": "LOB/LIB",
+        "seats": 0,
+        "votes": 21919
+      },
+      {
+        "partyId": 303307,
+        "partyLabel": "ONAF.CHRIS",
+        "seats": 0,
+        "votes": 7801
+      },
+      {
+        "partyId": 303259,
+        "partyLabel": "LVV",
+        "seats": 0,
+        "votes": 2740
+      },
+      {
+        "partyId": 303296,
+        "partyLabel": "TROTSKYST.",
+        "seats": 0,
+        "votes": 2660
+      },
+      {
+        "partyId": 303252,
+        "partyLabel": "KAGANOVEMUS",
+        "seats": 0,
+        "votes": 2580
+      },
+      {
+        "partyId": 303036,
+        "partyLabel": "PCB",
+        "seats": 0,
+        "votes": 2304
+      },
+      {
+        "partyId": 303271,
+        "partyLabel": "Van Meerhage",
+        "seats": 0,
+        "votes": 2004
+      },
+      {
+        "partyId": 303251,
+        "partyLabel": "Z.KLEUR",
+        "seats": 0,
+        "votes": 1547
+      },
+      {
+        "partyId": 303273,
+        "partyLabel": "DPU",
+        "seats": 0,
+        "votes": 1534
+      },
+      {
+        "partyId": 303229,
+        "partyLabel": "P.FRANCOPH",
+        "seats": 0,
+        "votes": 1471
+      },
+      {
+        "partyId": 303260,
+        "partyLabel": "NIEUWE PAR",
+        "seats": 0,
+        "votes": 899
+      },
+      {
+        "partyId": 303222,
+        "partyLabel": "U.VERBRUIK",
+        "seats": 0,
+        "votes": 640
+      },
+      {
+        "partyId": 303308,
+        "partyLabel": "DIERENBES.",
+        "seats": 0,
+        "votes": 633
+      },
+      {
+        "partyId": 303284,
+        "partyLabel": "DE KEYZER",
+        "seats": 0,
+        "votes": 565
+      },
+      {
+        "partyId": 303323,
+        "partyLabel": "R.D.WAL",
+        "seats": 0,
+        "votes": 339
+      }
+    ]
+  },
+  {
+    "date": "1974-03-10",
+    "electionId": 40927,
+    "totalSeats": 212,
+    "totalValidVotes": 5258531,
+    "parties": [
+      {
+        "partyId": 303193,
+        "partyLabel": "BSP/PSB",
+        "seats": 59,
+        "votes": 1401725
+      },
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 50,
+        "votes": 1222646
+      },
+      {
+        "partyId": 303195,
+        "partyLabel": "PVV/PLP",
+        "seats": 30,
+        "votes": 798818
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 22,
+        "votes": 536287
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 22,
+        "votes": 478209
+      },
+      {
+        "partyId": 303213,
+        "partyLabel": "FDF-PLDP",
+        "seats": 14,
+        "votes": 301303
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 11,
+        "votes": 269455
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 2,
+        "votes": 107481
+      },
+      {
+        "partyId": 303334,
+        "partyLabel": "UDP-DN",
+        "seats": 2,
+        "votes": 3623
+      },
+      {
+        "partyId": 303204,
+        "partyLabel": "PSB",
+        "seats": 0,
+        "votes": 164592
+      },
+      {
+        "partyId": 303217,
+        "partyLabel": "BSP RODE LEEUWEN",
+        "seats": 0,
+        "votes": 86929
+      },
+      {
+        "partyId": 303300,
+        "partyLabel": "UDP",
+        "seats": 0,
+        "votes": 58527
+      },
+      {
+        "partyId": 303235,
+        "partyLabel": "PLP",
+        "seats": 0,
+        "votes": 20886
+      },
+      {
+        "partyId": 303257,
+        "partyLabel": "AMADA/tpo",
+        "seats": 0,
+        "votes": 19794
+      },
+      {
+        "partyId": 303206,
+        "partyLabel": "VFP-PFU",
+        "seats": 0,
+        "votes": 18511
+      },
+      {
+        "partyId": 303256,
+        "partyLabel": "PMO",
+        "seats": 0,
+        "votes": 9184
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 8700
+      },
+      {
+        "partyId": 303302,
+        "partyLabel": "PLW",
+        "seats": 0,
+        "votes": 6846
+      },
+      {
+        "partyId": 303292,
+        "partyLabel": "FDP",
+        "seats": 0,
+        "votes": 4729
+      },
+      {
+        "partyId": 303230,
+        "partyLabel": "Rex Fr.",
+        "seats": 0,
+        "votes": 2764
+      },
+      {
+        "partyId": 303267,
+        "partyLabel": "RLiège",
+        "seats": 0,
+        "votes": 1810
+      },
+      {
+        "partyId": 303258,
+        "partyLabel": "Kaganov",
+        "seats": 0,
+        "votes": 1678
+      },
+      {
+        "partyId": 303083,
+        "partyLabel": "SAP",
+        "seats": 0,
+        "votes": 1445
+      },
+      {
+        "partyId": 303274,
+        "partyLabel": "DIEPENDALE",
+        "seats": 0,
+        "votes": 1229
+      },
+      {
+        "partyId": 303280,
+        "partyLabel": "A74",
+        "seats": 0,
+        "votes": 979
+      },
+      {
+        "partyId": 303224,
+        "partyLabel": "PRS",
+        "seats": 0,
+        "votes": 905
+      },
+      {
+        "partyId": 303268,
+        "partyLabel": "ZWARTBERG",
+        "seats": 0,
+        "votes": 665
+      },
+      {
+        "partyId": 303314,
+        "partyLabel": "Trotskyst",
+        "seats": 0,
+        "votes": 645
+      },
+      {
+        "partyId": 303298,
+        "partyLabel": "URB",
+        "seats": 0,
+        "votes": 389
+      },
+      {
+        "partyId": 303297,
+        "partyLabel": "PUR",
+        "seats": 0,
+        "votes": 184
+      }
+    ]
+  },
+  {
+    "date": "1977-04-17",
+    "electionId": 40926,
+    "totalSeats": 212,
+    "totalValidVotes": 5575058,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 56,
+        "votes": 1460757
+      },
+      {
+        "partyId": 303331,
+        "partyLabel": "PSB-BSP",
+        "seats": 34,
+        "votes": 602132
+      },
+      {
+        "partyId": 303006,
+        "partyLabel": "BSP",
+        "seats": 27,
+        "votes": 725513
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 24,
+        "votes": 406694
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 20,
+        "votes": 559567
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 17,
+        "votes": 475917
+      },
+      {
+        "partyId": 303309,
+        "partyLabel": "PRLW",
+        "seats": 16,
+        "votes": 191196
+      },
+      {
+        "partyId": 303039,
+        "partyLabel": "FDF-RW",
+        "seats": 11,
+        "votes": 263104
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 4,
+        "votes": 132773
+      },
+      {
+        "partyId": 303036,
+        "partyLabel": "PCB",
+        "seats": 2,
+        "votes": 37104
+      },
+      {
+        "partyId": 303339,
+        "partyLabel": "PSB-RW",
+        "seats": 1,
+        "votes": 33598
+      },
+      {
+        "partyId": 303204,
+        "partyLabel": "PSB",
+        "seats": 0,
+        "votes": 145771
+      },
+      {
+        "partyId": 303336,
+        "partyLabel": "PSC-CSP",
+        "seats": 0,
+        "votes": 138361
+      },
+      {
+        "partyId": 303337,
+        "partyLabel": "PRLW/PRF",
+        "seats": 0,
+        "votes": 107015
+      },
+      {
+        "partyId": 303243,
+        "partyLabel": "PRLW-PL",
+        "seats": 0,
+        "votes": 92178
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 0,
+        "votes": 62410
+      },
+      {
+        "partyId": 303321,
+        "partyLabel": "PCB/UDP",
+        "seats": 0,
+        "votes": 51930
+      },
+      {
+        "partyId": 303020,
+        "partyLabel": "AMADA",
+        "seats": 0,
+        "votes": 22919
+      },
+      {
+        "partyId": 303239,
+        "partyLabel": "ECOLOG",
+        "seats": 0,
+        "votes": 11839
+      },
+      {
+        "partyId": 303017,
+        "partyLabel": "RAL",
+        "seats": 0,
+        "votes": 8562
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 7735
+      },
+      {
+        "partyId": 303325,
+        "partyLabel": "PLPW",
+        "seats": 0,
+        "votes": 5220
+      },
+      {
+        "partyId": 303320,
+        "partyLabel": "ECOLOG-PBNZ",
+        "seats": 0,
+        "votes": 4321
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 0,
+        "votes": 3834
+      },
+      {
+        "partyId": 303231,
+        "partyLabel": "LRT-RAL",
+        "seats": 0,
+        "votes": 3127
+      },
+      {
+        "partyId": 303318,
+        "partyLabel": "LRT",
+        "seats": 0,
+        "votes": 2905
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 0,
+        "votes": 2435
+      },
+      {
+        "partyId": 303242,
+        "partyLabel": "FFF",
+        "seats": 0,
+        "votes": 2099
+      },
+      {
+        "partyId": 303310,
+        "partyLabel": "TPO",
+        "seats": 0,
+        "votes": 1980
+      },
+      {
+        "partyId": 303234,
+        "partyLabel": "CPC/URB",
+        "seats": 0,
+        "votes": 1547
+      },
+      {
+        "partyId": 303046,
+        "partyLabel": "PFU",
+        "seats": 0,
+        "votes": 1514
+      },
+      {
+        "partyId": 303267,
+        "partyLabel": "RLiège",
+        "seats": 0,
+        "votes": 1421
+      },
+      {
+        "partyId": 303244,
+        "partyLabel": "UB",
+        "seats": 0,
+        "votes": 1083
+      },
+      {
+        "partyId": 303241,
+        "partyLabel": "FNP",
+        "seats": 0,
+        "votes": 994
+      },
+      {
+        "partyId": 303225,
+        "partyLabel": "VFP",
+        "seats": 0,
+        "votes": 967
+      },
+      {
+        "partyId": 303250,
+        "partyLabel": "KAGANO",
+        "seats": 0,
+        "votes": 884
+      },
+      {
+        "partyId": 303338,
+        "partyLabel": "ECOLOGIQUE",
+        "seats": 0,
+        "votes": 777
+      },
+      {
+        "partyId": 303329,
+        "partyLabel": "EW",
+        "seats": 0,
+        "votes": 605
+      },
+      {
+        "partyId": 303333,
+        "partyLabel": "PCBML",
+        "seats": 0,
+        "votes": 533
+      },
+      {
+        "partyId": 303263,
+        "partyLabel": "VOP",
+        "seats": 0,
+        "votes": 443
+      },
+      {
+        "partyId": 303264,
+        "partyLabel": "VB77",
+        "seats": 0,
+        "votes": 377
+      },
+      {
+        "partyId": 303332,
+        "partyLabel": "UCMLB",
+        "seats": 0,
+        "votes": 222
+      },
+      {
+        "partyId": 303327,
+        "partyLabel": "UC-MEUNIER",
+        "seats": 0,
+        "votes": 199
+      },
+      {
+        "partyId": 303326,
+        "partyLabel": "PORT",
+        "seats": 0,
+        "votes": 175
+      },
+      {
+        "partyId": 303311,
+        "partyLabel": "PP",
+        "seats": 0,
+        "votes": 169
+      },
+      {
+        "partyId": 303328,
+        "partyLabel": "POE",
+        "seats": 0,
+        "votes": 152
+      }
+    ]
+  },
+  {
+    "date": "1978-12-17",
+    "electionId": 40956,
+    "totalSeats": 212,
+    "totalValidVotes": 5535631,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 57,
+        "votes": 1447112
+      },
+      {
+        "partyId": 303204,
+        "partyLabel": "PSB",
+        "seats": 31,
+        "votes": 689876
+      },
+      {
+        "partyId": 303006,
+        "partyLabel": "BSP",
+        "seats": 26,
+        "votes": 684976
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 25,
+        "votes": 560440
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 22,
+        "votes": 573387
+      },
+      {
+        "partyId": 303309,
+        "partyLabel": "PRLW",
+        "seats": 15,
+        "votes": 256685
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 14,
+        "votes": 388762
+      },
+      {
+        "partyId": 303039,
+        "partyLabel": "FDF-RW",
+        "seats": 11,
+        "votes": 259019
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 4,
+        "votes": 180234
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 4,
+        "votes": 128153
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 1,
+        "votes": 75635
+      },
+      {
+        "partyId": 303101,
+        "partyLabel": "RAD/UDRT",
+        "seats": 1,
+        "votes": 48616
+      },
+      {
+        "partyId": 303406,
+        "partyLabel": "PSB(LUX)",
+        "seats": 1,
+        "votes": 30222
+      },
+      {
+        "partyId": 303403,
+        "partyLabel": "AMA/TPO",
+        "seats": 0,
+        "votes": 43483
+      },
+      {
+        "partyId": 303364,
+        "partyLabel": "PL",
+        "seats": 0,
+        "votes": 41460
+      },
+      {
+        "partyId": 303337,
+        "partyLabel": "PRLW/PRF",
+        "seats": 0,
+        "votes": 31280
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 0,
+        "votes": 21224
+      },
+      {
+        "partyId": 303302,
+        "partyLabel": "PLW",
+        "seats": 0,
+        "votes": 9861
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 9032
+      },
+      {
+        "partyId": 303239,
+        "partyLabel": "ECOLOG",
+        "seats": 0,
+        "votes": 8360
+      },
+      {
+        "partyId": 303407,
+        "partyLabel": "RW (LUX)",
+        "seats": 0,
+        "votes": 6493
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 0,
+        "votes": 5556
+      },
+      {
+        "partyId": 303426,
+        "partyLabel": "ECOPOL",
+        "seats": 0,
+        "votes": 3922
+      },
+      {
+        "partyId": 303390,
+        "partyLabel": "LSDP",
+        "seats": 0,
+        "votes": 3678
+      },
+      {
+        "partyId": 303425,
+        "partyLabel": "BNP-PNB",
+        "seats": 0,
+        "votes": 3465
+      },
+      {
+        "partyId": 303318,
+        "partyLabel": "LRT",
+        "seats": 0,
+        "votes": 2597
+      },
+      {
+        "partyId": 303394,
+        "partyLabel": "PLF",
+        "seats": 0,
+        "votes": 2313
+      },
+      {
+        "partyId": 303400,
+        "partyLabel": "PPB",
+        "seats": 0,
+        "votes": 2123
+      },
+      {
+        "partyId": 303300,
+        "partyLabel": "UDP",
+        "seats": 0,
+        "votes": 1843
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 0,
+        "votes": 1761
+      },
+      {
+        "partyId": 303046,
+        "partyLabel": "PFU",
+        "seats": 0,
+        "votes": 1686
+      },
+      {
+        "partyId": 303385,
+        "partyLabel": "PF-ECO",
+        "seats": 0,
+        "votes": 1512
+      },
+      {
+        "partyId": 303250,
+        "partyLabel": "KAGANO",
+        "seats": 0,
+        "votes": 1376
+      },
+      {
+        "partyId": 303382,
+        "partyLabel": "PVCM",
+        "seats": 0,
+        "votes": 993
+      },
+      {
+        "partyId": 303023,
+        "partyLabel": "PFN",
+        "seats": 0,
+        "votes": 729
+      },
+      {
+        "partyId": 303433,
+        "partyLabel": "LP-PL",
+        "seats": 0,
+        "votes": 698
+      },
+      {
+        "partyId": 303436,
+        "partyLabel": "PDE",
+        "seats": 0,
+        "votes": 375
+      },
+      {
+        "partyId": 303435,
+        "partyLabel": "PDRT",
+        "seats": 0,
+        "votes": 311
+      }
+    ]
+  },
+  {
+    "date": "1981-11-08",
+    "electionId": 40925,
+    "totalSeats": 212,
+    "totalValidVotes": 6025027,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 43,
+        "votes": 1165239
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 35,
+        "votes": 733137
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 28,
+        "votes": 776871
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 26,
+        "votes": 744593
+      },
+      {
+        "partyId": 303007,
+        "partyLabel": "PRL",
+        "seats": 24,
+        "votes": 480380
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 20,
+        "votes": 588436
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 18,
+        "votes": 390896
+      },
+      {
+        "partyId": 303039,
+        "partyLabel": "FDF-RW",
+        "seats": 8,
+        "votes": 253720
+      },
+      {
+        "partyId": 303102,
+        "partyLabel": "UDRT/RA",
+        "seats": 3,
+        "votes": 130526
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 2,
+        "votes": 138575
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 2,
+        "votes": 132312
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 2,
+        "votes": 27892
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 1,
+        "votes": 66424
+      },
+      {
+        "partyId": 303036,
+        "partyLabel": "PCB",
+        "seats": 0,
+        "votes": 72357
+      },
+      {
+        "partyId": 303048,
+        "partyLabel": "PVDA",
+        "seats": 0,
+        "votes": 40446
+      },
+      {
+        "partyId": 303347,
+        "partyLabel": "PSC/CSP",
+        "seats": 0,
+        "votes": 39961
+      },
+      {
+        "partyId": 303042,
+        "partyLabel": "KPB",
+        "seats": 0,
+        "votes": 38729
+      },
+      {
+        "partyId": 303348,
+        "partyLabel": "PRL/PFF",
+        "seats": 0,
+        "votes": 35925
+      },
+      {
+        "partyId": 303346,
+        "partyLabel": "SP/PS",
+        "seats": 0,
+        "votes": 31784
+      },
+      {
+        "partyId": 303142,
+        "partyLabel": "WALLON",
+        "seats": 0,
+        "votes": 31061
+      },
+      {
+        "partyId": 303152,
+        "partyLabel": "RAD",
+        "seats": 0,
+        "votes": 28661
+      },
+      {
+        "partyId": 303110,
+        "partyLabel": "ECOLO-J",
+        "seats": 0,
+        "votes": 10946
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 8397
+      },
+      {
+        "partyId": 303017,
+        "partyLabel": "RAL",
+        "seats": 0,
+        "votes": 7110
+      },
+      {
+        "partyId": 303126,
+        "partyLabel": "ECOLOS",
+        "seats": 0,
+        "votes": 5858
+      },
+      {
+        "partyId": 303108,
+        "partyLabel": "LRT-PLS",
+        "seats": 0,
+        "votes": 5241
+      },
+      {
+        "partyId": 303129,
+        "partyLabel": "FNK",
+        "seats": 0,
+        "votes": 5102
+      },
+      {
+        "partyId": 303335,
+        "partyLabel": "UDRT",
+        "seats": 0,
+        "votes": 4540
+      },
+      {
+        "partyId": 303118,
+        "partyLabel": "BLANCO.",
+        "seats": 0,
+        "votes": 4118
+      },
+      {
+        "partyId": 303075,
+        "partyLabel": "DD",
+        "seats": 0,
+        "votes": 3545
+      },
+      {
+        "partyId": 303134,
+        "partyLabel": "UNF",
+        "seats": 0,
+        "votes": 2914
+      },
+      {
+        "partyId": 303056,
+        "partyLabel": "PVDA/PTB",
+        "seats": 0,
+        "votes": 2898
+      },
+      {
+        "partyId": 303123,
+        "partyLabel": "ECO-BXL",
+        "seats": 0,
+        "votes": 2710
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 0,
+        "votes": 2479
+      },
+      {
+        "partyId": 303013,
+        "partyLabel": "PTB",
+        "seats": 0,
+        "votes": 2460
+      },
+      {
+        "partyId": 303171,
+        "partyLabel": "BNP",
+        "seats": 0,
+        "votes": 2263
+      },
+      {
+        "partyId": 303153,
+        "partyLabel": "PCPA",
+        "seats": 0,
+        "votes": 1785
+      },
+      {
+        "partyId": 303115,
+        "partyLabel": "PNB-BNP",
+        "seats": 0,
+        "votes": 954
+      },
+      {
+        "partyId": 303046,
+        "partyLabel": "PFU",
+        "seats": 0,
+        "votes": 856
+      },
+      {
+        "partyId": 303341,
+        "partyLabel": "AAJ",
+        "seats": 0,
+        "votes": 838
+      },
+      {
+        "partyId": 303178,
+        "partyLabel": "URD",
+        "seats": 0,
+        "votes": 598
+      },
+      {
+        "partyId": 303340,
+        "partyLabel": "LISTE-12",
+        "seats": 0,
+        "votes": 588
+      },
+      {
+        "partyId": 303342,
+        "partyLabel": "LISTE-14",
+        "seats": 0,
+        "votes": 372
+      },
+      {
+        "partyId": 303350,
+        "partyLabel": "CIN",
+        "seats": 0,
+        "votes": 210
+      },
+      {
+        "partyId": 303343,
+        "partyLabel": "LISTE-13",
+        "seats": 0,
+        "votes": 180
+      },
+      {
+        "partyId": 303349,
+        "partyLabel": "PNB",
+        "seats": 0,
+        "votes": 140
+      }
+    ]
+  },
+  {
+    "date": "1985-10-13",
+    "electionId": 40924,
+    "totalSeats": 212,
+    "totalValidVotes": 6064260,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 49,
+        "votes": 1291244
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 35,
+        "votes": 834488
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 32,
+        "votes": 882200
+      },
+      {
+        "partyId": 303007,
+        "partyLabel": "PRL",
+        "seats": 24,
+        "votes": 619390
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 22,
+        "votes": 651806
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 20,
+        "votes": 482254
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 16,
+        "votes": 477755
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 5,
+        "votes": 152483
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 4,
+        "votes": 226758
+      },
+      {
+        "partyId": 303097,
+        "partyLabel": "FDF",
+        "seats": 3,
+        "votes": 72361
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 1,
+        "votes": 85391
+      },
+      {
+        "partyId": 303101,
+        "partyLabel": "RAD/UDRT",
+        "seats": 1,
+        "votes": 69707
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 0,
+        "votes": 71695
+      },
+      {
+        "partyId": 303056,
+        "partyLabel": "PVDA/PTB",
+        "seats": 0,
+        "votes": 46034
+      },
+      {
+        "partyId": 303117,
+        "partyLabel": "SEP",
+        "seats": 0,
+        "votes": 31983
+      },
+      {
+        "partyId": 303106,
+        "partyLabel": "SAP/POS",
+        "seats": 0,
+        "votes": 13681
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 0,
+        "votes": 9719
+      },
+      {
+        "partyId": 303103,
+        "partyLabel": "PW",
+        "seats": 0,
+        "votes": 9284
+      },
+      {
+        "partyId": 303132,
+        "partyLabel": "FORCES",
+        "seats": 0,
+        "votes": 8221
+      },
+      {
+        "partyId": 303122,
+        "partyLabel": "UND",
+        "seats": 0,
+        "votes": 6609
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 5228
+      },
+      {
+        "partyId": 303107,
+        "partyLabel": "NF-FN",
+        "seats": 0,
+        "votes": 3738
+      },
+      {
+        "partyId": 303114,
+        "partyLabel": "PLC",
+        "seats": 0,
+        "votes": 3442
+      },
+      {
+        "partyId": 303116,
+        "partyLabel": "NCP/PCN",
+        "seats": 0,
+        "votes": 1763
+      },
+      {
+        "partyId": 303173,
+        "partyLabel": "ZOMAAR",
+        "seats": 0,
+        "votes": 1630
+      },
+      {
+        "partyId": 303046,
+        "partyLabel": "PFU",
+        "seats": 0,
+        "votes": 1201
+      },
+      {
+        "partyId": 303345,
+        "partyLabel": "UPW",
+        "seats": 0,
+        "votes": 828
+      },
+      {
+        "partyId": 303094,
+        "partyLabel": "VVP",
+        "seats": 0,
+        "votes": 678
+      },
+      {
+        "partyId": 303351,
+        "partyLabel": "CHARLIER",
+        "seats": 0,
+        "votes": 655
+      },
+      {
+        "partyId": 303167,
+        "partyLabel": "GIOT",
+        "seats": 0,
+        "votes": 640
+      },
+      {
+        "partyId": 303135,
+        "partyLabel": "HP-PH",
+        "seats": 0,
+        "votes": 518
+      },
+      {
+        "partyId": 303344,
+        "partyLabel": "AAT",
+        "seats": 0,
+        "votes": 464
+      },
+      {
+        "partyId": 303163,
+        "partyLabel": "SDU-USD",
+        "seats": 0,
+        "votes": 412
+      }
+    ]
+  },
+  {
+    "date": "1987-12-13",
+    "electionId": 40923,
+    "totalSeats": 212,
+    "totalValidVotes": 6145207,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 43,
+        "votes": 1195363
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 40,
+        "votes": 961361
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 32,
+        "votes": 915432
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 25,
+        "votes": 709758
+      },
+      {
+        "partyId": 303007,
+        "partyLabel": "PRL",
+        "seats": 23,
+        "votes": 577959
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 19,
+        "votes": 491908
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 16,
+        "votes": 495120
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 6,
+        "votes": 275437
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 3,
+        "votes": 157988
+      },
+      {
+        "partyId": 303097,
+        "partyLabel": "FDF",
+        "seats": 3,
+        "votes": 71338
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 2,
+        "votes": 116534
+      },
+      {
+        "partyId": 303104,
+        "partyLabel": "KPB/PCB",
+        "seats": 0,
+        "votes": 51046
+      },
+      {
+        "partyId": 303056,
+        "partyLabel": "PVDA/PTB",
+        "seats": 0,
+        "votes": 45218
+      },
+      {
+        "partyId": 303106,
+        "partyLabel": "SAP/POS",
+        "seats": 0,
+        "votes": 31446
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 0,
+        "votes": 12391
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 0,
+        "votes": 7596
+      },
+      {
+        "partyId": 303101,
+        "partyLabel": "RAD/UDRT",
+        "seats": 0,
+        "votes": 6452
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 0,
+        "votes": 6096
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 5683
+      },
+      {
+        "partyId": 303111,
+        "partyLabel": "PFN/PCN",
+        "seats": 0,
+        "votes": 5053
+      },
+      {
+        "partyId": 303114,
+        "partyLabel": "PLC",
+        "seats": 0,
+        "votes": 4136
+      },
+      {
+        "partyId": 303046,
+        "partyLabel": "PFU",
+        "seats": 0,
+        "votes": 959
+      },
+      {
+        "partyId": 303184,
+        "partyLabel": "AATSLE",
+        "seats": 0,
+        "votes": 593
+      },
+      {
+        "partyId": 303169,
+        "partyLabel": "GPR",
+        "seats": 0,
+        "votes": 340
+      }
+    ]
+  },
+  {
+    "date": "1991-11-24",
+    "electionId": 40922,
+    "totalSeats": 212,
+    "totalValidVotes": 6162160,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 39,
+        "votes": 1036165
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 35,
+        "votes": 831199
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 28,
+        "votes": 737976
+      },
+      {
+        "partyId": 303009,
+        "partyLabel": "PVV",
+        "seats": 26,
+        "votes": 738016
+      },
+      {
+        "partyId": 303007,
+        "partyLabel": "PRL",
+        "seats": 20,
+        "votes": 501647
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 18,
+        "votes": 476730
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 12,
+        "votes": 405247
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 10,
+        "votes": 363124
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 10,
+        "votes": 312624
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 7,
+        "votes": 299550
+      },
+      {
+        "partyId": 303109,
+        "partyLabel": "ROSSEM",
+        "seats": 3,
+        "votes": 198182
+      },
+      {
+        "partyId": 303098,
+        "partyLabel": "FDF/PPW",
+        "seats": 3,
+        "votes": 90813
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 1,
+        "votes": 64992
+      },
+      {
+        "partyId": 303056,
+        "partyLabel": "PVDA/PTB",
+        "seats": 0,
+        "votes": 30491
+      },
+      {
+        "partyId": 303065,
+        "partyLabel": "B.E.B",
+        "seats": 0,
+        "votes": 15429
+      },
+      {
+        "partyId": 303055,
+        "partyLabel": "REGEBO",
+        "seats": 0,
+        "votes": 11944
+      },
+      {
+        "partyId": 303050,
+        "partyLabel": "AGIR",
+        "seats": 0,
+        "votes": 11189
+      },
+      {
+        "partyId": 293021,
+        "partyLabel": "PC",
+        "seats": 0,
+        "votes": 5706
+      },
+      {
+        "partyId": 303106,
+        "partyLabel": "SAP/POS",
+        "seats": 0,
+        "votes": 5243
+      },
+      {
+        "partyId": 303170,
+        "partyLabel": "V.D.",
+        "seats": 0,
+        "votes": 4467
+      },
+      {
+        "partyId": 303100,
+        "partyLabel": "RW",
+        "seats": 0,
+        "votes": 3756
+      },
+      {
+        "partyId": 303151,
+        "partyLabel": "VCD/PCS",
+        "seats": 0,
+        "votes": 2941
+      },
+      {
+        "partyId": 303101,
+        "partyLabel": "RAD/UDRT",
+        "seats": 0,
+        "votes": 2416
+      },
+      {
+        "partyId": 303175,
+        "partyLabel": "O.A.T.N.B.",
+        "seats": 0,
+        "votes": 2413
+      },
+      {
+        "partyId": 303111,
+        "partyLabel": "PFN/PCN",
+        "seats": 0,
+        "votes": 1870
+      },
+      {
+        "partyId": 303121,
+        "partyLabel": "PVCS",
+        "seats": 0,
+        "votes": 1769
+      },
+      {
+        "partyId": 303125,
+        "partyLabel": "D.V.A.",
+        "seats": 0,
+        "votes": 1139
+      },
+      {
+        "partyId": 303181,
+        "partyLabel": "F.N.B.B.",
+        "seats": 0,
+        "votes": 1128
+      },
+      {
+        "partyId": 303179,
+        "partyLabel": "ROSSUM",
+        "seats": 0,
+        "votes": 1012
+      },
+      {
+        "partyId": 303160,
+        "partyLabel": "U.C.D.",
+        "seats": 0,
+        "votes": 721
+      },
+      {
+        "partyId": 303127,
+        "partyLabel": "PLI-POL",
+        "seats": 0,
+        "votes": 709
+      },
+      {
+        "partyId": 303166,
+        "partyLabel": "N.V.",
+        "seats": 0,
+        "votes": 693
+      },
+      {
+        "partyId": 303188,
+        "partyLabel": "S.N.W.",
+        "seats": 0,
+        "votes": 491
+      },
+      {
+        "partyId": 303172,
+        "partyLabel": "SRD",
+        "seats": 0,
+        "votes": 368
+      }
+    ]
+  },
+  {
+    "date": "1995-05-21",
+    "electionId": 40921,
+    "totalSeats": 150,
+    "totalValidVotes": 6072051,
+    "parties": [
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 29,
+        "votes": 1042933
+      },
+      {
+        "partyId": 293005,
+        "partyLabel": "VLD",
+        "seats": 21,
+        "votes": 798363
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 21,
+        "votes": 720819
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 20,
+        "votes": 762444
+      },
+      {
+        "partyId": 293014,
+        "partyLabel": "PRL-FDF",
+        "seats": 18,
+        "votes": 623250
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 12,
+        "votes": 469101
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 11,
+        "votes": 475677
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 6,
+        "votes": 243362
+      },
+      {
+        "partyId": 303012,
+        "partyLabel": "VU",
+        "seats": 5,
+        "votes": 283516
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 5,
+        "votes": 269058
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 2,
+        "votes": 138496
+      },
+      {
+        "partyId": 303096,
+        "partyLabel": "BANAAN",
+        "seats": 0,
+        "votes": 40098
+      },
+      {
+        "partyId": 303034,
+        "partyLabel": "W.O.W.",
+        "seats": 0,
+        "votes": 25195
+      },
+      {
+        "partyId": 293009,
+        "partyLabel": "PVDA-AE",
+        "seats": 0,
+        "votes": 20997
+      },
+      {
+        "partyId": 303050,
+        "partyLabel": "AGIR",
+        "seats": 0,
+        "votes": 15374
+      },
+      {
+        "partyId": 303033,
+        "partyLabel": "PTB-UA",
+        "seats": 0,
+        "votes": 13250
+      },
+      {
+        "partyId": 303054,
+        "partyLabel": "UNIE",
+        "seats": 0,
+        "votes": 11779
+      },
+      {
+        "partyId": 303094,
+        "partyLabel": "VVP",
+        "seats": 0,
+        "votes": 8480
+      },
+      {
+        "partyId": 303142,
+        "partyLabel": "WALLON",
+        "seats": 0,
+        "votes": 6462
+      },
+      {
+        "partyId": 293021,
+        "partyLabel": "PC",
+        "seats": 0,
+        "votes": 6277
+      },
+      {
+        "partyId": 303067,
+        "partyLabel": "N.W.P.",
+        "seats": 0,
+        "votes": 5314
+      },
+      {
+        "partyId": 303128,
+        "partyLabel": "JEUNES",
+        "seats": 0,
+        "votes": 5243
+      },
+      {
+        "partyId": 303137,
+        "partyLabel": "BEB",
+        "seats": 0,
+        "votes": 5171
+      },
+      {
+        "partyId": 303065,
+        "partyLabel": "B.E.B",
+        "seats": 0,
+        "votes": 5015
+      },
+      {
+        "partyId": 303091,
+        "partyLabel": "PDB",
+        "seats": 0,
+        "votes": 4426
+      },
+      {
+        "partyId": 303140,
+        "partyLabel": "EMPLOI",
+        "seats": 0,
+        "votes": 3812
+      },
+      {
+        "partyId": 303147,
+        "partyLabel": "PSP",
+        "seats": 0,
+        "votes": 2939
+      },
+      {
+        "partyId": 303086,
+        "partyLabel": "W.I.T.",
+        "seats": 0,
+        "votes": 2936
+      },
+      {
+        "partyId": 303138,
+        "partyLabel": "PTB-PVDA",
+        "seats": 0,
+        "votes": 2852
+      },
+      {
+        "partyId": 293022,
+        "partyLabel": "PCN",
+        "seats": 0,
+        "votes": 2554
+      },
+      {
+        "partyId": 303095,
+        "partyLabel": "SUD-BEB",
+        "seats": 0,
+        "votes": 2412
+      },
+      {
+        "partyId": 303120,
+        "partyLabel": "BLANC",
+        "seats": 0,
+        "votes": 2410
+      },
+      {
+        "partyId": 303159,
+        "partyLabel": "UNI.E",
+        "seats": 0,
+        "votes": 2099
+      },
+      {
+        "partyId": 303113,
+        "partyLabel": "R.L.B.",
+        "seats": 0,
+        "votes": 1892
+      },
+      {
+        "partyId": 303072,
+        "partyLabel": "PLUS",
+        "seats": 0,
+        "votes": 1705
+      },
+      {
+        "partyId": 303141,
+        "partyLabel": "R",
+        "seats": 0,
+        "votes": 1606
+      },
+      {
+        "partyId": 303158,
+        "partyLabel": "AUTO",
+        "seats": 0,
+        "votes": 1603
+      },
+      {
+        "partyId": 303051,
+        "partyLabel": "PLN",
+        "seats": 0,
+        "votes": 1478
+      },
+      {
+        "partyId": 303145,
+        "partyLabel": "D",
+        "seats": 0,
+        "votes": 1471
+      },
+      {
+        "partyId": 303146,
+        "partyLabel": "A.O.V.",
+        "seats": 0,
+        "votes": 1274
+      },
+      {
+        "partyId": 303032,
+        "partyLabel": "LETD",
+        "seats": 0,
+        "votes": 1270
+      },
+      {
+        "partyId": 303093,
+        "partyLabel": "U.D.F.",
+        "seats": 0,
+        "votes": 1179
+      },
+      {
+        "partyId": 303185,
+        "partyLabel": "U.R.D.",
+        "seats": 0,
+        "votes": 1009
+      },
+      {
+        "partyId": 303190,
+        "partyLabel": "U.L.",
+        "seats": 0,
+        "votes": 907
+      },
+      {
+        "partyId": 303069,
+        "partyLabel": "A.R.",
+        "seats": 0,
+        "votes": 882
+      },
+      {
+        "partyId": 303150,
+        "partyLabel": "ADM",
+        "seats": 0,
+        "votes": 831
+      },
+      {
+        "partyId": 303161,
+        "partyLabel": "LIGUE",
+        "seats": 0,
+        "votes": 808
+      },
+      {
+        "partyId": 303186,
+        "partyLabel": "FRW",
+        "seats": 0,
+        "votes": 750
+      },
+      {
+        "partyId": 303089,
+        "partyLabel": "V.N.P.",
+        "seats": 0,
+        "votes": 670
+      },
+      {
+        "partyId": 303148,
+        "partyLabel": "RVM",
+        "seats": 0,
+        "votes": 566
+      },
+      {
+        "partyId": 303174,
+        "partyLabel": "D.S.A.",
+        "seats": 0,
+        "votes": 536
+      },
+      {
+        "partyId": 303063,
+        "partyLabel": "PFH/PFU",
+        "seats": 0,
+        "votes": 533
+      },
+      {
+        "partyId": 303131,
+        "partyLabel": "ADD",
+        "seats": 0,
+        "votes": 506
+      },
+      {
+        "partyId": 303180,
+        "partyLabel": "D.L.L.",
+        "seats": 0,
+        "votes": 450
+      },
+      {
+        "partyId": 303124,
+        "partyLabel": "PCN-NCP",
+        "seats": 0,
+        "votes": 441
+      },
+      {
+        "partyId": 303149,
+        "partyLabel": "BEBEL",
+        "seats": 0,
+        "votes": 393
+      },
+      {
+        "partyId": 303192,
+        "partyLabel": "PDA",
+        "seats": 0,
+        "votes": 329
+      },
+      {
+        "partyId": 303139,
+        "partyLabel": "I.N.",
+        "seats": 0,
+        "votes": 311
+      },
+      {
+        "partyId": 303165,
+        "partyLabel": "REF",
+        "seats": 0,
+        "votes": 310
+      }
+    ]
+  },
+  {
+    "date": "1999-06-13",
+    "electionId": 40920,
+    "totalSeats": 150,
+    "totalValidVotes": 6214074,
+    "parties": [
+      {
+        "partyId": 293005,
+        "partyLabel": "VLD",
+        "seats": 23,
+        "votes": 888861
+      },
+      {
+        "partyId": 293008,
+        "partyLabel": "CVP",
+        "seats": 22,
+        "votes": 875455
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 19,
+        "votes": 631653
+      },
+      {
+        "partyId": 293014,
+        "partyLabel": "PRL-FDF",
+        "seats": 18,
+        "votes": 630219
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 15,
+        "votes": 613399
+      },
+      {
+        "partyId": 293004,
+        "partyLabel": "SP",
+        "seats": 14,
+        "votes": 593372
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 11,
+        "votes": 457281
+      },
+      {
+        "partyId": 293016,
+        "partyLabel": "PSC",
+        "seats": 10,
+        "votes": 365318
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 9,
+        "votes": 434449
+      },
+      {
+        "partyId": 293007,
+        "partyLabel": "VU-ID",
+        "seats": 8,
+        "votes": 345576
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 1,
+        "votes": 90401
+      },
+      {
+        "partyId": 293017,
+        "partyLabel": "VIVANT.",
+        "seats": 0,
+        "votes": 46742
+      },
+      {
+        "partyId": 303101,
+        "partyLabel": "RAD/UDRT",
+        "seats": 0,
+        "votes": 23081
+      },
+      {
+        "partyId": 293019,
+        "partyLabel": "FNB",
+        "seats": 0,
+        "votes": 22491
+      },
+      {
+        "partyId": 293009,
+        "partyLabel": "PVDA-AE",
+        "seats": 0,
+        "votes": 22170
+      },
+      {
+        "partyId": 293011,
+        "partyLabel": "VIVANT",
+        "seats": 0,
+        "votes": 14008
+      },
+      {
+        "partyId": 303142,
+        "partyLabel": "WALLON",
+        "seats": 0,
+        "votes": 11863
+      },
+      {
+        "partyId": 293010,
+        "partyLabel": "PNPB",
+        "seats": 0,
+        "votes": 8781
+      },
+      {
+        "partyId": 293010,
+        "partyLabel": "PNPB",
+        "seats": 0,
+        "votes": 8781
+      },
+      {
+        "partyId": 303033,
+        "partyLabel": "PTB-UA",
+        "seats": 0,
+        "votes": 8760
+      },
+      {
+        "partyId": 303034,
+        "partyLabel": "W.O.W.",
+        "seats": 0,
+        "votes": 8033
+      },
+      {
+        "partyId": 303157,
+        "partyLabel": "FRANCE",
+        "seats": 0,
+        "votes": 7493
+      },
+      {
+        "partyId": 303168,
+        "partyLabel": "PJU-PDB",
+        "seats": 0,
+        "votes": 2945
+      },
+      {
+        "partyId": 293012,
+        "partyLabel": "SOLIDE",
+        "seats": 0,
+        "votes": 2623
+      },
+      {
+        "partyId": 303112,
+        "partyLabel": "P.T.B.-P.V.D.A.",
+        "seats": 0,
+        "votes": 2406
+      },
+      {
+        "partyId": 303052,
+        "partyLabel": "PSD",
+        "seats": 0,
+        "votes": 1928
+      },
+      {
+        "partyId": 293020,
+        "partyLabel": "PNPb.",
+        "seats": 0,
+        "votes": 1789
+      },
+      {
+        "partyId": 303087,
+        "partyLabel": "LEEF",
+        "seats": 0,
+        "votes": 1703
+      },
+      {
+        "partyId": 303086,
+        "partyLabel": "W.I.T.",
+        "seats": 0,
+        "votes": 1610
+      },
+      {
+        "partyId": 303189,
+        "partyLabel": "A.V.D.B.",
+        "seats": 0,
+        "votes": 1597
+      },
+      {
+        "partyId": 303183,
+        "partyLabel": "A.",
+        "seats": 0,
+        "votes": 1595
+      },
+      {
+        "partyId": 303182,
+        "partyLabel": "BIZON",
+        "seats": 0,
+        "votes": 1488
+      },
+      {
+        "partyId": 303133,
+        "partyLabel": "NOOR",
+        "seats": 0,
+        "votes": 1244
+      },
+      {
+        "partyId": 303119,
+        "partyLabel": "A..",
+        "seats": 0,
+        "votes": 1233
+      },
+      {
+        "partyId": 303019,
+        "partyLabel": "A",
+        "seats": 0,
+        "votes": 1173
+      },
+      {
+        "partyId": 303064,
+        "partyLabel": "PMTJ",
+        "seats": 0,
+        "votes": 1068
+      },
+      {
+        "partyId": 303154,
+        "partyLabel": "N.P.",
+        "seats": 0,
+        "votes": 943
+      },
+      {
+        "partyId": 303143,
+        "partyLabel": "FN-FW",
+        "seats": 0,
+        "votes": 859
+      },
+      {
+        "partyId": 303187,
+        "partyLabel": "UDDU.",
+        "seats": 0,
+        "votes": 698
+      },
+      {
+        "partyId": 303156,
+        "partyLabel": "FNBP",
+        "seats": 0,
+        "votes": 671
+      },
+      {
+        "partyId": 303089,
+        "partyLabel": "V.N.P.",
+        "seats": 0,
+        "votes": 656
+      },
+      {
+        "partyId": 303136,
+        "partyLabel": "STDUST",
+        "seats": 0,
+        "votes": 649
+      },
+      {
+        "partyId": 303155,
+        "partyLabel": "V.I.C.",
+        "seats": 0,
+        "votes": 636
+      },
+      {
+        "partyId": 303075,
+        "partyLabel": "DD",
+        "seats": 0,
+        "votes": 607
+      },
+      {
+        "partyId": 303165,
+        "partyLabel": "REF",
+        "seats": 0,
+        "votes": 601
+      },
+      {
+        "partyId": 303085,
+        "partyLabel": "MLINKS",
+        "seats": 0,
+        "votes": 438
+      },
+      {
+        "partyId": 303084,
+        "partyLabel": "UDDU",
+        "seats": 0,
+        "votes": 421
+      },
+      {
+        "partyId": 293022,
+        "partyLabel": "PCN",
+        "seats": 0,
+        "votes": 399
+      },
+      {
+        "partyId": 303130,
+        "partyLabel": "P.H.",
+        "seats": 0,
+        "votes": 369
+      },
+      {
+        "partyId": 303144,
+        "partyLabel": "LC",
+        "seats": 0,
+        "votes": 242
+      },
+      {
+        "partyId": 303191,
+        "partyLabel": "P.A.P",
+        "seats": 0,
+        "votes": 105
+      }
+    ]
+  },
+  {
+    "date": "2003-05-18",
+    "electionId": 41000,
+    "totalSeats": 150,
+    "totalValidVotes": 6572189,
+    "parties": [
+      {
+        "partyId": 293005,
+        "partyLabel": "VLD",
+        "seats": 25,
+        "votes": 1009223
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 25,
+        "votes": 855992
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 24,
+        "votes": 748952
+      },
+      {
+        "partyId": 303353,
+        "partyLabel": "sp.a-spirit",
+        "seats": 23,
+        "votes": 979750
+      },
+      {
+        "partyId": 303356,
+        "partyLabel": "CD&V",
+        "seats": 21,
+        "votes": 870749
+      },
+      {
+        "partyId": 293006,
+        "partyLabel": "VLAAMS BLOK",
+        "seats": 18,
+        "votes": 761407
+      },
+      {
+        "partyId": 303368,
+        "partyLabel": "CDH",
+        "seats": 8,
+        "votes": 359660
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 4,
+        "votes": 201118
+      },
+      {
+        "partyId": 303352,
+        "partyLabel": "N-VA",
+        "seats": 1,
+        "votes": 201399
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 1,
+        "votes": 130012
+      },
+      {
+        "partyId": 303004,
+        "partyLabel": "AGALEV",
+        "seats": 0,
+        "votes": 162205
+      },
+      {
+        "partyId": 293011,
+        "partyLabel": "VIVANT",
+        "seats": 0,
+        "votes": 44233
+      },
+      {
+        "partyId": 303371,
+        "partyLabel": "CDF",
+        "seats": 0,
+        "votes": 38346
+      },
+      {
+        "partyId": 303358,
+        "partyLabel": "LIB. APPEL",
+        "seats": 0,
+        "votes": 29868
+      },
+      {
+        "partyId": 293017,
+        "partyLabel": "VIVANT.",
+        "seats": 0,
+        "votes": 29194
+      },
+      {
+        "partyId": 303369,
+        "partyLabel": "RWF RBF",
+        "seats": 0,
+        "votes": 25416
+      },
+      {
+        "partyId": 303013,
+        "partyLabel": "PTB",
+        "seats": 0,
+        "votes": 11298
+      },
+      {
+        "partyId": 303363,
+        "partyLabel": "RESIST",
+        "seats": 0,
+        "votes": 10059
+      },
+      {
+        "partyId": 303048,
+        "partyLabel": "PVDA",
+        "seats": 0,
+        "votes": 9527
+      },
+      {
+        "partyId": 303481,
+        "partyLabel": "PCP",
+        "seats": 0,
+        "votes": 8258
+      },
+      {
+        "partyId": 303896,
+        "partyLabel": "MS",
+        "seats": 0,
+        "votes": 8116
+      },
+      {
+        "partyId": 303621,
+        "partyLabel": "VIVANT..",
+        "seats": 0,
+        "votes": 7910
+      },
+      {
+        "partyId": 293021,
+        "partyLabel": "PC",
+        "seats": 0,
+        "votes": 6759
+      },
+      {
+        "partyId": 293019,
+        "partyLabel": "FNB",
+        "seats": 0,
+        "votes": 6736
+      },
+      {
+        "partyId": 303628,
+        "partyLabel": "Maria",
+        "seats": 0,
+        "votes": 6440
+      },
+      {
+        "partyId": 303912,
+        "partyLabel": "Vlaams BlokF",
+        "seats": 0,
+        "votes": 6198
+      },
+      {
+        "partyId": 303157,
+        "partyLabel": "FRANCE",
+        "seats": 0,
+        "votes": 5668
+      },
+      {
+        "partyId": 303624,
+        "partyLabel": "NATION",
+        "seats": 0,
+        "votes": 4190
+      },
+      {
+        "partyId": 303439,
+        "partyLabel": "BELG.UNIE-BUB",
+        "seats": 0,
+        "votes": 3561
+      },
+      {
+        "partyId": 303365,
+        "partyLabel": "veilig blauw",
+        "seats": 0,
+        "votes": 3237
+      },
+      {
+        "partyId": 303360,
+        "partyLabel": "LSP",
+        "seats": 0,
+        "votes": 2929
+      },
+      {
+        "partyId": 304034,
+        "partyLabel": "PC-RDS",
+        "seats": 0,
+        "votes": 2522
+      },
+      {
+        "partyId": 303961,
+        "partyLabel": "CHOPE",
+        "seats": 0,
+        "votes": 2430
+      },
+      {
+        "partyId": 303626,
+        "partyLabel": "RDS-PC",
+        "seats": 0,
+        "votes": 2084
+      },
+      {
+        "partyId": 303887,
+        "partyLabel": "UFE",
+        "seats": 0,
+        "votes": 1910
+      },
+      {
+        "partyId": 303771,
+        "partyLabel": "BUB-BEB",
+        "seats": 0,
+        "votes": 1828
+      },
+      {
+        "partyId": 303822,
+        "partyLabel": "omnium",
+        "seats": 0,
+        "votes": 1616
+      },
+      {
+        "partyId": 303192,
+        "partyLabel": "PDA",
+        "seats": 0,
+        "votes": 1415
+      },
+      {
+        "partyId": 303088,
+        "partyLabel": "vital",
+        "seats": 0,
+        "votes": 1325
+      },
+      {
+        "partyId": 303133,
+        "partyLabel": "NOOR",
+        "seats": 0,
+        "votes": 1141
+      },
+      {
+        "partyId": 303911,
+        "partyLabel": "DL",
+        "seats": 0,
+        "votes": 1052
+      },
+      {
+        "partyId": 304033,
+        "partyLabel": "MDT",
+        "seats": 0,
+        "votes": 914
+      },
+      {
+        "partyId": 303631,
+        "partyLabel": "PH-HP",
+        "seats": 0,
+        "votes": 521
+      },
+      {
+        "partyId": 304087,
+        "partyLabel": "PPR",
+        "seats": 0,
+        "votes": 376
+      }
+    ]
+  },
+  {
+    "date": "2007-06-10",
+    "electionId": 51187,
+    "totalSeats": 150,
+    "totalValidVotes": 6671360,
+    "parties": [
+      {
+        "partyId": 303437,
+        "partyLabel": "CD&V NVA",
+        "seats": 30,
+        "votes": 1234950
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 23,
+        "votes": 835073
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 20,
+        "votes": 724787
+      },
+      {
+        "partyId": 305803,
+        "partyLabel": "open vld",
+        "seats": 18,
+        "votes": 789445
+      },
+      {
+        "partyId": 305802,
+        "partyLabel": "VLAAMS BELANG",
+        "seats": 17,
+        "votes": 799844
+      },
+      {
+        "partyId": 303353,
+        "partyLabel": "sp.a-spirit",
+        "seats": 14,
+        "votes": 684390
+      },
+      {
+        "partyId": 303368,
+        "partyLabel": "CDH",
+        "seats": 10,
+        "votes": 404077
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 8,
+        "votes": 340378
+      },
+      {
+        "partyId": 305804,
+        "partyLabel": "Lijst Dedecker",
+        "seats": 5,
+        "votes": 268648
+      },
+      {
+        "partyId": 303452,
+        "partyLabel": "GROEN!",
+        "seats": 4,
+        "votes": 265828
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 1,
+        "votes": 131385
+      },
+      {
+        "partyId": 303475,
+        "partyLabel": "PVDA+",
+        "seats": 0,
+        "votes": 37758
+      },
+      {
+        "partyId": 303476,
+        "partyLabel": "R.W.F.",
+        "seats": 0,
+        "votes": 26240
+      },
+      {
+        "partyId": 305805,
+        "partyLabel": "CAP",
+        "seats": 0,
+        "votes": 20083
+      },
+      {
+        "partyId": 293021,
+        "partyLabel": "PC",
+        "seats": 0,
+        "votes": 19329
+      },
+      {
+        "partyId": 303472,
+        "partyLabel": "PTB+",
+        "seats": 0,
+        "votes": 14931
+      },
+      {
+        "partyId": 303371,
+        "partyLabel": "CDF",
+        "seats": 0,
+        "votes": 11961
+      },
+      {
+        "partyId": 303462,
+        "partyLabel": "FN B",
+        "seats": 0,
+        "votes": 9010
+      },
+      {
+        "partyId": 303142,
+        "partyLabel": "WALLON",
+        "seats": 0,
+        "votes": 8688
+      },
+      {
+        "partyId": 303439,
+        "partyLabel": "BELG.UNIE-BUB",
+        "seats": 0,
+        "votes": 8607
+      },
+      {
+        "partyId": 305808,
+        "partyLabel": "FORCE NATIONALE",
+        "seats": 0,
+        "votes": 6660
+      },
+      {
+        "partyId": 293011,
+        "partyLabel": "VIVANT",
+        "seats": 0,
+        "votes": 5742
+      },
+      {
+        "partyId": 303483,
+        "partyLabel": "PJM",
+        "seats": 0,
+        "votes": 4373
+      },
+      {
+        "partyId": 303484,
+        "partyLabel": "PTB+PVDA+",
+        "seats": 0,
+        "votes": 3478
+      },
+      {
+        "partyId": 303464,
+        "partyLabel": "Parti Wallon",
+        "seats": 0,
+        "votes": 3139
+      },
+      {
+        "partyId": 303088,
+        "partyLabel": "vital",
+        "seats": 0,
+        "votes": 1780
+      },
+      {
+        "partyId": 305810,
+        "partyLabel": "NP-FN",
+        "seats": 0,
+        "votes": 1605
+      },
+      {
+        "partyId": 305812,
+        "partyLabel": "VÉLORUTION",
+        "seats": 0,
+        "votes": 1453
+      },
+      {
+        "partyId": 305817,
+        "partyLabel": "UMP-B",
+        "seats": 0,
+        "votes": 1408
+      },
+      {
+        "partyId": 305818,
+        "partyLabel": "MP Education",
+        "seats": 0,
+        "votes": 1362
+      },
+      {
+        "partyId": 305813,
+        "partyLabel": "TREFLE",
+        "seats": 0,
+        "votes": 920
+      },
+      {
+        "partyId": 305811,
+        "partyLabel": "FDB",
+        "seats": 0,
+        "votes": 901
+      },
+      {
+        "partyId": 305815,
+        "partyLabel": "Belgique Positif",
+        "seats": 0,
+        "votes": 880
+      },
+      {
+        "partyId": 303054,
+        "partyLabel": "UNIE",
+        "seats": 0,
+        "votes": 856
+      },
+      {
+        "partyId": 305819,
+        "partyLabel": "PLURALIS",
+        "seats": 0,
+        "votes": 757
+      },
+      {
+        "partyId": 305816,
+        "partyLabel": "DLC",
+        "seats": 0,
+        "votes": 464
+      },
+      {
+        "partyId": 305814,
+        "partyLabel": "GSCD",
+        "seats": 0,
+        "votes": 170
+      }
+    ]
+  },
+  {
+    "date": "2010-06-13",
+    "electionId": 51193,
+    "totalSeats": 150,
+    "totalValidVotes": 6527367,
+    "parties": [
+      {
+        "partyId": 303352,
+        "partyLabel": "N-VA",
+        "seats": 27,
+        "votes": 1135617
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 26,
+        "votes": 894543
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 18,
+        "votes": 605617
+      },
+      {
+        "partyId": 303356,
+        "partyLabel": "CD&V",
+        "seats": 17,
+        "votes": 707986
+      },
+      {
+        "partyId": 304199,
+        "partyLabel": "SP.A",
+        "seats": 13,
+        "votes": 602867
+      },
+      {
+        "partyId": 305803,
+        "partyLabel": "open vld",
+        "seats": 13,
+        "votes": 563873
+      },
+      {
+        "partyId": 305802,
+        "partyLabel": "VLAAMS BELANG",
+        "seats": 12,
+        "votes": 506697
+      },
+      {
+        "partyId": 303368,
+        "partyLabel": "CDH",
+        "seats": 9,
+        "votes": 360441
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 8,
+        "votes": 313047
+      },
+      {
+        "partyId": 303452,
+        "partyLabel": "GROEN!",
+        "seats": 5,
+        "votes": 285989
+      },
+      {
+        "partyId": 305804,
+        "partyLabel": "Lijst Dedecker",
+        "seats": 1,
+        "votes": 150577
+      },
+      {
+        "partyId": 305852,
+        "partyLabel": "Parti Populaire",
+        "seats": 1,
+        "votes": 84005
+      },
+      {
+        "partyId": 303475,
+        "partyLabel": "PVDA+",
+        "seats": 0,
+        "votes": 52918
+      },
+      {
+        "partyId": 303472,
+        "partyLabel": "PTB+",
+        "seats": 0,
+        "votes": 38857
+      },
+      {
+        "partyId": 305834,
+        "partyLabel": "WALLONIE D'ABORD",
+        "seats": 0,
+        "votes": 36642
+      },
+      {
+        "partyId": 303476,
+        "partyLabel": "R.W.F.",
+        "seats": 0,
+        "votes": 35743
+      },
+      {
+        "partyId": 293018,
+        "partyLabel": "FN",
+        "seats": 0,
+        "votes": 33591
+      },
+      {
+        "partyId": 305851,
+        "partyLabel": "Front des gauches",
+        "seats": 0,
+        "votes": 20734
+      },
+      {
+        "partyId": 305854,
+        "partyLabel": "BELG.UNIE",
+        "seats": 0,
+        "votes": 20665
+      },
+      {
+        "partyId": 305859,
+        "partyLabel": "FN+",
+        "seats": 0,
+        "votes": 11553
+      },
+      {
+        "partyId": 303484,
+        "partyLabel": "PTB+PVDA+",
+        "seats": 0,
+        "votes": 9313
+      },
+      {
+        "partyId": 305853,
+        "partyLabel": "PROBRUXSEL",
+        "seats": 0,
+        "votes": 7201
+      },
+      {
+        "partyId": 303360,
+        "partyLabel": "LSP",
+        "seats": 0,
+        "votes": 6791
+      },
+      {
+        "partyId": 305860,
+        "partyLabel": "Parti Pensionné PP",
+        "seats": 0,
+        "votes": 6688
+      },
+      {
+        "partyId": 293011,
+        "partyLabel": "VIVANT",
+        "seats": 0,
+        "votes": 6211
+      },
+      {
+        "partyId": 305857,
+        "partyLabel": "W+",
+        "seats": 0,
+        "votes": 5857
+      },
+      {
+        "partyId": 305855,
+        "partyLabel": "EGALITE",
+        "seats": 0,
+        "votes": 5670
+      },
+      {
+        "partyId": 303696,
+        "partyLabel": "RESPECT",
+        "seats": 0,
+        "votes": 5630
+      },
+      {
+        "partyId": 305858,
+        "partyLabel": "MSplus",
+        "seats": 0,
+        "votes": 2827
+      },
+      {
+        "partyId": 305818,
+        "partyLabel": "MP Education",
+        "seats": 0,
+        "votes": 2572
+      },
+      {
+        "partyId": 304168,
+        "partyLabel": "V.I.T.A.L.",
+        "seats": 0,
+        "votes": 2259
+      },
+      {
+        "partyId": 305856,
+        "partyLabel": "PIRATE PARTY",
+        "seats": 0,
+        "votes": 2200
+      },
+      {
+        "partyId": 305847,
+        "partyLabel": "Vrijheid",
+        "seats": 0,
+        "votes": 1576
+      },
+      {
+        "partyId": 305559,
+        "partyLabel": "N",
+        "seats": 0,
+        "votes": 610
+      }
+    ]
+  },
+  {
+    "date": "2014-05-25",
+    "electionId": 51199,
+    "totalSeats": 150,
+    "totalValidVotes": 6744547,
+    "parties": [
+      {
+        "partyId": 303352,
+        "partyLabel": "N-VA",
+        "seats": 33,
+        "votes": 1366397
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 23,
+        "votes": 787058
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 20,
+        "votes": 650260
+      },
+      {
+        "partyId": 303356,
+        "partyLabel": "CD&V",
+        "seats": 18,
+        "votes": 783040
+      },
+      {
+        "partyId": 305862,
+        "partyLabel": "OpenVld",
+        "seats": 14,
+        "votes": 659571
+      },
+      {
+        "partyId": 304199,
+        "partyLabel": "SP.A",
+        "seats": 13,
+        "votes": 595466
+      },
+      {
+        "partyId": 303368,
+        "partyLabel": "CDH",
+        "seats": 9,
+        "votes": 336184
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 6,
+        "votes": 358947
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 6,
+        "votes": 222524
+      },
+      {
+        "partyId": 305802,
+        "partyLabel": "VLAAMS BELANG",
+        "seats": 3,
+        "votes": 247738
+      },
+      {
+        "partyId": 305863,
+        "partyLabel": "PTB*PVDA-GO !",
+        "seats": 2,
+        "votes": 132943
+      },
+      {
+        "partyId": 303097,
+        "partyLabel": "FDF",
+        "seats": 2,
+        "votes": 121384
+      },
+      {
+        "partyId": 305852,
+        "partyLabel": "Parti Populaire",
+        "seats": 1,
+        "votes": 102581
+      },
+      {
+        "partyId": 303475,
+        "partyLabel": "PVDA+",
+        "seats": 0,
+        "votes": 118333
+      },
+      {
+        "partyId": 305866,
+        "partyLabel": "DEBOUT LES BELGES!",
+        "seats": 0,
+        "votes": 58043
+      },
+      {
+        "partyId": 305804,
+        "partyLabel": "Lijst Dedecker",
+        "seats": 0,
+        "votes": 28414
+      },
+      {
+        "partyId": 305865,
+        "partyLabel": "LA DROITE",
+        "seats": 0,
+        "votes": 26035
+      },
+      {
+        "partyId": 305891,
+        "partyLabel": "Piratenpartij",
+        "seats": 0,
+        "votes": 23169
+      },
+      {
+        "partyId": 305905,
+        "partyLabel": "Faire place Nette",
+        "seats": 0,
+        "votes": 15467
+      },
+      {
+        "partyId": 305869,
+        "partyLabel": "ISLAM",
+        "seats": 0,
+        "votes": 13719
+      },
+      {
+        "partyId": 305900,
+        "partyLabel": "B.U.B.-Belg.Unie",
+        "seats": 0,
+        "votes": 12103
+      },
+      {
+        "partyId": 305887,
+        "partyLabel": "R.O.S.S.E.M.",
+        "seats": 0,
+        "votes": 11680
+      },
+      {
+        "partyId": 305834,
+        "partyLabel": "WALLONIE D'ABORD",
+        "seats": 0,
+        "votes": 11221
+      },
+      {
+        "partyId": 303624,
+        "partyLabel": "NATION",
+        "seats": 0,
+        "votes": 10216
+      },
+      {
+        "partyId": 305874,
+        "partyLabel": "PIRATE",
+        "seats": 0,
+        "votes": 9845
+      },
+      {
+        "partyId": 303476,
+        "partyLabel": "R.W.F.",
+        "seats": 0,
+        "votes": 7394
+      },
+      {
+        "partyId": 305877,
+        "partyLabel": "MG",
+        "seats": 0,
+        "votes": 4529
+      },
+      {
+        "partyId": 305906,
+        "partyLabel": "Lutte Ouvrière",
+        "seats": 0,
+        "votes": 3539
+      },
+      {
+        "partyId": 305883,
+        "partyLabel": "PP PARTIPENSIONNES",
+        "seats": 0,
+        "votes": 3178
+      },
+      {
+        "partyId": 305771,
+        "partyLabel": "FW",
+        "seats": 0,
+        "votes": 3080
+      },
+      {
+        "partyId": 305876,
+        "partyLabel": "NWA",
+        "seats": 0,
+        "votes": 2785
+      },
+      {
+        "partyId": 305894,
+        "partyLabel": "SD&P",
+        "seats": 0,
+        "votes": 2298
+      },
+      {
+        "partyId": 303311,
+        "partyLabel": "PP",
+        "seats": 0,
+        "votes": 2281
+      },
+      {
+        "partyId": 305879,
+        "partyLabel": "P+",
+        "seats": 0,
+        "votes": 2254
+      },
+      {
+        "partyId": 305882,
+        "partyLabel": "VLC",
+        "seats": 0,
+        "votes": 2028
+      },
+      {
+        "partyId": 305880,
+        "partyLabel": "RassemblementWalon",
+        "seats": 0,
+        "votes": 1598
+      },
+      {
+        "partyId": 305867,
+        "partyLabel": "GAUCHES COMMUNES",
+        "seats": 0,
+        "votes": 1445
+      },
+      {
+        "partyId": 305909,
+        "partyLabel": "Vox Populi Belgica",
+        "seats": 0,
+        "votes": 1280
+      },
+      {
+        "partyId": 305868,
+        "partyLabel": "Égalitaires ! ",
+        "seats": 0,
+        "votes": 953
+      },
+      {
+        "partyId": 305904,
+        "partyLabel": "PVGW",
+        "seats": 0,
+        "votes": 932
+      },
+      {
+        "partyId": 305861,
+        "partyLabel": "Parti Libertarien",
+        "seats": 0,
+        "votes": 750
+      },
+      {
+        "partyId": 305907,
+        "partyLabel": "MGJOD",
+        "seats": 0,
+        "votes": 460
+      },
+      {
+        "partyId": 305908,
+        "partyLabel": "CIM",
+        "seats": 0,
+        "votes": 430
+      },
+      {
+        "partyId": 305903,
+        "partyLabel": "MOVE",
+        "seats": 0,
+        "votes": 400
+      },
+      {
+        "partyId": 305901,
+        "partyLabel": "Agora Erasmus",
+        "seats": 0,
+        "votes": 382
+      },
+      {
+        "partyId": 305902,
+        "partyLabel": "LaLutte-DeStrijd",
+        "seats": 0,
+        "votes": 213
+      }
+    ]
+  },
+  {
+    "date": "2019-05-26",
+    "electionId": 51204,
+    "totalSeats": 150,
+    "totalValidVotes": 6780538,
+    "parties": [
+      {
+        "partyId": 303352,
+        "partyLabel": "N-VA",
+        "seats": 25,
+        "votes": 1086787
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 20,
+        "votes": 641623
+      },
+      {
+        "partyId": 305802,
+        "partyLabel": "VLAAMS BELANG",
+        "seats": 18,
+        "votes": 810177
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 14,
+        "votes": 512825
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 13,
+        "votes": 416452
+      },
+      {
+        "partyId": 303356,
+        "partyLabel": "CD&V",
+        "seats": 12,
+        "votes": 602520
+      },
+      {
+        "partyId": 303048,
+        "partyLabel": "PVDA",
+        "seats": 12,
+        "votes": 584621
+      },
+      {
+        "partyId": 305803,
+        "partyLabel": "open vld",
+        "seats": 12,
+        "votes": 579334
+      },
+      {
+        "partyId": 304199,
+        "partyLabel": "SP.A",
+        "seats": 9,
+        "votes": 455034
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 8,
+        "votes": 413836
+      },
+      {
+        "partyId": 303368,
+        "partyLabel": "CDH",
+        "seats": 5,
+        "votes": 250861
+      },
+      {
+        "partyId": 305911,
+        "partyLabel": "DéFI",
+        "seats": 2,
+        "votes": 150394
+      },
+      {
+        "partyId": 305852,
+        "partyLabel": "Parti Populaire",
+        "seats": 0,
+        "votes": 75096
+      },
+      {
+        "partyId": 305916,
+        "partyLabel": "DierAnimal",
+        "seats": 0,
+        "votes": 47733
+      },
+      {
+        "partyId": 305912,
+        "partyLabel": "LISTES DESTEXHE",
+        "seats": 0,
+        "votes": 42712
+      },
+      {
+        "partyId": 305920,
+        "partyLabel": "COLLECTIF CITOYEN",
+        "seats": 0,
+        "votes": 21092
+      },
+      {
+        "partyId": 305865,
+        "partyLabel": "LA DROITE",
+        "seats": 0,
+        "votes": 15075
+      },
+      {
+        "partyId": 303624,
+        "partyLabel": "NATION",
+        "seats": 0,
+        "votes": 10583
+      },
+      {
+        "partyId": 305936,
+        "partyLabel": "LES BELGES D'ABORD",
+        "seats": 0,
+        "votes": 10463
+      },
+      {
+        "partyId": 303050,
+        "partyLabel": "AGIR",
+        "seats": 0,
+        "votes": 7598
+      },
+      {
+        "partyId": 305891,
+        "partyLabel": "Piratenpartij",
+        "seats": 0,
+        "votes": 7521
+      },
+      {
+        "partyId": 305927,
+        "partyLabel": "D-SA",
+        "seats": 0,
+        "votes": 5949
+      },
+      {
+        "partyId": 305906,
+        "partyLabel": "Lutte Ouvrière",
+        "seats": 0,
+        "votes": 5735
+      },
+      {
+        "partyId": 305427,
+        "partyLabel": "PRO",
+        "seats": 0,
+        "votes": 5682
+      },
+      {
+        "partyId": 305924,
+        "partyLabel": "WALLONIE INSOUMISE",
+        "seats": 0,
+        "votes": 5354
+      },
+      {
+        "partyId": 305934,
+        "partyLabel": "BUB Belgische Unie",
+        "seats": 0,
+        "votes": 4513
+      },
+      {
+        "partyId": 305926,
+        "partyLabel": "PV&S",
+        "seats": 0,
+        "votes": 3217
+      },
+      {
+        "partyId": 305935,
+        "partyLabel": "B.U.B",
+        "seats": 0,
+        "votes": 2098
+      },
+      {
+        "partyId": 305931,
+        "partyLabel": "de coöperatie",
+        "seats": 0,
+        "votes": 1732
+      },
+      {
+        "partyId": 305933,
+        "partyLabel": "Volt",
+        "seats": 0,
+        "votes": 1669
+      },
+      {
+        "partyId": 303036,
+        "partyLabel": "PCB",
+        "seats": 0,
+        "votes": 1626
+      },
+      {
+        "partyId": 305923,
+        "partyLabel": "Turquoise",
+        "seats": 0,
+        "votes": 626
+      }
+    ]
+  },
+  {
+    "date": "2024-06-09",
+    "electionId": 51207,
+    "totalSeats": 150,
+    "totalValidVotes": 6984906,
+    "parties": [
+      {
+        "partyId": 303352,
+        "partyLabel": "N-VA",
+        "seats": 24,
+        "votes": 1167061
+      },
+      {
+        "partyId": 305802,
+        "partyLabel": "VLAAMS BELANG",
+        "seats": 20,
+        "votes": 961601
+      },
+      {
+        "partyId": 303367,
+        "partyLabel": "MR",
+        "seats": 20,
+        "votes": 716934
+      },
+      {
+        "partyId": 293015,
+        "partyLabel": "PS",
+        "seats": 16,
+        "votes": 561602
+      },
+      {
+        "partyId": 303048,
+        "partyLabel": "PVDA",
+        "seats": 15,
+        "votes": 688369
+      },
+      {
+        "partyId": 305972,
+        "partyLabel": "LES ENGAGÉS",
+        "seats": 14,
+        "votes": 472755
+      },
+      {
+        "partyId": 305967,
+        "partyLabel": "Vooruit",
+        "seats": 13,
+        "votes": 566436
+      },
+      {
+        "partyId": 303356,
+        "partyLabel": "CD&V",
+        "seats": 11,
+        "votes": 557392
+      },
+      {
+        "partyId": 305803,
+        "partyLabel": "open vld",
+        "seats": 7,
+        "votes": 380659
+      },
+      {
+        "partyId": 303164,
+        "partyLabel": "GROEN",
+        "seats": 6,
+        "votes": 324608
+      },
+      {
+        "partyId": 293013,
+        "partyLabel": "ECOLO",
+        "seats": 3,
+        "votes": 204438
+      },
+      {
+        "partyId": 305911,
+        "partyLabel": "DéFI",
+        "seats": 1,
+        "votes": 84024
+      },
+      {
+        "partyId": 305969,
+        "partyLabel": "Partij BLANCO",
+        "seats": 0,
+        "votes": 75683
+      },
+      {
+        "partyId": 305981,
+        "partyLabel": "CHEZ NOUS",
+        "seats": 0,
+        "votes": 64058
+      },
+      {
+        "partyId": 305968,
+        "partyLabel": "Voor U",
+        "seats": 0,
+        "votes": 43346
+      },
+      {
+        "partyId": 305920,
+        "partyLabel": "COLLECTIF CITOYEN",
+        "seats": 0,
+        "votes": 35706
+      },
+      {
+        "partyId": 305974,
+        "partyLabel": "Team Fouad Ahidar",
+        "seats": 0,
+        "votes": 24826
+      },
+      {
+        "partyId": 303439,
+        "partyLabel": "BELG.UNIE-BUB",
+        "seats": 0,
+        "votes": 15780
+      },
+      {
+        "partyId": 305916,
+        "partyLabel": "DierAnimal",
+        "seats": 0,
+        "votes": 10341
+      },
+      {
+        "partyId": 305966,
+        "partyLabel": "Volt Europa",
+        "seats": 0,
+        "votes": 7245
+      },
+      {
+        "partyId": 305977,
+        "partyLabel": "LUTTE OUVRIERE",
+        "seats": 0,
+        "votes": 6552
+      },
+      {
+        "partyId": 305976,
+        "partyLabel": "l'Unie",
+        "seats": 0,
+        "votes": 5640
+      },
+      {
+        "partyId": 305982,
+        "partyLabel": "RMC",
+        "seats": 0,
+        "votes": 4025
+      },
+      {
+        "partyId": 305913,
+        "partyLabel": "Agora",
+        "seats": 0,
+        "votes": 3473
+      },
+      {
+        "partyId": 305985,
+        "partyLabel": "GV-GEZOND VERSTAND",
+        "seats": 0,
+        "votes": 2352
+      }
+    ]
+  }
+]

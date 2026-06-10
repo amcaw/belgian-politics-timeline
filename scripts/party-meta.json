@@ -1,0 +1,142 @@
+{
+  "cd-unitary": {
+    "family": "christian-democrat",
+    "wing": "national"
+  },
+  "cvp": {
+    "family": "christian-democrat",
+    "wing": "flemish"
+  },
+  "cdv": {
+    "family": "christian-democrat",
+    "wing": "flemish"
+  },
+  "psc": {
+    "family": "christian-democrat",
+    "wing": "francophone"
+  },
+  "cdh": {
+    "family": "christian-democrat",
+    "wing": "francophone"
+  },
+  "engages": {
+    "family": "christian-democrat",
+    "wing": "francophone"
+  },
+  "sp-unitary": {
+    "family": "socialist",
+    "wing": "national"
+  },
+  "sp": {
+    "family": "socialist",
+    "wing": "flemish"
+  },
+  "spa": {
+    "family": "socialist",
+    "wing": "flemish"
+  },
+  "vooruit": {
+    "family": "socialist",
+    "wing": "flemish"
+  },
+  "ps": {
+    "family": "socialist",
+    "wing": "francophone"
+  },
+  "lib-unitary": {
+    "family": "liberal",
+    "wing": "national"
+  },
+  "pvv": {
+    "family": "liberal",
+    "wing": "flemish"
+  },
+  "vld": {
+    "family": "liberal",
+    "wing": "flemish"
+  },
+  "openvld": {
+    "family": "liberal",
+    "wing": "flemish"
+  },
+  "prl": {
+    "family": "liberal",
+    "wing": "francophone"
+  },
+  "mr": {
+    "family": "liberal",
+    "wing": "francophone"
+  },
+  "vu": {
+    "family": "nationalist",
+    "wing": "flemish"
+  },
+  "nva": {
+    "family": "nationalist",
+    "wing": "flemish"
+  },
+  "agalev": {
+    "family": "green",
+    "wing": "flemish"
+  },
+  "groen": {
+    "family": "green",
+    "wing": "flemish"
+  },
+  "ecolo": {
+    "family": "green",
+    "wing": "francophone"
+  },
+  "vlaamsblok": {
+    "family": "far-right",
+    "wing": "flemish"
+  },
+  "vlaamsbelang": {
+    "family": "far-right",
+    "wing": "flemish"
+  },
+  "fn": {
+    "family": "far-right",
+    "wing": "francophone"
+  },
+  "kpb": {
+    "family": "far-left",
+    "wing": "national"
+  },
+  "ptb": {
+    "family": "far-left",
+    "wing": "national"
+  },
+  "fdf": {
+    "family": "regionalist",
+    "wing": "francophone"
+  },
+  "rw": {
+    "family": "regionalist",
+    "wing": "francophone"
+  },
+  "ld": {
+    "family": "other",
+    "wing": "flemish"
+  },
+  "rossem": {
+    "family": "other",
+    "wing": "national"
+  },
+  "pp": {
+    "family": "other",
+    "wing": "francophone"
+  },
+  "udrt": {
+    "family": "other",
+    "wing": "national"
+  },
+  "udb": {
+    "family": "other",
+    "wing": "national"
+  },
+  "other": {
+    "family": "other",
+    "wing": "national"
+  }
+}

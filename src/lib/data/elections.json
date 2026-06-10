@@ -1,0 +1,1958 @@
+[
+  {
+    "date": "1946-02-17",
+    "year": 1946,
+    "totalSeats": 202,
+    "totalVotes": 2365638,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 92,
+        "votes": 1006293,
+        "seatShare": 0.45544554455445546,
+        "voteShare": 0.4253791154859704
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 69,
+        "votes": 746738,
+        "seatShare": 0.3415841584158416,
+        "voteShare": 0.3156602996739146
+      },
+      {
+        "id": "kpb",
+        "seats": 23,
+        "votes": 300099,
+        "seatShare": 0.11386138613861387,
+        "voteShare": 0.12685753272478714
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 17,
+        "votes": 211143,
+        "seatShare": 0.08415841584158416,
+        "voteShare": 0.08925414623877365
+      },
+      {
+        "id": "udb",
+        "seats": 1,
+        "votes": 51095,
+        "seatShare": 0.0049504950495049506,
+        "voteShare": 0.02159882450315729
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 50270,
+        "seatShare": 0,
+        "voteShare": 0.021250081373396942
+      }
+    ]
+  },
+  {
+    "date": "1949-06-26",
+    "year": 1949,
+    "totalSeats": 212,
+    "totalVotes": 5030883,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 105,
+        "votes": 2190895,
+        "seatShare": 0.49528301886792453,
+        "voteShare": 0.43548915766874324
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 66,
+        "votes": 1496539,
+        "seatShare": 0.3113207547169811,
+        "voteShare": 0.29747044405524836
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 29,
+        "votes": 767180,
+        "seatShare": 0.13679245283018868,
+        "voteShare": 0.152494104911603
+      },
+      {
+        "id": "kpb",
+        "seats": 12,
+        "votes": 376765,
+        "seatShare": 0.05660377358490566,
+        "voteShare": 0.07489043175919614
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 199504,
+        "seatShare": 0,
+        "voteShare": 0.039655861605209265
+      }
+    ]
+  },
+  {
+    "date": "1950-06-04",
+    "year": 1950,
+    "totalSeats": 212,
+    "totalVotes": 4942807,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 108,
+        "votes": 2356608,
+        "seatShare": 0.5094339622641509,
+        "voteShare": 0.47677524127484644
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 73,
+        "votes": 1705781,
+        "seatShare": 0.3443396226415094,
+        "voteShare": 0.3451037032196483
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 24,
+        "votes": 556102,
+        "seatShare": 0.11320754716981132,
+        "voteShare": 0.11250732630264544
+      },
+      {
+        "id": "kpb",
+        "seats": 7,
+        "votes": 234541,
+        "seatShare": 0.0330188679245283,
+        "voteShare": 0.04745097269628371
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 89775,
+        "seatShare": 0,
+        "voteShare": 0.01816275650657612
+      }
+    ]
+  },
+  {
+    "date": "1954-04-11",
+    "year": 1954,
+    "totalSeats": 212,
+    "totalVotes": 5160923,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 96,
+        "votes": 2123408,
+        "seatShare": 0.4528301886792453,
+        "voteShare": 0.4114395816407259
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 82,
+        "votes": 1927015,
+        "seatShare": 0.3867924528301887,
+        "voteShare": 0.3733857296456467
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 29,
+        "votes": 626983,
+        "seatShare": 0.13679245283018868,
+        "voteShare": 0.1214866022996274
+      },
+      {
+        "id": "kpb",
+        "seats": 4,
+        "votes": 184108,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.03567346383582937
+      },
+      {
+        "id": "vu",
+        "seats": 1,
+        "votes": 0,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 298953,
+        "seatShare": 0,
+        "voteShare": 0.05792626628996402
+      }
+    ]
+  },
+  {
+    "date": "1958-06-01",
+    "year": 1958,
+    "totalSeats": 212,
+    "totalVotes": 5302353,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 104,
+        "votes": 2465549,
+        "seatShare": 0.49056603773584906,
+        "voteShare": 0.4649914858554306
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 80,
+        "votes": 1897646,
+        "seatShare": 0.37735849056603776,
+        "voteShare": 0.3578875265377465
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 25,
+        "votes": 585999,
+        "seatShare": 0.1179245283018868,
+        "voteShare": 0.11051678377505232
+      },
+      {
+        "id": "kpb",
+        "seats": 2,
+        "votes": 100145,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.018886897948891746
+      },
+      {
+        "id": "vu",
+        "seats": 1,
+        "votes": 104823,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.019769147772696387
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 148191,
+        "seatShare": 0,
+        "voteShare": 0.027948158110182406
+      }
+    ]
+  },
+  {
+    "date": "1961-03-26",
+    "year": 1961,
+    "totalSeats": 212,
+    "totalVotes": 5265025,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 96,
+        "votes": 2182642,
+        "seatShare": 0.4528301886792453,
+        "voteShare": 0.4145549166433208
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 84,
+        "votes": 1933424,
+        "seatShare": 0.39622641509433965,
+        "voteShare": 0.36722028860261824
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 20,
+        "votes": 649376,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.12333768595590715
+      },
+      {
+        "id": "vu",
+        "seats": 5,
+        "votes": 182407,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.034645039672176296
+      },
+      {
+        "id": "kpb",
+        "seats": 5,
+        "votes": 162238,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.030814288631108116
+      },
+      {
+        "id": "other",
+        "seats": 1,
+        "votes": 154938,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.029427780494869445
+      },
+      {
+        "id": "rw",
+        "seats": 1,
+        "votes": 0,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0
+      }
+    ]
+  },
+  {
+    "date": "1965-05-23",
+    "year": 1965,
+    "totalSeats": 212,
+    "totalVotes": 5236989,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 77,
+        "votes": 1785211,
+        "seatShare": 0.3632075471698113,
+        "voteShare": 0.3408850009041455
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 64,
+        "votes": 1465503,
+        "seatShare": 0.3018867924528302,
+        "voteShare": 0.279836944473246
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 48,
+        "votes": 1119991,
+        "seatShare": 0.22641509433962265,
+        "voteShare": 0.21386162926826846
+      },
+      {
+        "id": "vu",
+        "seats": 12,
+        "votes": 346860,
+        "seatShare": 0.05660377358490566,
+        "voteShare": 0.06623271502002391
+      },
+      {
+        "id": "kpb",
+        "seats": 6,
+        "votes": 236721,
+        "seatShare": 0.02830188679245283,
+        "voteShare": 0.04520173710504261
+      },
+      {
+        "id": "fdf",
+        "seats": 3,
+        "votes": 68966,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.013169017540422559
+      },
+      {
+        "id": "other",
+        "seats": 1,
+        "votes": 213737,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.04081295568885098
+      },
+      {
+        "id": "rw",
+        "seats": 1,
+        "votes": 0,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0
+      }
+    ]
+  },
+  {
+    "date": "1968-03-31",
+    "year": 1968,
+    "totalSeats": 212,
+    "totalVotes": 5414235,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 69,
+        "votes": 1643785,
+        "seatShare": 0.32547169811320753,
+        "voteShare": 0.3036042949742669
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 59,
+        "votes": 1403107,
+        "seatShare": 0.2783018867924528,
+        "voteShare": 0.259151477540225
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 47,
+        "votes": 1080894,
+        "seatShare": 0.22169811320754718,
+        "voteShare": 0.1996392842202084
+      },
+      {
+        "id": "vu",
+        "seats": 20,
+        "votes": 506697,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.09358607448697738
+      },
+      {
+        "id": "fdf",
+        "seats": 6,
+        "votes": 154023,
+        "seatShare": 0.02830188679245283,
+        "voteShare": 0.02844778625235144
+      },
+      {
+        "id": "rw",
+        "seats": 6,
+        "votes": 151421,
+        "seatShare": 0.02830188679245283,
+        "voteShare": 0.027967201275895855
+      },
+      {
+        "id": "kpb",
+        "seats": 5,
+        "votes": 170625,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.03151414742803
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 303683,
+        "seatShare": 0,
+        "voteShare": 0.05608973382204503
+      }
+    ]
+  },
+  {
+    "date": "1971-11-07",
+    "year": 1971,
+    "totalSeats": 212,
+    "totalVotes": 5281631,
+    "parties": [
+      {
+        "id": "cd-unitary",
+        "seats": 67,
+        "votes": 1587195,
+        "seatShare": 0.3160377358490566,
+        "voteShare": 0.30051228493622517
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 57,
+        "votes": 1335730,
+        "seatShare": 0.2688679245283019,
+        "voteShare": 0.2529010451506362
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 34,
+        "votes": 473525,
+        "seatShare": 0.16037735849056603,
+        "voteShare": 0.0896550705643768
+      },
+      {
+        "id": "vu",
+        "seats": 21,
+        "votes": 586917,
+        "seatShare": 0.09905660377358491,
+        "voteShare": 0.11112419629466731
+      },
+      {
+        "id": "rw",
+        "seats": 18,
+        "votes": 306606,
+        "seatShare": 0.08490566037735849,
+        "voteShare": 0.058051386020719735
+      },
+      {
+        "id": "fdf",
+        "seats": 6,
+        "votes": 286639,
+        "seatShare": 0.02830188679245283,
+        "voteShare": 0.05427092502297112
+      },
+      {
+        "id": "kpb",
+        "seats": 5,
+        "votes": 161517,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.030580894424468503
+      },
+      {
+        "id": "other",
+        "seats": 4,
+        "votes": 151372,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.028660086249872437
+      },
+      {
+        "id": "pvv",
+        "seats": 0,
+        "votes": 392130,
+        "seatShare": 0,
+        "voteShare": 0.07424411133606267
+      }
+    ]
+  },
+  {
+    "date": "1974-03-10",
+    "year": 1974,
+    "totalSeats": 212,
+    "totalVotes": 5530938,
+    "parties": [
+      {
+        "id": "sp-unitary",
+        "seats": 59,
+        "votes": 1566317,
+        "seatShare": 0.2783018867924528,
+        "voteShare": 0.2831919287469865
+      },
+      {
+        "id": "cvp",
+        "seats": 50,
+        "votes": 1222646,
+        "seatShare": 0.2358490566037736,
+        "voteShare": 0.22105581367934335
+      },
+      {
+        "id": "pvv",
+        "seats": 30,
+        "votes": 0,
+        "seatShare": 0.14150943396226415,
+        "voteShare": 0
+      },
+      {
+        "id": "vu",
+        "seats": 22,
+        "votes": 536287,
+        "seatShare": 0.10377358490566038,
+        "voteShare": 0.09696131108321952
+      },
+      {
+        "id": "psc",
+        "seats": 22,
+        "votes": 478209,
+        "seatShare": 0.10377358490566038,
+        "voteShare": 0.08646074137876794
+      },
+      {
+        "id": "fdf",
+        "seats": 14,
+        "votes": 0,
+        "seatShare": 0.0660377358490566,
+        "voteShare": 0
+      },
+      {
+        "id": "rw",
+        "seats": 11,
+        "votes": 269455,
+        "seatShare": 0.05188679245283019,
+        "voteShare": 0.04871777626145873
+      },
+      {
+        "id": "other",
+        "seats": 2,
+        "votes": 530839,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.09597630636973331
+      },
+      {
+        "id": "kpb",
+        "seats": 2,
+        "votes": 107481,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.019432689355765694
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 0,
+        "votes": 819704,
+        "seatShare": 0,
+        "voteShare": 0.14820343312472495
+      }
+    ]
+  },
+  {
+    "date": "1977-04-17",
+    "year": 1977,
+    "totalSeats": 212,
+    "totalVotes": 5575058,
+    "parties": [
+      {
+        "id": "sp-unitary",
+        "seats": 61,
+        "votes": 1473416,
+        "seatShare": 0.28773584905660377,
+        "voteShare": 0.26428711593673104
+      },
+      {
+        "id": "cvp",
+        "seats": 56,
+        "votes": 1460757,
+        "seatShare": 0.2641509433962264,
+        "voteShare": 0.2620164669138868
+      },
+      {
+        "id": "psc",
+        "seats": 24,
+        "votes": 406694,
+        "seatShare": 0.11320754716981132,
+        "voteShare": 0.07294883748294637
+      },
+      {
+        "id": "vu",
+        "seats": 20,
+        "votes": 559567,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.10036971812669931
+      },
+      {
+        "id": "pvv",
+        "seats": 17,
+        "votes": 475917,
+        "seatShare": 0.08018867924528301,
+        "voteShare": 0.0853653899206071
+      },
+      {
+        "id": "prl",
+        "seats": 16,
+        "votes": 191196,
+        "seatShare": 0.07547169811320754,
+        "voteShare": 0.0342948898468859
+      },
+      {
+        "id": "fdf",
+        "seats": 11,
+        "votes": 263104,
+        "seatShare": 0.05188679245283019,
+        "voteShare": 0.04719305162385755
+      },
+      {
+        "id": "rw",
+        "seats": 5,
+        "votes": 132773,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.023815536986341666
+      },
+      {
+        "id": "kpb",
+        "seats": 2,
+        "votes": 99514,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.0178498591404789
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 505851,
+        "seatShare": 0,
+        "voteShare": 0.09073466141518169
+      }
+    ]
+  },
+  {
+    "date": "1978-12-17",
+    "year": 1978,
+    "totalSeats": 212,
+    "totalVotes": 5529248,
+    "parties": [
+      {
+        "id": "sp-unitary",
+        "seats": 58,
+        "votes": 1405074,
+        "seatShare": 0.27358490566037735,
+        "voteShare": 0.2541166538379179
+      },
+      {
+        "id": "cvp",
+        "seats": 57,
+        "votes": 1447112,
+        "seatShare": 0.2688679245283019,
+        "voteShare": 0.2617194960327336
+      },
+      {
+        "id": "psc",
+        "seats": 25,
+        "votes": 560440,
+        "seatShare": 0.1179245283018868,
+        "voteShare": 0.10135917216952468
+      },
+      {
+        "id": "pvv",
+        "seats": 22,
+        "votes": 573387,
+        "seatShare": 0.10377358490566038,
+        "voteShare": 0.10370072024260804
+      },
+      {
+        "id": "prl",
+        "seats": 15,
+        "votes": 256685,
+        "seatShare": 0.07075471698113207,
+        "voteShare": 0.046423130233984804
+      },
+      {
+        "id": "vu",
+        "seats": 14,
+        "votes": 388762,
+        "seatShare": 0.0660377358490566,
+        "voteShare": 0.07031010365243158
+      },
+      {
+        "id": "fdf",
+        "seats": 11,
+        "votes": 259019,
+        "seatShare": 0.05188679245283019,
+        "voteShare": 0.04684524911886752
+      },
+      {
+        "id": "kpb",
+        "seats": 4,
+        "votes": 180234,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.03259647604882255
+      },
+      {
+        "id": "rw",
+        "seats": 4,
+        "votes": 128153,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.023177292825353465
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 1,
+        "votes": 75635,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.01367907534623153
+      },
+      {
+        "id": "udrt",
+        "seats": 1,
+        "votes": 48616,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.008792515727274306
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 177590,
+        "seatShare": 0,
+        "voteShare": 0.03211829167365978
+      }
+    ]
+  },
+  {
+    "date": "1981-11-08",
+    "year": 1981,
+    "totalSeats": 212,
+    "totalVotes": 6025027,
+    "parties": [
+      {
+        "id": "cvp",
+        "seats": 43,
+        "votes": 1165239,
+        "seatShare": 0.2028301886792453,
+        "voteShare": 0.193399797212527
+      },
+      {
+        "id": "ps",
+        "seats": 35,
+        "votes": 733137,
+        "seatShare": 0.1650943396226415,
+        "voteShare": 0.12168194432987603
+      },
+      {
+        "id": "pvv",
+        "seats": 28,
+        "votes": 776871,
+        "seatShare": 0.1320754716981132,
+        "voteShare": 0.12894066698788237
+      },
+      {
+        "id": "sp",
+        "seats": 26,
+        "votes": 744593,
+        "seatShare": 0.12264150943396226,
+        "voteShare": 0.12358334659745093
+      },
+      {
+        "id": "prl",
+        "seats": 24,
+        "votes": 480380,
+        "seatShare": 0.11320754716981132,
+        "voteShare": 0.07973076303226526
+      },
+      {
+        "id": "vu",
+        "seats": 20,
+        "votes": 588436,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.09766528847090644
+      },
+      {
+        "id": "psc",
+        "seats": 18,
+        "votes": 390896,
+        "seatShare": 0.08490566037735849,
+        "voteShare": 0.06487871340659553
+      },
+      {
+        "id": "fdf",
+        "seats": 4,
+        "votes": 253720,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.0421110146062416
+      },
+      {
+        "id": "rw",
+        "seats": 4,
+        "votes": 0,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0
+      },
+      {
+        "id": "udrt",
+        "seats": 3,
+        "votes": 130526,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.021663969306693565
+      },
+      {
+        "id": "agalev",
+        "seats": 2,
+        "votes": 138575,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.02299989692992247
+      },
+      {
+        "id": "ecolo",
+        "seats": 2,
+        "votes": 132312,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.021960399513562347
+      },
+      {
+        "id": "kpb",
+        "seats": 2,
+        "votes": 100249,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.01663876361051992
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 1,
+        "votes": 66424,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.011024680885247485
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 280744,
+        "seatShare": 0,
+        "voteShare": 0.046596305709501386
+      }
+    ]
+  },
+  {
+    "date": "1985-10-13",
+    "year": 1985,
+    "totalSeats": 212,
+    "totalVotes": 6064260,
+    "parties": [
+      {
+        "id": "cvp",
+        "seats": 49,
+        "votes": 1291244,
+        "seatShare": 0.23113207547169812,
+        "voteShare": 0.21292688638020138
+      },
+      {
+        "id": "ps",
+        "seats": 35,
+        "votes": 834488,
+        "seatShare": 0.1650943396226415,
+        "voteShare": 0.13760755640424388
+      },
+      {
+        "id": "sp",
+        "seats": 32,
+        "votes": 882200,
+        "seatShare": 0.1509433962264151,
+        "voteShare": 0.14547529294588293
+      },
+      {
+        "id": "prl",
+        "seats": 24,
+        "votes": 619390,
+        "seatShare": 0.11320754716981132,
+        "voteShare": 0.10213777113778102
+      },
+      {
+        "id": "pvv",
+        "seats": 22,
+        "votes": 651806,
+        "seatShare": 0.10377358490566038,
+        "voteShare": 0.10748318838572225
+      },
+      {
+        "id": "psc",
+        "seats": 20,
+        "votes": 482254,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.0795239650015006
+      },
+      {
+        "id": "vu",
+        "seats": 16,
+        "votes": 477755,
+        "seatShare": 0.07547169811320754,
+        "voteShare": 0.0787820772856045
+      },
+      {
+        "id": "ecolo",
+        "seats": 5,
+        "votes": 152483,
+        "seatShare": 0.02358490566037736,
+        "voteShare": 0.025144535359631678
+      },
+      {
+        "id": "agalev",
+        "seats": 4,
+        "votes": 226758,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.037392526046046835
+      },
+      {
+        "id": "fdf",
+        "seats": 3,
+        "votes": 72361,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.011932370973540054
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 1,
+        "votes": 85391,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.014081025549696088
+      },
+      {
+        "id": "udrt",
+        "seats": 1,
+        "votes": 69707,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.011494724830399752
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 137009,
+        "seatShare": 0,
+        "voteShare": 0.022592863762437625
+      },
+      {
+        "id": "kpb",
+        "seats": 0,
+        "votes": 71695,
+        "seatShare": 0,
+        "voteShare": 0.011822547186301378
+      }
+    ]
+  },
+  {
+    "date": "1987-12-13",
+    "year": 1987,
+    "totalSeats": 212,
+    "totalVotes": 6145207,
+    "parties": [
+      {
+        "id": "cvp",
+        "seats": 43,
+        "votes": 1195363,
+        "seatShare": 0.2028301886792453,
+        "voteShare": 0.1945195662245389
+      },
+      {
+        "id": "ps",
+        "seats": 40,
+        "votes": 961361,
+        "seatShare": 0.18867924528301888,
+        "voteShare": 0.1564407838499175
+      },
+      {
+        "id": "sp",
+        "seats": 32,
+        "votes": 915432,
+        "seatShare": 0.1509433962264151,
+        "voteShare": 0.14896682894489965
+      },
+      {
+        "id": "pvv",
+        "seats": 25,
+        "votes": 709758,
+        "seatShare": 0.1179245283018868,
+        "voteShare": 0.11549781805560008
+      },
+      {
+        "id": "prl",
+        "seats": 23,
+        "votes": 577959,
+        "seatShare": 0.10849056603773585,
+        "voteShare": 0.09405037128936422
+      },
+      {
+        "id": "psc",
+        "seats": 19,
+        "votes": 491908,
+        "seatShare": 0.08962264150943396,
+        "voteShare": 0.08004742557899189
+      },
+      {
+        "id": "vu",
+        "seats": 16,
+        "votes": 495120,
+        "seatShare": 0.07547169811320754,
+        "voteShare": 0.08057010935514458
+      },
+      {
+        "id": "agalev",
+        "seats": 6,
+        "votes": 275437,
+        "seatShare": 0.02830188679245283,
+        "voteShare": 0.04482143563268089
+      },
+      {
+        "id": "ecolo",
+        "seats": 3,
+        "votes": 157988,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.025709142100502066
+      },
+      {
+        "id": "fdf",
+        "seats": 3,
+        "votes": 71338,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.011608722049558299
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 2,
+        "votes": 116534,
+        "seatShare": 0.009433962264150943,
+        "voteShare": 0.018963397001923614
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 93428,
+        "seatShare": 0,
+        "voteShare": 0.015203393473970853
+      }
+    ]
+  },
+  {
+    "date": "1991-11-24",
+    "year": 1991,
+    "totalSeats": 212,
+    "totalVotes": 6162160,
+    "parties": [
+      {
+        "id": "cvp",
+        "seats": 39,
+        "votes": 1036165,
+        "seatShare": 0.18396226415094338,
+        "voteShare": 0.16814964233320784
+      },
+      {
+        "id": "ps",
+        "seats": 35,
+        "votes": 831199,
+        "seatShare": 0.1650943396226415,
+        "voteShare": 0.13488760434652783
+      },
+      {
+        "id": "sp",
+        "seats": 28,
+        "votes": 737976,
+        "seatShare": 0.1320754716981132,
+        "voteShare": 0.11975930517870358
+      },
+      {
+        "id": "pvv",
+        "seats": 26,
+        "votes": 738016,
+        "seatShare": 0.12264150943396226,
+        "voteShare": 0.11976579640905137
+      },
+      {
+        "id": "prl",
+        "seats": 20,
+        "votes": 501647,
+        "seatShare": 0.09433962264150944,
+        "voteShare": 0.08140765575707219
+      },
+      {
+        "id": "psc",
+        "seats": 18,
+        "votes": 476730,
+        "seatShare": 0.08490566037735849,
+        "voteShare": 0.0773641060926688
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 12,
+        "votes": 405247,
+        "seatShare": 0.05660377358490566,
+        "voteShare": 0.0657637906188739
+      },
+      {
+        "id": "vu",
+        "seats": 10,
+        "votes": 363124,
+        "seatShare": 0.04716981132075472,
+        "voteShare": 0.058928038220364284
+      },
+      {
+        "id": "ecolo",
+        "seats": 10,
+        "votes": 312624,
+        "seatShare": 0.04716981132075472,
+        "voteShare": 0.050732859906266636
+      },
+      {
+        "id": "agalev",
+        "seats": 7,
+        "votes": 299550,
+        "seatShare": 0.0330188679245283,
+        "voteShare": 0.048611201267088164
+      },
+      {
+        "id": "rossem",
+        "seats": 3,
+        "votes": 198182,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.0321611253196931
+      },
+      {
+        "id": "fdf",
+        "seats": 3,
+        "votes": 90813,
+        "seatShare": 0.014150943396226415,
+        "voteShare": 0.014737202539369313
+      },
+      {
+        "id": "fn",
+        "seats": 1,
+        "votes": 64992,
+        "seatShare": 0.0047169811320754715,
+        "voteShare": 0.010546951069105638
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 94017,
+        "seatShare": 0,
+        "voteShare": 0.015257150090228102
+      }
+    ]
+  },
+  {
+    "date": "1995-05-21",
+    "year": 1995,
+    "totalSeats": 150,
+    "totalVotes": 6045824,
+    "parties": [
+      {
+        "id": "cvp",
+        "seats": 29,
+        "votes": 1042933,
+        "seatShare": 0.19333333333333333,
+        "voteShare": 0.1725046908411492
+      },
+      {
+        "id": "vld",
+        "seats": 21,
+        "votes": 798363,
+        "seatShare": 0.14,
+        "voteShare": 0.13205197504922406
+      },
+      {
+        "id": "ps",
+        "seats": 21,
+        "votes": 720819,
+        "seatShare": 0.14,
+        "voteShare": 0.1192259318167383
+      },
+      {
+        "id": "sp",
+        "seats": 20,
+        "votes": 762444,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.12611084940613554
+      },
+      {
+        "id": "prl",
+        "seats": 14,
+        "votes": 0,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0
+      },
+      {
+        "id": "psc",
+        "seats": 12,
+        "votes": 469101,
+        "seatShare": 0.08,
+        "voteShare": 0.0775909123388309
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 11,
+        "votes": 475677,
+        "seatShare": 0.07333333333333333,
+        "voteShare": 0.07867860526538649
+      },
+      {
+        "id": "ecolo",
+        "seats": 6,
+        "votes": 243362,
+        "seatShare": 0.04,
+        "voteShare": 0.040252908453835244
+      },
+      {
+        "id": "vu",
+        "seats": 5,
+        "votes": 283516,
+        "seatShare": 0.03333333333333333,
+        "voteShare": 0.04689451760421739
+      },
+      {
+        "id": "agalev",
+        "seats": 5,
+        "votes": 269058,
+        "seatShare": 0.03333333333333333,
+        "voteShare": 0.04450311487731035
+      },
+      {
+        "id": "fdf",
+        "seats": 4,
+        "votes": 0,
+        "seatShare": 0.02666666666666667,
+        "voteShare": 0
+      },
+      {
+        "id": "fn",
+        "seats": 2,
+        "votes": 138496,
+        "seatShare": 0.013333333333333334,
+        "voteShare": 0.022907712827895752
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 835778,
+        "seatShare": 0,
+        "voteShare": 0.13824054421696694
+      }
+    ]
+  },
+  {
+    "date": "1999-06-13",
+    "year": 1999,
+    "totalSeats": 150,
+    "totalVotes": 6140883,
+    "parties": [
+      {
+        "id": "vld",
+        "seats": 23,
+        "votes": 888861,
+        "seatShare": 0.15333333333333332,
+        "voteShare": 0.14474481927110483
+      },
+      {
+        "id": "cvp",
+        "seats": 22,
+        "votes": 875455,
+        "seatShare": 0.14666666666666667,
+        "voteShare": 0.14256174559912638
+      },
+      {
+        "id": "ps",
+        "seats": 19,
+        "votes": 631653,
+        "seatShare": 0.12666666666666668,
+        "voteShare": 0.10286028898449946
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 15,
+        "votes": 613399,
+        "seatShare": 0.1,
+        "voteShare": 0.09988775229881436
+      },
+      {
+        "id": "sp",
+        "seats": 14,
+        "votes": 593372,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0.09662649491937886
+      },
+      {
+        "id": "prl",
+        "seats": 14,
+        "votes": 0,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0
+      },
+      {
+        "id": "ecolo",
+        "seats": 11,
+        "votes": 457281,
+        "seatShare": 0.07333333333333333,
+        "voteShare": 0.07446502400387697
+      },
+      {
+        "id": "psc",
+        "seats": 10,
+        "votes": 365318,
+        "seatShare": 0.06666666666666667,
+        "voteShare": 0.05948949035505154
+      },
+      {
+        "id": "agalev",
+        "seats": 9,
+        "votes": 434449,
+        "seatShare": 0.06,
+        "voteShare": 0.07074699192282283
+      },
+      {
+        "id": "vu",
+        "seats": 8,
+        "votes": 0,
+        "seatShare": 0.05333333333333334,
+        "voteShare": 0
+      },
+      {
+        "id": "fdf",
+        "seats": 4,
+        "votes": 0,
+        "seatShare": 0.02666666666666667,
+        "voteShare": 0
+      },
+      {
+        "id": "fn",
+        "seats": 1,
+        "votes": 90401,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.014721172834590726
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 1167613,
+        "seatShare": 0,
+        "voteShare": 0.19013763981499077
+      }
+    ]
+  },
+  {
+    "date": "2003-05-18",
+    "year": 2003,
+    "totalSeats": 150,
+    "totalVotes": 6567544,
+    "parties": [
+      {
+        "id": "vld",
+        "seats": 25,
+        "votes": 1009223,
+        "seatShare": 0.16666666666666666,
+        "voteShare": 0.15366825102351808
+      },
+      {
+        "id": "ps",
+        "seats": 25,
+        "votes": 855992,
+        "seatShare": 0.16666666666666666,
+        "voteShare": 0.13033669816296625
+      },
+      {
+        "id": "mr",
+        "seats": 24,
+        "votes": 748952,
+        "seatShare": 0.16,
+        "voteShare": 0.11403836807183934
+      },
+      {
+        "id": "spa",
+        "seats": 23,
+        "votes": 0,
+        "seatShare": 0.15333333333333332,
+        "voteShare": 0
+      },
+      {
+        "id": "cdv",
+        "seats": 21,
+        "votes": 870749,
+        "seatShare": 0.14,
+        "voteShare": 0.13258365684341056
+      },
+      {
+        "id": "vlaamsblok",
+        "seats": 18,
+        "votes": 761407,
+        "seatShare": 0.12,
+        "voteShare": 0.11593481520641506
+      },
+      {
+        "id": "cdh",
+        "seats": 8,
+        "votes": 359660,
+        "seatShare": 0.05333333333333334,
+        "voteShare": 0.05476324178414336
+      },
+      {
+        "id": "ecolo",
+        "seats": 4,
+        "votes": 201118,
+        "seatShare": 0.02666666666666667,
+        "voteShare": 0.030623015239791312
+      },
+      {
+        "id": "nva",
+        "seats": 1,
+        "votes": 201399,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.03066580140155894
+      },
+      {
+        "id": "fn",
+        "seats": 1,
+        "votes": 130012,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.019796136881610537
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 1250541,
+        "seatShare": 0,
+        "voteShare": 0.19041227588273485
+      },
+      {
+        "id": "agalev",
+        "seats": 0,
+        "votes": 162205,
+        "seatShare": 0,
+        "voteShare": 0.02469796928653999
+      }
+    ]
+  },
+  {
+    "date": "2007-06-10",
+    "year": 2007,
+    "totalSeats": 150,
+    "totalVotes": 6671360,
+    "parties": [
+      {
+        "id": "cdv",
+        "seats": 24,
+        "votes": 0,
+        "seatShare": 0.16,
+        "voteShare": 0
+      },
+      {
+        "id": "mr",
+        "seats": 23,
+        "votes": 835073,
+        "seatShare": 0.15333333333333332,
+        "voteShare": 0.12517282832885648
+      },
+      {
+        "id": "ps",
+        "seats": 20,
+        "votes": 724787,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.10864156633729855
+      },
+      {
+        "id": "openvld",
+        "seats": 18,
+        "votes": 789445,
+        "seatShare": 0.12,
+        "voteShare": 0.11833344325594781
+      },
+      {
+        "id": "vlaamsbelang",
+        "seats": 17,
+        "votes": 799844,
+        "seatShare": 0.11333333333333333,
+        "voteShare": 0.11989219589409056
+      },
+      {
+        "id": "spa",
+        "seats": 14,
+        "votes": 0,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0
+      },
+      {
+        "id": "cdh",
+        "seats": 10,
+        "votes": 404077,
+        "seatShare": 0.06666666666666667,
+        "voteShare": 0.060568909487720646
+      },
+      {
+        "id": "ecolo",
+        "seats": 8,
+        "votes": 340378,
+        "seatShare": 0.05333333333333334,
+        "voteShare": 0.05102078136991558
+      },
+      {
+        "id": "nva",
+        "seats": 6,
+        "votes": 0,
+        "seatShare": 0.04,
+        "voteShare": 0
+      },
+      {
+        "id": "ld",
+        "seats": 5,
+        "votes": 268648,
+        "seatShare": 0.03333333333333333,
+        "voteShare": 0.04026885072908672
+      },
+      {
+        "id": "groen",
+        "seats": 4,
+        "votes": 265828,
+        "seatShare": 0.02666666666666667,
+        "voteShare": 0.03984614831158864
+      },
+      {
+        "id": "fn",
+        "seats": 1,
+        "votes": 131385,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.01969388550460476
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 2092566,
+        "seatShare": 0,
+        "voteShare": 0.3136640804873369
+      }
+    ]
+  },
+  {
+    "date": "2010-06-13",
+    "year": 2010,
+    "totalSeats": 150,
+    "totalVotes": 6527367,
+    "parties": [
+      {
+        "id": "nva",
+        "seats": 27,
+        "votes": 1135617,
+        "seatShare": 0.18,
+        "voteShare": 0.17397780759071765
+      },
+      {
+        "id": "ps",
+        "seats": 26,
+        "votes": 894543,
+        "seatShare": 0.17333333333333334,
+        "voteShare": 0.13704499838909012
+      },
+      {
+        "id": "mr",
+        "seats": 18,
+        "votes": 605617,
+        "seatShare": 0.12,
+        "voteShare": 0.09278120871708301
+      },
+      {
+        "id": "cdv",
+        "seats": 17,
+        "votes": 707986,
+        "seatShare": 0.11333333333333333,
+        "voteShare": 0.10846425518896056
+      },
+      {
+        "id": "spa",
+        "seats": 13,
+        "votes": 602867,
+        "seatShare": 0.08666666666666667,
+        "voteShare": 0.09235990560971981
+      },
+      {
+        "id": "openvld",
+        "seats": 13,
+        "votes": 563873,
+        "seatShare": 0.08666666666666667,
+        "voteShare": 0.0863859807484396
+      },
+      {
+        "id": "vlaamsbelang",
+        "seats": 12,
+        "votes": 506697,
+        "seatShare": 0.08,
+        "voteShare": 0.07762655294240388
+      },
+      {
+        "id": "cdh",
+        "seats": 9,
+        "votes": 360441,
+        "seatShare": 0.06,
+        "voteShare": 0.05521996848039953
+      },
+      {
+        "id": "ecolo",
+        "seats": 8,
+        "votes": 313047,
+        "seatShare": 0.05333333333333334,
+        "voteShare": 0.047959154127537186
+      },
+      {
+        "id": "groen",
+        "seats": 5,
+        "votes": 285989,
+        "seatShare": 0.03333333333333333,
+        "voteShare": 0.04381383795334321
+      },
+      {
+        "id": "ld",
+        "seats": 1,
+        "votes": 150577,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.023068566544519407
+      },
+      {
+        "id": "pp",
+        "seats": 1,
+        "votes": 84005,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.012869660921471092
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 282517,
+        "seatShare": 0,
+        "voteShare": 0.04328192363015593
+      }
+    ]
+  },
+  {
+    "date": "2014-05-25",
+    "year": 2014,
+    "totalSeats": 150,
+    "totalVotes": 6744547,
+    "parties": [
+      {
+        "id": "nva",
+        "seats": 33,
+        "votes": 1366397,
+        "seatShare": 0.22,
+        "voteShare": 0.20259285019438666
+      },
+      {
+        "id": "ps",
+        "seats": 23,
+        "votes": 787058,
+        "seatShare": 0.15333333333333332,
+        "voteShare": 0.11669545782689333
+      },
+      {
+        "id": "mr",
+        "seats": 20,
+        "votes": 650260,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.09641270199466324
+      },
+      {
+        "id": "cdv",
+        "seats": 18,
+        "votes": 783040,
+        "seatShare": 0.12,
+        "voteShare": 0.11609971729754423
+      },
+      {
+        "id": "openvld",
+        "seats": 14,
+        "votes": 659571,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0.09779322465986226
+      },
+      {
+        "id": "spa",
+        "seats": 13,
+        "votes": 595466,
+        "seatShare": 0.08666666666666667,
+        "voteShare": 0.08828850922085649
+      },
+      {
+        "id": "cdh",
+        "seats": 9,
+        "votes": 336184,
+        "seatShare": 0.06,
+        "voteShare": 0.049845304658711696
+      },
+      {
+        "id": "groen",
+        "seats": 6,
+        "votes": 358947,
+        "seatShare": 0.04,
+        "voteShare": 0.05322032747343891
+      },
+      {
+        "id": "ecolo",
+        "seats": 6,
+        "votes": 222524,
+        "seatShare": 0.04,
+        "voteShare": 0.03299317211370904
+      },
+      {
+        "id": "vlaamsbelang",
+        "seats": 3,
+        "votes": 247738,
+        "seatShare": 0.02,
+        "voteShare": 0.03673159961669776
+      },
+      {
+        "id": "fdf",
+        "seats": 2,
+        "votes": 121384,
+        "seatShare": 0.013333333333333334,
+        "voteShare": 0.017997354010580696
+      },
+      {
+        "id": "ptb",
+        "seats": 2,
+        "votes": 0,
+        "seatShare": 0.013333333333333334,
+        "voteShare": 0
+      },
+      {
+        "id": "pp",
+        "seats": 1,
+        "votes": 102581,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.015209472185455895
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 484983,
+        "seatShare": 0,
+        "voteShare": 0.07190742387887578
+      }
+    ]
+  },
+  {
+    "date": "2019-05-26",
+    "year": 2019,
+    "totalSeats": 150,
+    "totalVotes": 6780538,
+    "parties": [
+      {
+        "id": "nva",
+        "seats": 25,
+        "votes": 1086787,
+        "seatShare": 0.16666666666666666,
+        "voteShare": 0.1602803494353988
+      },
+      {
+        "id": "ps",
+        "seats": 20,
+        "votes": 641623,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.09462715200475243
+      },
+      {
+        "id": "vlaamsbelang",
+        "seats": 18,
+        "votes": 810177,
+        "seatShare": 0.12,
+        "voteShare": 0.11948565143355881
+      },
+      {
+        "id": "mr",
+        "seats": 14,
+        "votes": 512825,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0.07563190413504062
+      },
+      {
+        "id": "ecolo",
+        "seats": 13,
+        "votes": 416452,
+        "seatShare": 0.08666666666666667,
+        "voteShare": 0.06141872518080424
+      },
+      {
+        "id": "cdv",
+        "seats": 12,
+        "votes": 602520,
+        "seatShare": 0.08,
+        "voteShare": 0.08886020548811908
+      },
+      {
+        "id": "ptb",
+        "seats": 12,
+        "votes": 584621,
+        "seatShare": 0.08,
+        "voteShare": 0.0862204444544076
+      },
+      {
+        "id": "openvld",
+        "seats": 12,
+        "votes": 579334,
+        "seatShare": 0.08,
+        "voteShare": 0.08544071281659361
+      },
+      {
+        "id": "spa",
+        "seats": 9,
+        "votes": 455034,
+        "seatShare": 0.06,
+        "voteShare": 0.06710883413676023
+      },
+      {
+        "id": "groen",
+        "seats": 8,
+        "votes": 413836,
+        "seatShare": 0.05333333333333334,
+        "voteShare": 0.06103291508726889
+      },
+      {
+        "id": "cdh",
+        "seats": 5,
+        "votes": 250861,
+        "seatShare": 0.03333333333333333,
+        "voteShare": 0.03699721172567722
+      },
+      {
+        "id": "fdf",
+        "seats": 2,
+        "votes": 150394,
+        "seatShare": 0.013333333333333334,
+        "voteShare": 0.02218024587429493
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 199352,
+        "seatShare": 0,
+        "voteShare": 0.029400616883203074
+      },
+      {
+        "id": "pp",
+        "seats": 0,
+        "votes": 75096,
+        "seatShare": 0,
+        "voteShare": 0.011075227363964334
+      }
+    ]
+  },
+  {
+    "date": "2024-06-09",
+    "year": 2024,
+    "totalSeats": 150,
+    "totalVotes": 6984906,
+    "parties": [
+      {
+        "id": "nva",
+        "seats": 24,
+        "votes": 1167061,
+        "seatShare": 0.16,
+        "voteShare": 0.16708327928822522
+      },
+      {
+        "id": "vlaamsbelang",
+        "seats": 20,
+        "votes": 961601,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.13766842388430137
+      },
+      {
+        "id": "mr",
+        "seats": 20,
+        "votes": 716934,
+        "seatShare": 0.13333333333333333,
+        "voteShare": 0.10264046502558517
+      },
+      {
+        "id": "ps",
+        "seats": 16,
+        "votes": 561602,
+        "seatShare": 0.10666666666666667,
+        "voteShare": 0.08040222731701759
+      },
+      {
+        "id": "ptb",
+        "seats": 15,
+        "votes": 688369,
+        "seatShare": 0.1,
+        "voteShare": 0.0985509325393928
+      },
+      {
+        "id": "engages",
+        "seats": 14,
+        "votes": 472755,
+        "seatShare": 0.09333333333333334,
+        "voteShare": 0.06768237110134338
+      },
+      {
+        "id": "vooruit",
+        "seats": 13,
+        "votes": 566436,
+        "seatShare": 0.08666666666666667,
+        "voteShare": 0.0810942910326925
+      },
+      {
+        "id": "cdv",
+        "seats": 11,
+        "votes": 557392,
+        "seatShare": 0.07333333333333333,
+        "voteShare": 0.07979949909132636
+      },
+      {
+        "id": "openvld",
+        "seats": 7,
+        "votes": 380659,
+        "seatShare": 0.04666666666666667,
+        "voteShare": 0.05449736904118681
+      },
+      {
+        "id": "groen",
+        "seats": 6,
+        "votes": 324608,
+        "seatShare": 0.04,
+        "voteShare": 0.046472780020232196
+      },
+      {
+        "id": "ecolo",
+        "seats": 3,
+        "votes": 204438,
+        "seatShare": 0.02,
+        "voteShare": 0.029268539905905677
+      },
+      {
+        "id": "fdf",
+        "seats": 1,
+        "votes": 84024,
+        "seatShare": 0.006666666666666667,
+        "voteShare": 0.012029367324341945
+      },
+      {
+        "id": "other",
+        "seats": 0,
+        "votes": 299027,
+        "seatShare": 0,
+        "voteShare": 0.042810454428449
+      }
+    ]
+  }
+]

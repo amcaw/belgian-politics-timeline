@@ -1,0 +1,108 @@
+/* Design-system tokens — single source of truth. Dark is the default;
+   light is applied automatically via prefers-color-scheme. Components never
+   hard-code a colour: they read these vars. */
+:root {
+	/* surfaces */
+	--bg: #001324;
+	--surface: #0a2a40;
+	--surface-2: rgba(255, 255, 255, 0.05);
+	--surface-hover: rgba(255, 255, 255, 0.09);
+
+	/* text */
+	--text: #f0f0f1;
+	--text-secondary: rgba(240, 240, 241, 0.72);
+	--text-muted: rgba(240, 240, 241, 0.5);
+
+	/* borders */
+	--border: rgba(255, 255, 255, 0.14);
+	--border-strong: rgba(255, 255, 255, 0.24);
+	--divider: rgba(255, 255, 255, 0.08);
+
+	/* accent — per-project colour for selected/active states & links */
+	--accent: #4a90e2;
+	--accent-contrast: #ffffff;
+	--accent-soft: rgba(74, 144, 226, 0.16);
+	--accent-shadow: rgba(74, 144, 226, 0.35);
+
+	/* semantic */
+	--positive: #4ecb71;
+	--negative: #ff6b6b;
+	--positive-soft: rgba(78, 203, 113, 0.18);
+	--negative-soft: rgba(255, 107, 107, 0.18);
+
+	/* domain tokens — data-viz canvas */
+	--chart-bg: #04192c;          /* streamgraph canvas base */
+	--chart-bg-glow: #0a3457;     /* lighter centre for a subtle radial depth */
+	--chart-grid: rgba(255, 255, 255, 0.07);
+	--chart-cursor: rgba(240, 240, 241, 0.55);
+	--band-stroke: rgba(4, 25, 44, 0.7); /* separates adjacent bands (= bg-ish) */
+	--label-halo: rgba(0, 0, 0, 0.45);    /* outline behind on-band labels */
+
+	/* warning / note block */
+	--warn-text: #f0c674;
+	--warn-bg: rgba(240, 198, 116, 0.08);
+	--warn-border: rgba(240, 198, 116, 0.28);
+
+	/* typography */
+	--font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg: #f7f8fb;
+		--surface: #ffffff;
+		--surface-2: rgba(0, 0, 0, 0.03);
+		--surface-hover: rgba(0, 0, 0, 0.05);
+
+		--text: #2e3238;
+		--text-secondary: rgba(46, 50, 56, 0.72);
+		--text-muted: rgba(46, 50, 56, 0.5);
+
+		--border: rgba(0, 0, 0, 0.12);
+		--border-strong: rgba(0, 0, 0, 0.2);
+		--divider: rgba(0, 0, 0, 0.07);
+
+		--accent: #003d60;
+		--accent-contrast: #ffffff;
+		--accent-soft: rgba(0, 61, 96, 0.1);
+		--accent-shadow: rgba(0, 61, 96, 0.25);
+
+		--positive: #1a7a3c;
+		--negative: #c0392b;
+
+		--chart-bg: #eef1f6;          /* cool light grey, not cream */
+		--chart-bg-glow: #ffffff;
+		--chart-grid: rgba(0, 0, 0, 0.06);
+		--chart-cursor: rgba(26, 26, 26, 0.45);
+		--band-stroke: #ffffff;
+		--label-halo: rgba(0, 0, 0, 0.14);
+
+		--warn-text: #b45309;
+		--warn-bg: #fffbeb;
+		--warn-border: #fde68a;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: var(--font);
+	background-color: var(--bg);
+	color: var(--text);
+}
+
+/* Form controls and SVG text don't inherit font-family — force it. */
+button,
+input,
+select,
+textarea,
+svg text {
+	font-family: var(--font);
+}

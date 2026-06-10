@@ -1,0 +1,27 @@
+[
+  { "from": "cd-unitary", "to": "cvp", "year": 1974, "type": "split" },
+  { "from": "cd-unitary", "to": "psc", "year": 1974, "type": "split" },
+  { "from": "cvp", "to": "cdv", "year": 2001, "type": "rename" },
+  { "from": "psc", "to": "cdh", "year": 2002, "type": "rename" },
+  { "from": "cdh", "to": "engages", "year": 2022, "type": "rename" },
+
+  { "from": "sp-unitary", "to": "sp", "year": 1978, "type": "split" },
+  { "from": "sp-unitary", "to": "ps", "year": 1978, "type": "split" },
+  { "from": "sp", "to": "spa", "year": 2001, "type": "rename" },
+  { "from": "spa", "to": "vooruit", "year": 2021, "type": "rename" },
+
+  { "from": "lib-unitary", "to": "pvv", "year": 1972, "type": "split" },
+  { "from": "lib-unitary", "to": "prl", "year": 1979, "type": "split" },
+  { "from": "pvv", "to": "vld", "year": 1992, "type": "rename" },
+  { "from": "vld", "to": "openvld", "year": 2007, "type": "rename" },
+  { "from": "prl", "to": "mr", "year": 2002, "type": "rename" },
+  { "from": "fdf", "to": "mr", "year": 2002, "type": "merge" },
+
+  { "from": "vu", "to": "nva", "year": 2001, "type": "split" },
+
+  { "from": "agalev", "to": "groen", "year": 2003, "type": "rename" },
+
+  { "from": "vlaamsblok", "to": "vlaamsbelang", "year": 2004, "type": "rename" },
+
+  { "from": "kpb", "to": "ptb", "year": 2014, "type": "succession" }
+]

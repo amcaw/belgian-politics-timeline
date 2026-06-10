@@ -1,0 +1,146 @@
+[
+  {
+    "electionDate": "1946-02-17",
+    "name": "Paul-Henri Spaak",
+    "party": "PSB",
+    "photo": "/pm/Paul-Henri_Spaak.jpg"
+  },
+  {
+    "electionDate": "1949-06-26",
+    "name": "Gaston Eyskens",
+    "party": "CVP",
+    "photo": "/pm/Gaston_Eyskens.jpg"
+  },
+  {
+    "electionDate": "1950-06-04",
+    "name": "Jean Duvieusart",
+    "party": "PSC",
+    "photo": "/pm/Jean_Duvieusart.jpg"
+  },
+  {
+    "electionDate": "1954-04-11",
+    "name": "Achille Van Acker",
+    "party": "BSP",
+    "photo": "/pm/Achille_Van_Acker.jpg"
+  },
+  {
+    "electionDate": "1958-06-01",
+    "name": "Gaston Eyskens",
+    "party": "CVP",
+    "photo": "/pm/Gaston_Eyskens.jpg"
+  },
+  {
+    "electionDate": "1961-03-26",
+    "name": "Théo Lefèvre",
+    "party": "CVP",
+    "photo": "/pm/Théo_Lefèvre.jpg"
+  },
+  {
+    "electionDate": "1965-05-23",
+    "name": "Pierre Harmel",
+    "party": "PSC",
+    "photo": "/pm/Pierre_Harmel.jpg"
+  },
+  {
+    "electionDate": "1968-03-31",
+    "name": "Gaston Eyskens",
+    "party": "CVP",
+    "photo": "/pm/Gaston_Eyskens.jpg"
+  },
+  {
+    "electionDate": "1971-11-07",
+    "name": "Gaston Eyskens",
+    "party": "CVP",
+    "photo": "/pm/Gaston_Eyskens.jpg"
+  },
+  {
+    "electionDate": "1974-03-10",
+    "name": "Leo Tindemans",
+    "party": "CVP",
+    "photo": "/pm/Leo_Tindemans.jpg"
+  },
+  {
+    "electionDate": "1977-04-17",
+    "name": "Leo Tindemans",
+    "party": "CVP",
+    "photo": "/pm/Leo_Tindemans.jpg"
+  },
+  {
+    "electionDate": "1978-12-17",
+    "name": "Wilfried Martens",
+    "party": "CVP",
+    "photo": "/pm/Wilfried_Martens.jpg"
+  },
+  {
+    "electionDate": "1981-11-08",
+    "name": "Wilfried Martens",
+    "party": "CVP",
+    "photo": "/pm/Wilfried_Martens.jpg"
+  },
+  {
+    "electionDate": "1985-10-13",
+    "name": "Wilfried Martens",
+    "party": "CVP",
+    "photo": "/pm/Wilfried_Martens.jpg"
+  },
+  {
+    "electionDate": "1987-12-13",
+    "name": "Wilfried Martens",
+    "party": "CVP",
+    "photo": "/pm/Wilfried_Martens.jpg"
+  },
+  {
+    "electionDate": "1991-11-24",
+    "name": "Jean-Luc Dehaene",
+    "party": "CVP",
+    "photo": "/pm/Jean-Luc_Dehaene.jpg"
+  },
+  {
+    "electionDate": "1995-05-21",
+    "name": "Jean-Luc Dehaene",
+    "party": "CVP",
+    "photo": "/pm/Jean-Luc_Dehaene.jpg"
+  },
+  {
+    "electionDate": "1999-06-13",
+    "name": "Guy Verhofstadt",
+    "party": "VLD",
+    "photo": "/pm/Guy_Verhofstadt.jpg"
+  },
+  {
+    "electionDate": "2003-05-18",
+    "name": "Guy Verhofstadt",
+    "party": "VLD",
+    "photo": "/pm/Guy_Verhofstadt.jpg"
+  },
+  {
+    "electionDate": "2007-06-10",
+    "name": "Yves Leterme",
+    "party": "CD&V",
+    "photo": "/pm/Yves_Leterme.jpg"
+  },
+  {
+    "electionDate": "2010-06-13",
+    "name": "Elio Di Rupo",
+    "party": "PS",
+    "photo": "/pm/Elio_Di_Rupo.jpg"
+  },
+  {
+    "electionDate": "2014-05-25",
+    "name": "Charles Michel",
+    "party": "MR",
+    "photo": "/pm/Charles_Michel.jpg"
+  },
+  {
+    "electionDate": "2019-05-26",
+    "name": "Alexander De Croo",
+    "party": "Open Vld",
+    "photo": "/pm/Alexander_De_Croo.jpg"
+  },
+  {
+    "electionDate": "2024-06-09",
+    "name": "Bart De Wever",
+    "party": "N-VA",
+    "photo": "/pm/Bart_De_Wever.jpg"
+  }
+]
