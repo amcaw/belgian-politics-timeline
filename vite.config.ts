@@ -3,7 +3,8 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 // GitHub Pages serves the site under /<repo>/ in production.
-const base = process.env.BASE_PATH ?? '';
+const base = ((globalThis as { process?: { env?: Record<string, string> } }).process?.env
+	?.BASE_PATH ?? '') as '' | `/${string}`;
 
 export default defineConfig({
 	plugins: [

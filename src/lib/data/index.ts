@@ -48,17 +48,32 @@ export function isGoverning(date: string, partyId: string): boolean {
 	return (COALITIONS[date] ?? []).includes(partyId);
 }
 
-// Prime ministers heading the government formed after each election.
-import pmsData from './pms.json';
-export interface PM {
-	electionDate: string;
-	name: string;
-	party: string;
-	photo: string;
+// the coalition parties for a given government (via its election)
+export function coalitionOf(g: Government): string[] {
+	return COALITIONS[g.electionDate] ?? [];
 }
-export const PMS = pmsData as PM[];
-export function pmAt(date: string): PM | undefined {
-	return PMS.find((p) => p.electionDate === date);
+
+// Every federal government 1946-2024, placed at its start date — a continuous
+// PM frieze (several governments per legislature).
+import govData from './governments.json';
+export interface Government {
+	name: string;
+	government: string;
+	startDate: string; // YYYY-MM-DD
+	party: string;
+	partyId: string;
+	photo: string;
+	wikiUrl: string;
+	electionDate: string; // the election whose coalition this government belongs to
+}
+export const GOVERNMENTS = (govData as Government[])
+	.slice()
+	.sort((a, b) => a.startDate.localeCompare(b.startDate));
+
+// fractional year for time positioning (e.g. 1981-12-17 -> 1981.96)
+export function govYear(g: Government): number {
+	const [y, m, d] = g.startDate.split('-').map(Number);
+	return y + ((m - 1) * 30 + (d - 1)) / 365;
 }
 
 // Key narrative moments to annotate on the timeline.

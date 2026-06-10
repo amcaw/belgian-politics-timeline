@@ -1,12 +1,24 @@
 <script lang="ts">
 	import * as d3 from 'd3';
 	import { base } from '$app/paths';
-	import { ELECTIONS, share, party, isGoverning, pmAt, type Metric } from './data';
+	import {
+		ELECTIONS,
+		share,
+		party,
+		GOVERNMENTS,
+		govYear,
+		coalitionOf,
+		type Government,
+		type Metric
+	} from './data';
 
-	let {
-		metric = 'seats',
-		governingOnly = false
-	}: { metric?: Metric; governingOnly?: boolean } = $props();
+	let { metric = 'seats' }: { metric?: Metric } = $props();
+
+	// the government clicked in the frieze (null = none). Selecting one highlights
+	// its coalition and shows its details + Wikipedia link.
+	let selectedGov = $state<Government | null>(null);
+	// parties of the selected government's coalition (for highlighting)
+	const selectedCoalition = $derived(selectedGov ? new Set(coalitionOf(selectedGov)) : null);
 
 	// ---- horizontal streamgraph (chart_1 style) ----
 	// time flows left -> right; each party is a flowing band whose vertical
@@ -18,13 +30,12 @@
 	// Wide canvas: give each election generous room and let the container scroll
 	// horizontally. Bigger = more readable bands + a "grand frieze" feel.
 	const perElection = 82;
-	const pmBand = 70; // space at top for prime-minister portraits
+	const pmBand = 62; // space at top for the prime-minister frieze
 	const margin = { top: 38 + pmBand, right: 150, bottom: 16, left: 56 };
 	const innerW = (years.length - 1) * perElection;
 	const width = margin.left + innerW + margin.right;
 	const height = 660 + pmBand;
 	const innerH = height - margin.top - margin.bottom;
-	const photoR = 18; // portrait radius
 
 	// fixed family order (top -> bottom of the stack): left wing at top.
 	const FAMILY_ORDER = [
@@ -52,25 +63,57 @@
 			.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
 	);
 
-	// share matrix: one row per election, columns per party id
-	const series = $derived.by(() => {
-		const rows = ELECTIONS.map((e) => {
+	// share matrix: one row per election, columns per party id (always all parties)
+	const series = $derived.by(() =>
+		ELECTIONS.map((e) => {
 			const row: Record<string, number> = { year: e.year };
 			for (const id of allIds) {
 				const p = e.parties.find((q) => q.id === id);
-				let s = p ? share(p, metric) : 0;
-				if (governingOnly && p && !isGoverning(e.date, id)) s = 0; // collapse non-gov
-				row[id] = s;
+				row[id] = p ? share(p, metric) : 0;
 			}
 			return row;
-		});
-		return rows;
-	});
+		})
+	);
 
 	// x = even spacing PER ELECTION (not linear time), so closely-spaced years
 	// like 1977/1978 don't overlap and every election gets equal room.
 	const xi = (i: number) => (years.length === 1 ? 0 : (i / (years.length - 1)) * innerW);
 	const x = (year: number) => xi(years.indexOf(year));
+
+	// map an arbitrary (fractional) year onto the per-election x axis by
+	// interpolating between the two surrounding election columns. Lets us place
+	// governments (which start mid-legislature) on the same warped axis.
+	function xFrac(year: number): number {
+		if (year <= years[0]) return xi(0);
+		if (year >= years[years.length - 1]) return xi(years.length - 1);
+		let i = 0;
+		while (i < years.length - 1 && years[i + 1] <= year) i++;
+		const t = (year - years[i]) / (years[i + 1] - years[i]);
+		return xi(i) + t * (xi(i + 1) - xi(i));
+	}
+
+	// PM frieze layout: place every government at its start date, then nudge
+	// overlapping portraits rightwards so they stay legible.
+	const govR = 15; // portrait radius in the frieze
+	type GovPos = { g: Government; x: number; cx: number };
+	const govPositions = $derived.by((): GovPos[] => {
+		const min = 2 * govR + 2;
+		let prev = -Infinity;
+		return GOVERNMENTS.map((g) => {
+			let cx = xFrac(govYear(g));
+			if (cx - prev < min) cx = prev + min;
+			prev = cx;
+			return { g, x: xFrac(govYear(g)), cx };
+		});
+	});
+
+	// the government in office at a given election year (last one started by then)
+	function govAtYear(year: number): Government | undefined {
+		const cutoff = year + 0.96; // ~end of the election year
+		let found: Government | undefined;
+		for (const g of GOVERNMENTS) if (govYear(g) <= cutoff) found = g;
+		return found;
+	}
 
 	const stacked = $derived.by(() => {
 		const stack = d3
@@ -95,7 +138,10 @@
 			.x((_, i) => x(years[i]))
 			.y0((d) => yScale(d[0]))
 			.y1((d) => yScale(d[1]))
-			.curve(d3.curveBasis)
+			// monotone: the curve passes THROUGH each election point with no
+			// overshoot, so a party at 0 seats is genuinely 0 (no "ghost" bands in
+			// the governing-only view). curveBasis only approximates the points.
+			.curve(d3.curveMonotoneX)
 	);
 
 	// label anchor: place the label at the election where THIS band is thickest,
@@ -169,28 +215,28 @@
 		const p = ELECTIONS.find((e) => e.year === year)?.parties.find((q) => q.id === id);
 		return p ? share(p, metric) : 0;
 	}
-	function governingAt(year: number, id: string) {
-		const e = ELECTIONS.find((x) => x.year === year);
-		return e ? isGoverning(e.date, id) : false;
-	}
 	function textColor(hex: string) {
 		const c = d3.rgb(hex);
 		return (0.299 * c.r + 0.587 * c.g + 0.114 * c.b) / 255 > 0.62 ? '#1a1a1a' : '#fff';
 	}
 	const pct = (s: number) => (s * 100).toFixed(1) + '%';
 
-	// map a PM's party abbreviation to a canonical party id (for ring colour)
-	const PM_PARTY: Record<string, string> = {
-		PSB: 'ps', BSP: 'sp', CVP: 'cvp', PSC: 'psc', 'CD&V': 'cdv', cdH: 'cdh',
-		VLD: 'vld', 'Open Vld': 'openvld', MR: 'mr', PS: 'ps', 'N-VA': 'nva'
-	};
-	const toPartyId = (abbr: string) => PM_PARTY[abbr] ?? 'other';
+	// hovered government portrait (by government name), drives the panel focus
+	let govHover = $state<string | null>(null);
 
-	// live ranking: the parties at the currently hovered election, biggest first.
-	// Driven by hovering a band (tip.year) OR a PM portrait (pmHoverYear).
-	// Defaults to the latest election when nothing is hovered.
-	let pmHoverYear = $state<number | null>(null);
-	const rankYear = $derived(pmHoverYear ?? tip?.year ?? years.at(-1)!);
+	// when a government portrait is hovered, focus the nearest election year so
+	// the ranking panel and cursor follow it.
+	const govHoverYear = $derived.by(() => {
+		if (!govHover) return null;
+		const g = GOVERNMENTS.find((x) => x.government === govHover);
+		if (!g) return null;
+		const gy = govYear(g);
+		return years.reduce((b, y) => (Math.abs(y - gy) < Math.abs(b - gy) ? y : b), years[0]);
+	});
+
+	// live ranking: the parties at the currently focused election, biggest first.
+	// Focus follows a hovered band, a hovered government portrait, else the latest.
+	const rankYear = $derived(govHoverYear ?? tip?.year ?? years.at(-1)!);
 	const ranking = $derived.by(() => {
 		const e = ELECTIONS.find((x) => x.year === rankYear);
 		if (!e) return [] as { id: string; v: number; seats: number }[];
@@ -202,7 +248,11 @@
 			.slice(0, 9);
 	});
 	const rankMax = $derived(Math.max(0.01, ...ranking.map((r) => r.v)));
-	const rankPM = $derived(pmAt(ELECTIONS.find((e) => e.year === rankYear)?.date ?? ''));
+	// the government to feature in the panel: hovered one, else the one in office
+	const rankGov = $derived(
+		(govHover ? GOVERNMENTS.find((x) => x.government === govHover) : undefined) ??
+			govAtYear(rankYear)
+	);
 
 	// horizontal-scroll hint: show while the chart overflows and isn't scrolled yet
 	let wrapEl = $state<HTMLDivElement | null>(null);
@@ -240,29 +290,40 @@
 						<stop offset="100%" stop-color={d3.rgb(p.color).darker(0.5).formatHex()} />
 					</linearGradient>
 				{/each}
-				<clipPath id="photo-clip"><circle cx="0" cy="0" r={photoR} /></clipPath>
+				<clipPath id="photo-clip"><circle cx="0" cy="0" r={govR} /></clipPath>
 			</defs>
 
-			<!-- prime-minister portrait band -->
-			<g transform="translate({margin.left},{38})">
-				{#each ELECTIONS as e}
-					{@const pm = pmAt(e.date)}
-					{#if pm}
-						{@const active = rankYear === e.year}
-						<g transform="translate({x(e.year)},{photoR + 2})"
-							role="presentation"
-							onmouseenter={() => (pmHoverYear = e.year)}
-							onmouseleave={() => (pmHoverYear = null)}>
-							<g class="pm" class:pm-active={active}>
-								<circle cx="0" cy="0" r={photoR + 1.5} class="pm-ring" stroke={party(toPartyId(pm.party)).color} />
-								<image
-									href={base + pm.photo}
-									x={-photoR} y={-photoR} width={photoR * 2} height={photoR * 2}
-									clip-path="url(#photo-clip)" preserveAspectRatio="xMidYMid slice"
-								/>
-							</g>
-						</g>
+			<!-- prime-minister frieze: every government at its start date -->
+			<g transform="translate({margin.left},{16})">
+				<!-- leader line connecting the portraits -->
+				<line class="pm-axis" x1={govPositions[0]?.cx ?? 0} x2={govPositions.at(-1)?.cx ?? 0}
+					y1={govR + 2} y2={govR + 2} />
+				{#each govPositions as gp (gp.g.government)}
+					{@const selected = selectedGov?.government === gp.g.government}
+					{@const active = selected || govHover === gp.g.government || (govHover === null && !selectedGov && rankGov?.government === gp.g.government)}
+					<!-- tick from the real date position down to the (possibly nudged) portrait -->
+					{#if Math.abs(gp.cx - gp.x) > 1}
+						<line class="pm-tick" x1={gp.x} y1={govR + 2} x2={gp.cx} y2={govR + 2} />
 					{/if}
+					<g transform="translate({gp.cx},{govR + 2})" role="button" tabindex="0"
+						aria-label="Gouvernement {gp.g.government}"
+						class="pm-hit"
+						onmouseenter={() => (govHover = gp.g.government)}
+						onmouseleave={() => (govHover = null)}
+						onclick={() => (selectedGov = selected ? null : gp.g)}
+						onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectedGov = selected ? null : gp.g; } }}>
+						<g class="pm" class:pm-active={active} class:pm-selected={selected}>
+							<circle cx="0" cy="0" r={govR + 1.5} class="pm-ring" stroke={party(gp.g.partyId).color} />
+							{#if gp.g.photo}
+								<image href={base + gp.g.photo}
+									x={-govR} y={-govR} width={govR * 2} height={govR * 2}
+									clip-path="url(#photo-clip)" preserveAspectRatio="xMidYMid slice" />
+							{/if}
+						</g>
+						{#if active}
+							<text class="pm-name" x="0" y={-govR - 6}>{gp.g.name}</text>
+						{/if}
+					</g>
 				{/each}
 			</g>
 
@@ -281,11 +342,15 @@
 				<!-- streamgraph bands -->
 				{#each stacked as s (s.key)}
 					{@const p = party(s.key)}
+					{@const dimmed =
+						(hovered && hovered !== s.key) ||
+						(selectedCoalition && !selectedCoalition.has(s.key))}
 					<path
 						d={area(s)}
 						fill="url(#grad-{s.key})"
 						class="band"
-						class:dim={hovered && hovered !== s.key}
+						class:dim={dimmed}
+						class:in-coalition={selectedCoalition && selectedCoalition.has(s.key)}
 						role="img"
 						aria-label={p.fullName}
 						onmousemove={(ev) => move(s.key, ev)}
@@ -306,29 +371,59 @@
 		</div>
 	</div>
 
-	<!-- live ranking panel -->
+	<!-- live ranking / government panel -->
 	<aside class="rank">
-		<div class="rank-year">{rankYear}</div>
-		{#if rankPM}
+		{#if selectedGov}
+			<!-- selected government detail -->
+			{@const coal = coalitionOf(selectedGov)}
+			<button class="rank-close" onclick={() => (selectedGov = null)} aria-label="Fermer">✕</button>
 			<div class="rank-pm">
-				<img src={base + rankPM.photo} alt={rankPM.name} />
-				<div><div class="rank-pm-name">{rankPM.name}</div><div class="rank-pm-role">Premier ministre · {rankPM.party}</div></div>
-			</div>
-		{/if}
-		<div class="rank-bars">
-			{#each ranking as r (r.id)}
-				{@const p = party(r.id)}
-				<div class="rank-row" class:dim={hovered && hovered !== r.id}
-					onmouseenter={() => (hovered = r.id)} onmouseleave={() => (hovered = null)} role="presentation">
-					<span class="rank-name">{p.label}</span>
-					<span class="rank-bar-wrap">
-						<span class="rank-bar" style:width="{(r.v / rankMax) * 100}%" style:background={p.color}></span>
-					</span>
-					<span class="rank-val">{metric === 'seats' ? r.seats : pct(r.v)}</span>
+				{#if selectedGov.photo}<img src={base + selectedGov.photo} alt={selectedGov.name} />{/if}
+				<div>
+					<div class="rank-pm-name">{selectedGov.name}</div>
+					<div class="rank-pm-role">Gouvernement {selectedGov.government}</div>
 				</div>
-			{/each}
-		</div>
-		<div class="rank-hint">Survolez la frise pour explorer chaque élection</div>
+			</div>
+			<div class="rank-meta">Entrée en fonction&nbsp;: {selectedGov.startDate}</div>
+			<div class="rank-sub">Coalition</div>
+			<div class="coal-chips">
+				{#each coal as id (id)}
+					{@const p = party(id)}
+					<span class="coal-chip" style:border-color={p.color}>
+						<span class="sw" style:background={p.color}></span>{p.label}
+					</span>
+				{/each}
+			</div>
+			<a class="wiki-link" href={selectedGov.wikiUrl} target="_blank" rel="noreferrer">
+				Voir sur Wikipédia ↗
+			</a>
+		{:else}
+			<!-- live ranking for the focused election -->
+			<div class="rank-year">{rankYear}</div>
+			{#if rankGov}
+				<div class="rank-pm">
+					{#if rankGov.photo}<img src={base + rankGov.photo} alt={rankGov.name} />{/if}
+					<div>
+						<div class="rank-pm-name">{rankGov.name}</div>
+						<div class="rank-pm-role">Gouvernement {rankGov.government} · {rankGov.party}</div>
+					</div>
+				</div>
+			{/if}
+			<div class="rank-bars">
+				{#each ranking as r (r.id)}
+					{@const p = party(r.id)}
+					<div class="rank-row" class:dim={hovered && hovered !== r.id}
+						onmouseenter={() => (hovered = r.id)} onmouseleave={() => (hovered = null)} role="presentation">
+						<span class="rank-name">{p.label}</span>
+						<span class="rank-bar-wrap">
+							<span class="rank-bar" style:width="{(r.v / rankMax) * 100}%" style:background={p.color}></span>
+						</span>
+						<span class="rank-val">{metric === 'seats' ? r.seats : pct(r.v)}</span>
+					</div>
+				{/each}
+			</div>
+			<div class="rank-hint">Cliquez un Premier ministre pour voir sa coalition</div>
+		{/if}
 	</aside>
 
 	{#if tip}
@@ -337,7 +432,6 @@
 			<div class="tt-head"><span class="sw" style:background={p.color}></span><strong>{p.fullName}</strong></div>
 			<div class="tt-row">{tip.year} · {seatsAt(tip.year, tip.id)} sièges</div>
 			<div class="tt-row">{metric === 'seats' ? 'Sièges' : 'Voix'}: <b>{pct(shareAt(tip.year, tip.id))}</b></div>
-			{#if governingAt(tip.year, tip.id)}<div class="tt-gov">● au gouvernement</div>{/if}
 		</div>
 	{/if}
 </div>
@@ -393,11 +487,19 @@
 	}
 	.band-label.dim { opacity: 0.12; }
 
-	/* PM portraits — inner group's local origin (0,0) is the portrait centre. */
+	/* PM frieze — inner group's local origin (0,0) is the portrait centre. */
+	.pm-axis { stroke: var(--border); stroke-width: 1; }
+	.pm-tick { stroke: var(--border-strong); stroke-width: 1; }
+	.pm-hit { cursor: pointer; outline: none; }
 	.pm { transition: transform 0.15s ease; }
-	.pm-ring { fill: var(--surface); stroke-width: 2.5; transition: stroke-width 0.15s; }
-	.pm-active { transform: scale(1.16); }
-	.pm-active .pm-ring { stroke-width: 3.5; }
+	.pm-ring { fill: var(--surface); stroke-width: 2; transition: stroke-width 0.15s; }
+	.pm-active { transform: scale(1.32); }
+	.pm-active .pm-ring { stroke-width: 3; }
+	.pm-selected .pm-ring { stroke-width: 4; filter: drop-shadow(0 0 4px var(--accent-shadow)); }
+	.pm-name {
+		font-size: 10px; font-weight: 700; text-anchor: middle; fill: var(--text);
+		paint-order: stroke; stroke: var(--chart-bg); stroke-width: 3px;
+	}
 
 	/* live ranking panel (design system: card-outlined) */
 	.rank {
@@ -419,6 +521,33 @@
 	.rank-val { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--text); text-align: right; }
 	.rank-hint { font-size: 0.68rem; color: var(--text-muted); margin-top: 0.9rem; text-align: center; }
 
+	/* selected-government view */
+	.rank { position: sticky; }
+	.rank-close {
+		position: absolute; top: 10px; right: 12px; border: none; background: none;
+		color: var(--text-muted); cursor: pointer; font-size: 0.9rem; line-height: 1;
+	}
+	.rank-close:hover { color: var(--text); }
+	.rank-meta { font-size: 0.74rem; color: var(--text-muted); margin-bottom: 0.9rem; }
+	.rank-sub {
+		font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em;
+		color: var(--text-muted); font-weight: 700; margin-bottom: 0.4rem;
+	}
+	.coal-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+	.coal-chip {
+		display: inline-flex; align-items: center; gap: 5px;
+		font-size: 0.74rem; font-weight: 600; color: var(--text);
+		border: 1.5px solid; border-radius: 999px; padding: 3px 9px;
+		background: var(--surface-2);
+	}
+	.wiki-link {
+		display: block; margin-top: 1.1rem; text-align: center;
+		background: var(--accent); color: var(--accent-contrast);
+		font-size: 0.8rem; font-weight: 700; text-decoration: none;
+		padding: 9px; border-radius: 9px; transition: opacity 0.15s;
+	}
+	.wiki-link:hover { opacity: 0.88; }
+
 	.tooltip {
 		position: fixed; pointer-events: none; background: var(--surface); color: var(--text);
 		border: 1px solid var(--border); padding: 8px 10px; border-radius: 8px;
@@ -428,7 +557,6 @@
 	.tt-head { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; font-weight: 700; }
 	.sw { width: 11px; height: 11px; border-radius: 2px; flex-shrink: 0; }
 	.tt-row { color: var(--text-secondary); }
-	.tt-gov { color: var(--positive); margin-top: 2px; font-weight: 600; }
 
 	@media (max-width: 760px) {
 		.layout { flex-direction: column; }

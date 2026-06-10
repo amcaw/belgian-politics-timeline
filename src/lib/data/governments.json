@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Achille Van Acker",
+    "government": "Van Acker II",
+    "startDate": "1945-08-02",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Achille_Van_Acker.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_II",
+    "electionDate": "1946-02-17"
+  },
+  {
+    "name": "Paul-Henri Spaak",
+    "government": "Spaak I",
+    "startDate": "1946-03-13",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Paul-Henri_Spaak.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_I",
+    "electionDate": "1946-02-17"
+  },
+  {
+    "name": "Achille Van Acker",
+    "government": "Van Acker III",
+    "startDate": "1946-03-31",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Achille_Van_Acker.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_III",
+    "electionDate": "1946-02-17"
+  },
+  {
+    "name": "Camille Huysmans",
+    "government": "Huysmans",
+    "startDate": "1946-08-03",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Camille_Huysmans.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Huysmans",
+    "electionDate": "1946-02-17"
+  },
+  {
+    "name": "Paul-Henri Spaak",
+    "government": "Spaak II",
+    "startDate": "1947-03-20",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Paul-Henri_Spaak.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_II",
+    "electionDate": "1946-02-17"
+  },
+  {
+    "name": "Gaston Eyskens",
+    "government": "Eyskens I",
+    "startDate": "1949-08-11",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Gaston_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Eyskens_I",
+    "electionDate": "1949-06-26"
+  },
+  {
+    "name": "Jean Duvieusart",
+    "government": "Duvieusart",
+    "startDate": "1950-06-08",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Jean_Duvieusart.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Duvieusart",
+    "electionDate": "1950-06-04"
+  },
+  {
+    "name": "Joseph Pholien",
+    "government": "Pholien",
+    "startDate": "1950-08-16",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Joseph_Pholien.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Pholien",
+    "electionDate": "1950-06-04"
+  },
+  {
+    "name": "Jean Van Houtte",
+    "government": "Van Houtte",
+    "startDate": "1952-01-15",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Jean_Van_Houtte.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Houtte",
+    "electionDate": "1950-06-04"
+  },
+  {
+    "name": "Achille Van Acker",
+    "government": "Van Acker IV",
+    "startDate": "1954-04-23",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Achille_Van_Acker.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Acker_IV",
+    "electionDate": "1954-04-11"
+  },
+  {
+    "name": "Gaston Eyskens",
+    "government": "Eyskens II",
+    "startDate": "1958-06-26",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Gaston_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_II",
+    "electionDate": "1958-06-01"
+  },
+  {
+    "name": "Théo Lefèvre",
+    "government": "Lefèvre",
+    "startDate": "1961-04-25",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Théo_Lefèvre.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Lefèvre",
+    "electionDate": "1961-03-26"
+  },
+  {
+    "name": "Pierre Harmel",
+    "government": "Harmel",
+    "startDate": "1965-07-28",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Pierre_Harmel.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Harmel",
+    "electionDate": "1965-05-23"
+  },
+  {
+    "name": "Paul Vanden Boeynants",
+    "government": "Vanden Boeynants I",
+    "startDate": "1966-03-19",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Paul_Vanden_Boeynants.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Vanden_Boeynants_I",
+    "electionDate": "1965-05-23"
+  },
+  {
+    "name": "Gaston Eyskens",
+    "government": "Eyskens III",
+    "startDate": "1968-06-17",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Gaston_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_III",
+    "electionDate": "1968-03-31"
+  },
+  {
+    "name": "Gaston Eyskens",
+    "government": "Eyskens IV",
+    "startDate": "1972-01-21",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Gaston_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_IV",
+    "electionDate": "1971-11-07"
+  },
+  {
+    "name": "Edmond Leburton",
+    "government": "Leburton",
+    "startDate": "1973-01-26",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Edmond_Leburton.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leburton",
+    "electionDate": "1971-11-07"
+  },
+  {
+    "name": "Leo Tindemans",
+    "government": "Tindemans I",
+    "startDate": "1974-04-25",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Leo_Tindemans.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_I",
+    "electionDate": "1974-03-10"
+  },
+  {
+    "name": "Leo Tindemans",
+    "government": "Tindemans II",
+    "startDate": "1977-06-03",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Leo_Tindemans.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_II",
+    "electionDate": "1977-04-17"
+  },
+  {
+    "name": "Paul Vanden Boeynants",
+    "government": "Vanden Boeynants II",
+    "startDate": "1978-10-20",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Paul_Vanden_Boeynants.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Vanden_Boeynants_II",
+    "electionDate": "1977-04-17"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens I",
+    "startDate": "1979-04-03",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_I",
+    "electionDate": "1978-12-17"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens II",
+    "startDate": "1980-01-23",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_II",
+    "electionDate": "1978-12-17"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens III",
+    "startDate": "1980-05-18",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_III",
+    "electionDate": "1978-12-17"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens IV",
+    "startDate": "1980-10-22",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_IV",
+    "electionDate": "1978-12-17"
+  },
+  {
+    "name": "Mark Eyskens",
+    "government": "M. Eyskens",
+    "startDate": "1981-03-31",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Mark_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Mark_Eyskens",
+    "electionDate": "1978-12-17"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens V",
+    "startDate": "1981-12-17",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_V",
+    "electionDate": "1981-11-08"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens VI",
+    "startDate": "1985-11-28",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VI",
+    "electionDate": "1985-10-13"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens VII",
+    "startDate": "1987-10-21",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VII",
+    "electionDate": "1985-10-13"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens VIII",
+    "startDate": "1988-05-09",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_VIII",
+    "electionDate": "1987-12-13"
+  },
+  {
+    "name": "Wilfried Martens",
+    "government": "Martens IX",
+    "startDate": "1991-09-29",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Wilfried_Martens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Martens_IX",
+    "electionDate": "1987-12-13"
+  },
+  {
+    "name": "Jean-Luc Dehaene",
+    "government": "Dehaene I",
+    "startDate": "1992-03-07",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Jean-Luc_Dehaene.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Dehaene_I",
+    "electionDate": "1991-11-24"
+  },
+  {
+    "name": "Jean-Luc Dehaene",
+    "government": "Dehaene II",
+    "startDate": "1995-06-23",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Jean-Luc_Dehaene.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Dehaene_II",
+    "electionDate": "1995-05-21"
+  },
+  {
+    "name": "Guy Verhofstadt",
+    "government": "Verhofstadt I",
+    "startDate": "1999-07-12",
+    "party": "VLD",
+    "partyId": "vld",
+    "photo": "/pm/Guy_Verhofstadt.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_I",
+    "electionDate": "1999-06-13"
+  },
+  {
+    "name": "Guy Verhofstadt",
+    "government": "Verhofstadt II",
+    "startDate": "2003-07-12",
+    "party": "VLD",
+    "partyId": "vld",
+    "photo": "/pm/Guy_Verhofstadt.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_II",
+    "electionDate": "2003-05-18"
+  },
+  {
+    "name": "Guy Verhofstadt",
+    "government": "Verhofstadt III",
+    "startDate": "2007-12-21",
+    "party": "Open Vld",
+    "partyId": "openvld",
+    "photo": "/pm/Guy_Verhofstadt.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Verhofstadt_III",
+    "electionDate": "2007-06-10"
+  },
+  {
+    "name": "Yves Leterme",
+    "government": "Leterme I",
+    "startDate": "2008-03-20",
+    "party": "CD&V",
+    "partyId": "cdv",
+    "photo": "/pm/Yves_Leterme.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leterme_I",
+    "electionDate": "2007-06-10"
+  },
+  {
+    "name": "Herman Van Rompuy",
+    "government": "Van Rompuy",
+    "startDate": "2008-12-30",
+    "party": "CD&V",
+    "partyId": "cdv",
+    "photo": "/pm/Herman_Van_Rompuy.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Van_Rompuy",
+    "electionDate": "2007-06-10"
+  },
+  {
+    "name": "Yves Leterme",
+    "government": "Leterme II",
+    "startDate": "2009-11-25",
+    "party": "CD&V",
+    "partyId": "cdv",
+    "photo": "/pm/Yves_Leterme.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leterme_II",
+    "electionDate": "2007-06-10"
+  },
+  {
+    "name": "Elio Di Rupo",
+    "government": "Di Rupo",
+    "startDate": "2011-12-06",
+    "party": "PS",
+    "partyId": "ps",
+    "photo": "/pm/Elio_Di_Rupo.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Di_Rupo",
+    "electionDate": "2010-06-13"
+  },
+  {
+    "name": "Charles Michel",
+    "government": "Michel I",
+    "startDate": "2014-10-11",
+    "party": "MR",
+    "partyId": "mr",
+    "photo": "/pm/Charles_Michel.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Michel_I",
+    "electionDate": "2014-05-25"
+  },
+  {
+    "name": "Charles Michel",
+    "government": "Michel II",
+    "startDate": "2018-12-09",
+    "party": "MR",
+    "partyId": "mr",
+    "photo": "/pm/Charles_Michel.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Michel_II",
+    "electionDate": "2014-05-25"
+  },
+  {
+    "name": "Sophie Wilmès",
+    "government": "Wilmès I",
+    "startDate": "2019-10-27",
+    "party": "MR",
+    "partyId": "mr",
+    "photo": "/pm/Sophie_Wilmès.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Wilmès_I",
+    "electionDate": "2019-05-26"
+  },
+  {
+    "name": "Sophie Wilmès",
+    "government": "Wilmès II",
+    "startDate": "2020-03-17",
+    "party": "MR",
+    "partyId": "mr",
+    "photo": "/pm/Sophie_Wilmès.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Wilmès_II",
+    "electionDate": "2019-05-26"
+  },
+  {
+    "name": "Alexander De Croo",
+    "government": "De Croo",
+    "startDate": "2020-10-01",
+    "party": "Open Vld",
+    "partyId": "openvld",
+    "photo": "/pm/Alexander_De_Croo.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_De_Croo",
+    "electionDate": "2019-05-26"
+  },
+  {
+    "name": "Bart De Wever",
+    "government": "De Wever",
+    "startDate": "2025-02-03",
+    "party": "N-VA",
+    "partyId": "nva",
+    "photo": "/pm/Bart_De_Wever.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_De_Wever",
+    "electionDate": "2024-06-09"
+  }
+]

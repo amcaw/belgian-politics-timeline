@@ -5,7 +5,6 @@
 	import { METRIC_LABELS, type Metric } from '$lib/data';
 
 	let metric = $state<Metric>('votes');
-	let governingOnly = $state(true);
 
 	const metrics: Metric[] = ['seats', 'votes'];
 </script>
@@ -17,7 +16,10 @@
 <main>
 	<header>
 		<h1>Qui gouverne la Belgique&nbsp;?</h1>
-		<p class="subtitle">Les partis à la Chambre des représentants, 1946 → 2024</p>
+		<p class="subtitle">
+			Les partis à la Chambre des représentants, 1946 → 2024 ·
+			<span class="hint-inline">cliquez un Premier ministre pour voir sa coalition</span>
+		</p>
 	</header>
 
 	<div class="controls">
@@ -29,19 +31,9 @@
 				</button>
 			{/each}
 		</div>
-
-		<div class="toggle-group">
-			<span class="toggle-label">Vue&nbsp;:</span>
-			<button class:active={!governingOnly} onclick={() => (governingOnly = false)}>
-				Tous les partis
-			</button>
-			<button class:active={governingOnly} onclick={() => (governingOnly = true)}>
-				Au pouvoir
-			</button>
-		</div>
 	</div>
 
-	<Timeline {metric} {governingOnly} />
+	<Timeline {metric} />
 
 	<Legend />
 
@@ -78,6 +70,7 @@
 		font-size: 0.95rem;
 		font-weight: 500;
 	}
+	.hint-inline { color: var(--accent); font-weight: 600; }
 	.controls {
 		display: flex;
 		gap: 1rem 1.5rem;
