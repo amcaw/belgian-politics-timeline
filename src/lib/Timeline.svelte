@@ -1,5 +1,7 @@
 <script lang="ts">
 	import * as d3 from 'd3';
+	import { Tween } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
 	import { base } from '$app/paths';
 	import CoalitionHeader from './CoalitionHeader.svelte';
 	import {
@@ -62,23 +64,80 @@
 	}
 
 	// every party that ever appears, in stable stack order
-	const allIds = $derived(
-		[...new Set(ELECTIONS.flatMap((e) => e.parties.map((p) => p.id)))]
-			.filter((id) => id !== 'other')
-			.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
-	);
+	const allIds = [...new Set(ELECTIONS.flatMap((e) => e.parties.map((p) => p.id)))]
+		.filter((id) => id !== 'other')
+		.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
 
-	// share matrix: one row per election, columns per party id (always all parties)
-	const series = $derived.by(() =>
-		ELECTIONS.map((e) => {
-			const row: Record<string, number> = { year: e.year };
-			for (const id of allIds) {
+	// ---- animated share matrix ----
+	// one row per party, one column per election; tweened so switching the
+	// metric (sièges ↔ voix) morphs the whole stream instead of snapping.
+	const matrixFor = (m: Metric) =>
+		allIds.map((id) =>
+			ELECTIONS.map((e) => {
 				const p = e.parties.find((q) => q.id === id);
-				row[id] = p ? share(p, metric) : 0;
-			}
+				return p ? share(p, m) : 0;
+			})
+		);
+	// svelte-ignore state_referenced_locally -- initial value only; the $effect below tracks changes
+	const shares = new Tween(matrixFor(metric), {
+		duration: 650,
+		easing: cubicOut,
+		interpolate: (a, b) => d3.interpolate(a, b)
+	});
+	$effect(() => { shares.set(matrixFor(metric)); });
+
+	// ---- dense resampling: smooth, honest bands ----
+	// Each party's share is interpolated between elections with a MONOTONE cubic
+	// (Fritsch–Carlson): the curve passes exactly through every election value
+	// and never overshoots (no phantom bump between two declining results). The
+	// stack runs on the dense samples, so the silhouette flows like a ribbon
+	// while staying exact at each election column.
+	const SUB = 8; // samples per inter-election span
+	const fGrid: number[] = [];
+	for (let i = 0; i < (years.length - 1) * SUB; i++) fGrid.push(i / SUB);
+	fGrid.push(years.length - 1);
+	const D = (i: number) => Math.min(i * SUB, fGrid.length - 1); // election idx → dense idx
+	const xF = (j: number) => (fGrid[j] / (years.length - 1)) * innerW;
+
+	function monotoneTangents(ys: number[]): number[] {
+		const n = ys.length;
+		const d: number[] = [];
+		for (let i = 0; i < n - 1; i++) d.push(ys[i + 1] - ys[i]);
+		const m: number[] = new Array(n).fill(0);
+		m[0] = d[0];
+		m[n - 1] = d[n - 2];
+		for (let i = 1; i < n - 1; i++) m[i] = d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2;
+		for (let i = 0; i < n - 1; i++) {
+			if (d[i] === 0) { m[i] = 0; m[i + 1] = 0; continue; }
+			const a = m[i] / d[i];
+			const b = m[i + 1] / d[i];
+			const s = a * a + b * b;
+			if (s > 9) { const t = 3 / Math.sqrt(s); m[i] = t * a * d[i]; m[i + 1] = t * b * d[i]; }
+		}
+		return m;
+	}
+	function hermite(ys: number[], tans: number[], f: number): number {
+		if (f <= 0) return ys[0];
+		if (f >= ys.length - 1) return ys[ys.length - 1];
+		const i = Math.floor(f);
+		const t = f - i;
+		return (
+			(1 + 2 * t) * (1 - t) * (1 - t) * ys[i] +
+			t * (1 - t) * (1 - t) * tans[i] +
+			t * t * (3 - 2 * t) * ys[i + 1] +
+			t * t * (t - 1) * tans[i + 1]
+		);
+	}
+
+	const denseRows = $derived.by(() => {
+		const M = shares.current;
+		const tans = M.map(monotoneTangents);
+		return fGrid.map((f) => {
+			const row: Record<string, number> = {};
+			allIds.forEach((id, k) => { row[id] = Math.max(0, hermite(M[k], tans[k], f)); });
 			return row;
-		})
-	);
+		});
+	});
 
 	// x = even spacing PER ELECTION (not linear time), so closely-spaced years
 	// like 1977/1978 don't overlap and every election gets equal room.
@@ -132,7 +191,7 @@
 			.keys(allIds)
 			.offset(d3.stackOffsetSilhouette) // centered streamgraph
 			.order(d3.stackOrderNone); // keep our family order
-		return stack(series);
+		return stack(denseRows);
 	});
 
 	// vertical scale: map the stacked extent to innerH
@@ -146,12 +205,11 @@
 	const area = $derived(
 		d3
 			.area<d3.SeriesPoint<Record<string, number>>>()
-			.x((_, i) => x(years[i]))
+			.x((_, j) => xF(j))
 			.y0((d) => yScale(d[0]))
 			.y1((d) => yScale(d[1]))
-			// straight segments between elections: no spline overshoot, no bands
-			// that appear to overlap — exactly the seat/vote share at each election,
-			// linearly interpolated. Clearer than any curved interpolation.
+			// linear between the DENSE monotone samples: visually a smooth ribbon,
+			// but exact at every election column and free of spline overshoot.
 			.curve(d3.curveLinear)
 	);
 
@@ -164,31 +222,24 @@
 		const n = ELECTIONS.length;
 		const gov = ELECTIONS.map((e) => isGoverning(e.date, s.key));
 		const runs: GovRun[] = [];
-		// sample the band edges at a (possibly fractional) election index
-		const sampleX = (f: number) => {
-			const i = Math.floor(f), t = f - i;
-			if (i >= n - 1) return x(years[n - 1]);
-			return x(years[i]) + t * (x(years[i + 1]) - x(years[i]));
-		};
-		const sampleY = (f: number, edge: 0 | 1) => {
-			const i = Math.floor(f), t = f - i;
-			if (i >= n - 1) return yScale(s[n - 1][edge]);
-			return yScale(s[i][edge]) + t * (yScale(s[i + 1][edge]) - yScale(s[i][edge]));
-		};
 		let i = 0;
 		while (i < n) {
 			if (!gov[i]) { i++; continue; }
 			const start = i;
 			while (i < n && gov[i]) i++;
 			const end = i - 1; // inclusive last governing election
-			// extend a half-step beyond each end so every run has visible width,
-			// including a run that ends at the last election (2024).
-			const lo = Math.max(0, start - 0.5);
-			const hi = Math.min(n - 1, end + 0.5);
-			const steps = Math.max(2, Math.ceil((hi - lo) * 2) + 1);
-			const fs = Array.from({ length: steps }, (_, k) => lo + ((hi - lo) * k) / (steps - 1));
-			const top = fs.map((f) => `${sampleX(f)},${sampleY(f, 1)}`);
-			const bot = fs.slice().reverse().map((f) => `${sampleX(f)},${sampleY(f, 0)}`);
+			// half a legislature of lead-in/out so every run has visible width; the
+			// outline is sliced from the SAME dense samples as the band, so the
+			// coloured run hugs the smooth band edges exactly.
+			const lo = Math.max(0, Math.round((start - 0.5) * SUB));
+			const hi = Math.min(fGrid.length - 1, Math.round((end + 0.5) * SUB));
+			const top: string[] = [];
+			const bot: string[] = [];
+			for (let j = lo; j <= hi; j++) {
+				top.push(`${xF(j)},${yScale(s[j][1])}`);
+				bot.push(`${xF(j)},${yScale(s[j][0])}`);
+			}
+			bot.reverse();
 			runs.push({
 				d: 'M' + top.join(' L') + ' L' + bot.join(' L') + ' Z',
 				key: `${s.key}@${years[start]}`,
@@ -206,23 +257,24 @@
 	// require neighbours to be non-trivial too so the label sits on a stable, wide
 	// stretch of the band (not on a sliver where it would be misleading).
 	function bandWidthAt(s: d3.Series<Record<string, number>, string>, i: number) {
-		return Math.abs(yScale(s[i][0]) - yScale(s[i][1]));
+		const pt = s[D(i)]; // i = election index, sampled on the dense grid
+		return Math.abs(yScale(pt[0]) - yScale(pt[1]));
 	}
 	function labelAnchor(s: d3.Series<Record<string, number>, string>) {
 		let bi = -1;
 		let bw = -1;
-		s.forEach((pt, i) => {
-			const present = shareAt(years[i], s.key) > 0;
+		years.forEach((yr, i) => {
+			const present = shareAt(yr, s.key) > 0;
 			if (!present) return;
 			// stability: average this point's width with its present neighbours
 			const wHere = bandWidthAt(s, i);
 			const wPrev = i > 0 && shareAt(years[i - 1], s.key) > 0 ? bandWidthAt(s, i - 1) : wHere;
-			const wNext = i < s.length - 1 && shareAt(years[i + 1], s.key) > 0 ? bandWidthAt(s, i + 1) : wHere;
+			const wNext = i < years.length - 1 && shareAt(years[i + 1], s.key) > 0 ? bandWidthAt(s, i + 1) : wHere;
 			const wAvg = (wHere + wPrev + wNext) / 3;
 			if (wAvg > bw) { bw = wAvg; bi = i; }
 		});
 		if (bi < 0) return { x: 0, y: 0, w: 0, year: years[0], place: false };
-		const pt = s[bi];
+		const pt = s[D(bi)];
 		return {
 			x: x(years[bi]),
 			y: (yScale(pt[0]) + yScale(pt[1])) / 2,
@@ -231,6 +283,25 @@
 			place: true
 		};
 	}
+
+	// ---- right-edge labels (chart_1 style) ----
+	// every party still in the Chamber at the last election gets a name + value
+	// at the right edge, with a leader curve; collisions resolved top-to-bottom.
+	const lastYear = years[years.length - 1];
+	const edgeLabels = $derived.by(() => {
+		const last = fGrid.length - 1;
+		const items = stacked
+			.filter((s) => shareAt(lastYear, s.key) > 0)
+			.map((s) => {
+				const yBand = (yScale(s[last][0]) + yScale(s[last][1])) / 2;
+				return { id: s.key, yBand, y: yBand };
+			})
+			.sort((a, b) => a.y - b.y);
+		const gap = 16;
+		for (let k = 1; k < items.length; k++)
+			if (items[k].y - items[k - 1].y < gap) items[k].y = items[k - 1].y + gap;
+		return items;
+	});
 
 	let hovered = $state<string | null>(null);
 	let tip = $state<{ x: number; y: number; id: string; year: number } | null>(null);
@@ -348,8 +419,9 @@
 				{#each stacked as s (s.key)}
 					{@const p = party(s.key)}
 					<linearGradient id="grad-{s.key}" x1="0" y1="0" x2="0" y2="1">
-						<stop offset="0%" stop-color={d3.rgb(p.color).brighter(0.5).formatHex()} />
-						<stop offset="100%" stop-color={d3.rgb(p.color).darker(0.5).formatHex()} />
+						<stop offset="0%" stop-color={d3.rgb(p.color).brighter(0.7).formatHex()} />
+						<stop offset="45%" stop-color={p.color} />
+						<stop offset="100%" stop-color={d3.rgb(p.color).darker(0.6).formatHex()} />
 					</linearGradient>
 				{/each}
 				<clipPath id="photo-clip"><circle cx="0" cy="0" r={govR} /></clipPath>
@@ -401,7 +473,8 @@
 					<line class="cursor" x1={x(tip.year)} x2={x(tip.year)} y1={-22} y2={innerH + 6} />
 				{/if}
 
-				<!-- streamgraph bands -->
+				<!-- streamgraph bands (left→right reveal on first paint) -->
+				<g class="reveal">
 				{#each stacked as s (s.key)}
 					{@const p = party(s.key)}
 					{@const dimmed =
@@ -436,15 +509,33 @@
 					{/each}
 				{/if}
 
-				<!-- inline labels on thick bands -->
+				<!-- inline labels at peak, only for parties no longer in the Chamber
+				     (the living ones are named at the right edge instead) -->
 				{#each stacked as s (s.key)}
 					{@const p = party(s.key)}
 					{@const a = labelAnchor(s)}
-					{#if a.place && a.w > 15}
+					{#if a.place && a.w > 15 && shareAt(lastYear, s.key) === 0}
 						<text class="band-label" x={a.x} y={a.y} fill={textColor(p.color)}
 							class:dim={hovered && hovered !== s.key}>{p.label}</text>
 					{/if}
 				{/each}
+
+				<!-- right-edge labels: today's parties, biggest stories first -->
+				{#each edgeLabels as el (el.id)}
+					{@const p = party(el.id)}
+					<g class="edge" class:dim={hovered && hovered !== el.id}
+						role="presentation"
+						onmouseenter={() => (hovered = el.id)}
+						onmouseleave={() => (hovered = null)}>
+						<path class="edge-lead" stroke={p.color}
+							d="M{innerW + 2},{el.yBand} C{innerW + 12},{el.yBand} {innerW + 8},{el.y} {innerW + 19},{el.y}" />
+						<text class="edge-label" x={innerW + 23} y={el.y} fill={p.color}>
+							{p.label}
+							<tspan class="edge-val" dx="3">{metric === 'seats' ? seatsAt(lastYear, el.id) : pct(shareAt(lastYear, el.id))}</tspan>
+						</text>
+					</g>
+				{/each}
+				</g>
 			</g>
 		</svg>
 		</div>
@@ -559,9 +650,28 @@
 	.year-active { fill: var(--text); font-weight: 700; }
 	.cursor { stroke: var(--chart-cursor); stroke-width: 1.5; stroke-dasharray: 3 3; pointer-events: none; }
 
-	.band { stroke: var(--band-stroke); stroke-width: 0.6; cursor: pointer; transition: opacity 0.15s; }
+	.band { stroke: var(--band-stroke); stroke-width: 0.6; cursor: pointer; transition: opacity 0.15s, filter 0.15s; }
 	.band.dim { opacity: 0.16; }
+	.band:not(.dim):hover { filter: brightness(1.08) saturate(1.15); }
 	.gov-run { stroke: none; transition: opacity 0.15s; }
+
+	/* first-paint sweep: the stream draws itself left → right */
+	.reveal { animation: sweep 1.2s cubic-bezier(0.22, 0.8, 0.32, 1) both; }
+	@keyframes sweep {
+		from { clip-path: inset(0 100% 0 0); }
+		to { clip-path: inset(0 -5% 0 0); }
+	}
+	@media (prefers-reduced-motion: reduce) { .reveal { animation: none; } }
+
+	/* right-edge naming of today's parties */
+	.edge { transition: opacity 0.15s; cursor: default; }
+	.edge.dim { opacity: 0.2; }
+	.edge-lead { fill: none; stroke-width: 1.3; opacity: 0.75; }
+	.edge-label {
+		font-size: 11.5px; font-weight: 800; dominant-baseline: middle;
+		paint-order: stroke; stroke: var(--chart-bg); stroke-width: 3px;
+	}
+	.edge-val { font-weight: 600; fill: var(--text-secondary); font-family: var(--font-mono); font-size: 10px; }
 	.band-label {
 		font-size: 12px; font-weight: 700; text-anchor: middle; dominant-baseline: middle;
 		pointer-events: none; transition: opacity 0.15s;

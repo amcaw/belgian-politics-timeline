@@ -25,12 +25,12 @@
   },
   {
     "name": "Paul-Henri Spaak",
-    "government": "Spaak I",
+    "government": "Spaak II",
     "startDate": "1946-03-13",
     "party": "PSB",
     "partyId": "ps",
     "photo": "/pm/Paul-Henri_Spaak.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_I",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_II",
     "electionDate": "1946-02-17",
     "coalition": [
       {
@@ -89,12 +89,32 @@
   },
   {
     "name": "Paul-Henri Spaak",
-    "government": "Spaak II",
+    "government": "Spaak III",
     "startDate": "1947-03-20",
     "party": "PSB",
     "partyId": "ps",
     "photo": "/pm/Paul-Henri_Spaak.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_II",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_III",
+    "electionDate": "1946-02-17",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 92
+      },
+      {
+        "id": "sp-unitary",
+        "seats": 69
+      }
+    ]
+  },
+  {
+    "name": "Paul-Henri Spaak",
+    "government": "Spaak IV",
+    "startDate": "1948-11-27",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Paul-Henri_Spaak.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Spaak_IV",
     "electionDate": "1946-02-17",
     "coalition": [
       {
@@ -109,12 +129,12 @@
   },
   {
     "name": "Gaston Eyskens",
-    "government": "Eyskens I",
+    "government": "G. Eyskens I",
     "startDate": "1949-08-11",
     "party": "PSC",
     "partyId": "psc",
     "photo": "/pm/Gaston_Eyskens.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Eyskens_I",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_I",
     "electionDate": "1949-06-26",
     "coalition": [
       {
@@ -197,7 +217,7 @@
   },
   {
     "name": "Gaston Eyskens",
-    "government": "Eyskens II",
+    "government": "G. Eyskens II",
     "startDate": "1958-06-26",
     "party": "PSC",
     "partyId": "psc",
@@ -208,6 +228,26 @@
       {
         "id": "cd-unitary",
         "seats": 104
+      }
+    ]
+  },
+  {
+    "name": "Gaston Eyskens",
+    "government": "G. Eyskens III",
+    "startDate": "1958-11-06",
+    "party": "PSC",
+    "partyId": "psc",
+    "photo": "/pm/Gaston_Eyskens.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_III",
+    "electionDate": "1958-06-01",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 104
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 21
       }
     ]
   },
@@ -273,12 +313,12 @@
   },
   {
     "name": "Gaston Eyskens",
-    "government": "Eyskens III",
+    "government": "G. Eyskens IV",
     "startDate": "1968-06-17",
     "party": "CVP",
     "partyId": "cvp",
     "photo": "/pm/Gaston_Eyskens.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_III",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_IV",
     "electionDate": "1968-03-31",
     "coalition": [
       {
@@ -293,12 +333,12 @@
   },
   {
     "name": "Gaston Eyskens",
-    "government": "Eyskens IV",
+    "government": "G. Eyskens V",
     "startDate": "1972-01-21",
     "party": "CVP",
     "partyId": "cvp",
     "photo": "/pm/Gaston_Eyskens.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_IV",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Gaston_Eyskens_V",
     "electionDate": "1971-11-07",
     "coalition": [
       {
@@ -313,33 +353,49 @@
   },
   {
     "name": "Edmond Leburton",
-    "government": "Leburton",
+    "government": "Leburton I",
     "startDate": "1973-01-26",
     "party": "PSB",
     "partyId": "ps",
     "photo": "/pm/Edmond_Leburton.jpg",
-    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leburton",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leburton_I",
     "electionDate": "1971-11-07",
     "coalition": [
       {
-        "id": "cvp",
-        "seats": 47
-      },
-      {
-        "id": "psc",
-        "seats": 20
+        "id": "cd-unitary",
+        "seats": 67
       },
       {
         "id": "sp-unitary",
         "seats": 61
       },
       {
-        "id": "pvv",
-        "seats": 18
+        "id": "lib-unitary",
+        "seats": 34
+      }
+    ]
+  },
+  {
+    "name": "Edmond Leburton",
+    "government": "Leburton II",
+    "startDate": "1973-10-23",
+    "party": "PSB",
+    "partyId": "ps",
+    "photo": "/pm/Edmond_Leburton.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Leburton_II",
+    "electionDate": "1971-11-07",
+    "coalition": [
+      {
+        "id": "cd-unitary",
+        "seats": 67
       },
       {
-        "id": "prl",
-        "seats": 16
+        "id": "sp-unitary",
+        "seats": 61
+      },
+      {
+        "id": "lib-unitary",
+        "seats": 34
       }
     ]
   },
@@ -370,11 +426,63 @@
   {
     "name": "Leo Tindemans",
     "government": "Tindemans II",
-    "startDate": "1977-06-03",
+    "startDate": "1974-06-11",
     "party": "CVP",
     "partyId": "cvp",
     "photo": "/pm/Leo_Tindemans.jpg",
     "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_II",
+    "electionDate": "1974-03-10",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 50
+      },
+      {
+        "id": "psc",
+        "seats": 22
+      },
+      {
+        "id": "pvv",
+        "seats": 30
+      },
+      {
+        "id": "rw",
+        "seats": 11
+      }
+    ]
+  },
+  {
+    "name": "Leo Tindemans",
+    "government": "Tindemans III",
+    "startDate": "1977-03-04",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Leo_Tindemans.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_III",
+    "electionDate": "1974-03-10",
+    "coalition": [
+      {
+        "id": "cvp",
+        "seats": 50
+      },
+      {
+        "id": "psc",
+        "seats": 22
+      },
+      {
+        "id": "pvv",
+        "seats": 30
+      }
+    ]
+  },
+  {
+    "name": "Leo Tindemans",
+    "government": "Tindemans IV",
+    "startDate": "1977-06-03",
+    "party": "CVP",
+    "partyId": "cvp",
+    "photo": "/pm/Leo_Tindemans.jpg",
+    "wikiUrl": "https://fr.wikipedia.org/wiki/Gouvernement_Tindemans_IV",
     "electionDate": "1977-04-17",
     "coalition": [
       {
@@ -843,11 +951,7 @@
       },
       {
         "id": "spa",
-        "seats": 22
-      },
-      {
-        "id": "spirit",
-        "seats": 1
+        "seats": 23
       }
     ]
   },

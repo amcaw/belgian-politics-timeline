@@ -1,14 +1,30 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Timeline from '$lib/Timeline.svelte';
 	import GovernanceGantt from '$lib/GovernanceGantt.svelte';
 	import Legend from '$lib/Legend.svelte';
 	import Methodology from '$lib/Methodology.svelte';
-	import { METRIC_LABELS, type Metric } from '$lib/data';
+	import {
+		METRIC_LABELS,
+		ELECTIONS,
+		GOVERNMENTS,
+		yearsInPower,
+		type Metric
+	} from '$lib/data';
 
 	let metric = $state<Metric>('votes');
 	let view = $state<'results' | 'power' | 'powerStream'>('power');
 
 	const metrics: Metric[] = ['seats', 'votes'];
+
+	// big-number stats (computed from the verified datasets)
+	const cd = yearsInPower('cdv'); // christian-democrat lineage (CVP/PSC → CD&V…)
+	const stats = [
+		{ n: String(ELECTIONS.length), label: 'élections', sub: '1946 → 2024' },
+		{ n: String(GOVERNMENTS.length), label: 'gouvernements', sub: 'Van Acker II → De Wever' },
+		{ n: String(cd.years), label: 'ans au pouvoir', sub: 'famille chrétienne-démocrate' },
+		{ n: '541', label: 'jours sans gouvernement', sub: 'record mondial, 2010-2011' }
+	];
 </script>
 
 <svelte:head>
@@ -22,6 +38,21 @@
 			Les partis à la Chambre des représentants, 1946 → 2024 ·
 			<span class="hint-inline">cliquez un Premier ministre pour sa coalition</span>
 		</p>
+
+		<div class="stats">
+			{#each stats as s (s.label)}
+				<div class="stat">
+					<span class="stat-n">{s.n}</span>
+					<span class="stat-label">{s.label}</span>
+					<span class="stat-sub">{s.sub}</span>
+				</div>
+			{/each}
+			<a class="stat stat-cta" href="{base}/share">
+				<span class="stat-n">↗</span>
+				<span class="stat-label">version affiche</span>
+				<span class="stat-sub">à partager</span>
+			</a>
+		</div>
 	</header>
 
 	<div class="controls">
@@ -60,7 +91,7 @@
 			<a href="https://resultatselection.belgium.be/" target="_blank" rel="noreferrer"
 				>IBZ&nbsp;/&nbsp;electionresults.belgium.be</a
 			>, recoupés avec Wikipédia&nbsp;; couleurs et filiation des partis d'après le
-			<em>Timeline of Belgian political parties</em> (CRISP). Voir le détail du traitement
+			<em>Timeline of Belgian political parties</em> (Wikimedia Commons). Voir le détail du traitement
 			des données ci-dessus.
 		</p>
 	</footer>
@@ -86,6 +117,45 @@
 		font-weight: 500;
 	}
 	.hint-inline { color: var(--accent); font-weight: 600; }
+	/* big-number stats strip */
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 10px;
+		margin: 0 0 1.5rem;
+	}
+	.stat {
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+		padding: 0.7rem 0.9rem;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+	}
+	.stat-n {
+		font-size: 1.55rem;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		color: var(--text);
+		font-variant-numeric: tabular-nums;
+		line-height: 1.1;
+	}
+	.stat-label {
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--text-secondary);
+	}
+	.stat-sub { font-size: 0.7rem; color: var(--text-muted); }
+	.stat-cta {
+		text-decoration: none;
+		border-color: var(--accent);
+		transition: background 0.15s;
+	}
+	.stat-cta .stat-n, .stat-cta .stat-label { color: var(--accent); }
+	.stat-cta:hover { background: var(--accent-soft); }
 	.controls {
 		display: flex;
 		gap: 1rem 1.5rem;

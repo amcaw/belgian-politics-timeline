@@ -9,6 +9,7 @@
 		coalitionOf,
 		coalitionSeats,
 		governingSpells,
+		ANNOTATIONS,
 		type Government,
 		type Spell
 	} from './data';
@@ -123,7 +124,7 @@
 	const pmRowH = 2 * govR + 10; // vertical step between portrait rows
 	const pmTop = 14; // top padding before the first portrait row
 	const pmBand = pmTop + govRows.rowCount * pmRowH + 16; // dynamic band height
-	const margin = { top: pmBand, right: 90, bottom: 30, left: 132 };
+	const margin = { top: pmBand, right: 90, bottom: 52, left: 132 };
 	const width = margin.left + innerW + margin.right;
 	const height = margin.top + innerH + margin.bottom;
 
@@ -134,6 +135,14 @@
 		tip = { x: ev.clientX, y: ev.clientY, gov: seg.gov, party: party(s.partyId).label, seats: seg.seats };
 	}
 	function leave() { hoverParty = null; tip = null; }
+
+	// story annotations (numbered markers under the chart)
+	let annoTip = $state<{ x: number; y: number; n: number; title: string; detail: string } | null>(null);
+	function annoEnter(i: number, ev: MouseEvent) {
+		const a = ANNOTATIONS[i];
+		annoTip = { x: ev.clientX, y: ev.clientY, n: i + 1, title: a.title, detail: a.detail };
+	}
+	function annoLeave() { annoTip = null; }
 
 	// horizontal-scroll hint (same pattern as the streamgraph)
 	let wrapEl = $state<HTMLDivElement | null>(null);
@@ -239,6 +248,21 @@
 					{/each}
 				{/each}
 			{/each}
+
+			<!-- numbered story markers under the chart -->
+			{#each ANNOTATIONS as a, i (a.year)}
+				{@const ax = xAt(a.year)}
+				{@const ay = innerH + 24}
+				<g class="anno" class:anno-on={annoTip?.n === i + 1}
+					transform="translate({ax},{ay})" role="img"
+					aria-label="{a.year} : {a.title}"
+					onmousemove={(ev) => annoEnter(i, ev)}
+					onmouseleave={annoLeave}>
+					<line class="anno-stem" x1="0" x2="0" y1={-24 + 6} y2={-10} />
+					<circle class="anno-dot" r="9" />
+					<text class="anno-num" y="0.5">{i + 1}</text>
+				</g>
+			{/each}
 		</g>
 	</svg>
 	</div>
@@ -247,6 +271,13 @@
 		<div class="tooltip" style:left="{tip.x + 14}px" style:top="{tip.y + 14}px">
 			<strong>{tip.party}</strong> · {tip.seats} sièges<br />
 			<span class="tt-sub">Gouvernement {tip.gov}</span>
+		</div>
+	{/if}
+
+	{#if annoTip}
+		<div class="tooltip anno-tip" style:left="{annoTip.x + 14}px" style:top="{annoTip.y - 10}px">
+			<strong>{annoTip.n}. {annoTip.title}</strong><br />
+			<span class="tt-sub">{annoTip.detail}</span>
 		</div>
 	{/if}
 </div>
@@ -289,4 +320,14 @@
 		border: 1px solid var(--border); padding: 7px 10px; border-radius: 8px; font-size: 12px;
 		box-shadow: 0 6px 20px rgba(0,0,0,.3); z-index: 10; }
 	.tt-sub { color: var(--text-muted); }
+	.anno-tip { max-width: 260px; line-height: 1.45; }
+	.anno { cursor: help; }
+	.anno-stem { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0.45; }
+	.anno-dot { fill: var(--surface); stroke: var(--accent); stroke-width: 1.5;
+		transition: fill 0.15s, transform 0.15s; }
+	.anno-num { fill: var(--accent); font-size: 10px; font-weight: 700; text-anchor: middle;
+		dominant-baseline: middle; font-family: var(--font-mono); pointer-events: none;
+		transition: fill 0.15s; }
+	.anno:hover .anno-dot, .anno-on .anno-dot { fill: var(--accent); }
+	.anno:hover .anno-num, .anno-on .anno-num { fill: var(--accent-contrast); }
 </style>

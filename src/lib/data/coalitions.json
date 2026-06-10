@@ -1,26 +1,145 @@
 {
-  "1946-02-17": ["sp-unitary", "cd-unitary"],
-  "1949-06-26": ["cd-unitary", "lib-unitary"],
-  "1950-06-04": ["cd-unitary"],
-  "1954-04-11": ["sp-unitary", "lib-unitary"],
-  "1958-06-01": ["cd-unitary"],
-  "1961-03-26": ["cd-unitary", "sp-unitary"],
-  "1965-05-23": ["cd-unitary", "sp-unitary"],
-  "1968-03-31": ["cvp", "psc", "sp-unitary"],
-  "1971-11-07": ["cvp", "psc", "sp-unitary"],
-  "1974-03-10": ["cvp", "psc", "pvv", "prl"],
-  "1977-04-17": ["cvp", "psc", "sp-unitary", "vu", "fdf"],
-  "1978-12-17": ["cvp", "psc", "sp", "ps", "fdf"],
-  "1981-11-08": ["cvp", "psc", "pvv", "prl"],
-  "1985-10-13": ["cvp", "psc", "pvv", "prl"],
-  "1987-12-13": ["cvp", "psc", "sp", "ps", "vu"],
-  "1991-11-24": ["cvp", "psc", "sp", "ps"],
-  "1995-05-21": ["cvp", "psc", "sp", "ps"],
-  "1999-06-13": ["vld", "prl", "sp", "ps", "agalev", "ecolo"],
-  "2003-05-18": ["vld", "mr", "spa", "ps"],
-  "2007-06-10": ["cdv", "cdh", "openvld", "mr", "ps"],
-  "2010-06-13": ["cdv", "cdh", "spa", "ps", "openvld", "mr"],
-  "2014-05-25": ["nva", "cdv", "openvld", "mr"],
-  "2019-05-26": ["openvld", "mr", "vooruit", "ps", "cdv", "cdh", "ecolo", "groen"],
-  "2024-06-09": ["nva", "mr", "engages", "cdv", "vooruit"]
+  "1946-02-17": [
+    "sp-unitary",
+    "lib-unitary",
+    "kpb",
+    "cd-unitary"
+  ],
+  "1949-06-26": [
+    "cd-unitary",
+    "lib-unitary"
+  ],
+  "1950-06-04": [
+    "cd-unitary"
+  ],
+  "1954-04-11": [
+    "sp-unitary",
+    "lib-unitary"
+  ],
+  "1958-06-01": [
+    "cd-unitary",
+    "lib-unitary"
+  ],
+  "1961-03-26": [
+    "cd-unitary",
+    "sp-unitary"
+  ],
+  "1965-05-23": [
+    "cd-unitary",
+    "sp-unitary",
+    "lib-unitary"
+  ],
+  "1968-03-31": [
+    "cd-unitary",
+    "sp-unitary"
+  ],
+  "1971-11-07": [
+    "cd-unitary",
+    "sp-unitary",
+    "lib-unitary"
+  ],
+  "1974-03-10": [
+    "cvp",
+    "psc",
+    "pvv",
+    "rw"
+  ],
+  "1977-04-17": [
+    "cvp",
+    "psc",
+    "sp-unitary",
+    "vu",
+    "fdf"
+  ],
+  "1978-12-17": [
+    "cvp",
+    "sp-unitary",
+    "psc",
+    "fdf",
+    "pvv",
+    "prl"
+  ],
+  "1981-11-08": [
+    "cvp",
+    "psc",
+    "pvv",
+    "prl"
+  ],
+  "1985-10-13": [
+    "cvp",
+    "prl",
+    "pvv",
+    "psc"
+  ],
+  "1987-12-13": [
+    "cvp",
+    "ps",
+    "sp",
+    "psc",
+    "vu"
+  ],
+  "1991-11-24": [
+    "cvp",
+    "ps",
+    "sp",
+    "psc"
+  ],
+  "1995-05-21": [
+    "cvp",
+    "ps",
+    "sp",
+    "psc"
+  ],
+  "1999-06-13": [
+    "vld",
+    "ps",
+    "prl",
+    "sp",
+    "ecolo",
+    "agalev"
+  ],
+  "2003-05-18": [
+    "vld",
+    "ps",
+    "mr",
+    "spa"
+  ],
+  "2007-06-10": [
+    "cdv",
+    "mr",
+    "ps",
+    "openvld",
+    "cdh",
+    "nva"
+  ],
+  "2010-06-13": [
+    "ps",
+    "cdv",
+    "mr",
+    "spa",
+    "openvld",
+    "cdh"
+  ],
+  "2014-05-25": [
+    "nva",
+    "mr",
+    "cdv",
+    "openvld"
+  ],
+  "2019-05-26": [
+    "mr",
+    "cdv",
+    "openvld",
+    "ps",
+    "ecolo",
+    "spa",
+    "groen"
+  ],
+  "2024-06-09": [
+    "nva",
+    "mr",
+    "engages",
+    "vooruit",
+    "cdv"
+  ]
 }

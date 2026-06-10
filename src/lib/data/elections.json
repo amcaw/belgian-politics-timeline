@@ -424,63 +424,63 @@
     "date": "1971-11-07",
     "year": 1971,
     "totalSeats": 212,
-    "totalVotes": 5281631,
+    "totalVotes": 5281632,
     "parties": [
       {
         "id": "cd-unitary",
         "seats": 67,
         "votes": 1587195,
         "seatShare": 0.3160377358490566,
-        "voteShare": 0.30051228493622517
+        "voteShare": 0.3005122280386062
       },
       {
         "id": "sp-unitary",
         "seats": 57,
         "votes": 1439770,
         "seatShare": 0.2688679245283019,
-        "voteShare": 0.2725995057208654
+        "voteShare": 0.27259945410812414
       },
       {
         "id": "lib-unitary",
         "seats": 34,
         "votes": 865655,
         "seatShare": 0.16037735849056603,
-        "voteShare": 0.16389918190043948
+        "voteShare": 0.16389915086851942
       },
       {
         "id": "vu",
         "seats": 21,
         "votes": 586917,
         "seatShare": 0.09905660377358491,
-        "voteShare": 0.11112419629466731
+        "voteShare": 0.1111241752549212
       },
       {
         "id": "rw",
         "seats": 18,
         "votes": 449926,
         "seatShare": 0.08490566037735849,
-        "voteShare": 0.08518694319993199
+        "voteShare": 0.08518692707102653
       },
       {
         "id": "fdf",
         "seats": 6,
         "votes": 143320,
         "seatShare": 0.02830188679245283,
-        "voteShare": 0.027135557179212254
+        "voteShare": 0.027135552041490207
       },
       {
         "id": "kpb",
         "seats": 5,
         "votes": 161517,
         "seatShare": 0.02358490566037736,
-        "voteShare": 0.030580894424468503
+        "voteShare": 0.03058088863442209
       },
       {
         "id": "other",
         "seats": 4,
         "votes": 47332,
         "seatShare": 0.018867924528301886,
-        "voteShare": 0.008961625679643277
+        "voteShare": 0.008961623982890137
       }
     ]
   },

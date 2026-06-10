@@ -30,7 +30,8 @@
 			(<code>electionresults.belgium.be</code>), qui recense toutes les élections belges depuis 1848.
 			Au niveau national, elle fournit pour chaque parti le nombre de <em>sièges</em> et de
 			<em>voix</em>. Les couleurs et la généalogie des partis (qui descend de qui) suivent la
-			référence <em>Timeline of Belgian political parties</em> (CRISP).
+			référence <em>Timeline of Belgian political parties</em> (Wikimedia Commons), recoupée
+			avec les articles Wikipédia de chaque parti.
 		</p>
 		<p>
 			Pour les <strong>sièges</strong>, une nuance : pour quelques élections de transition, la base
@@ -102,8 +103,11 @@
 			</li>
 			<li>
 				<strong>Tous les gouvernements sont représentés</strong> (pas seulement un par élection)&nbsp;:
-				la frise des Premiers ministres et la vue « Au pouvoir » incluent chaque gouvernement
-				fédéral 1946-2024, y compris les remaniements en cours de législature.
+				la frise des Premiers ministres et la vue « Au pouvoir » incluent les
+				<strong>50 gouvernements fédéraux</strong> de 1945 (Van Acker II) à 2025 (De Wever), y
+				compris les gouvernements éphémères et les remaniements en cours de législature (ex.
+				Gaston Eyskens III en 1958, Tindemans II en 1974 — le seul gouvernement auquel le
+				Rassemblement wallon ait participé).
 			</li>
 			<li>
 				<strong>La filiation des partis est suivie explicitement.</strong> Une table de filiation
