@@ -71,6 +71,13 @@
 				par parti ; ils ne concernent qu'une poignée de cas.
 			</li>
 			<li>
+				<strong>Les très petits partenaires de cartel sont absorbés par le grand parti.</strong>
+				Le cartel <em>sp.a-Spirit</em> (2003-2007) est compté entièrement en sp.a ; Spirit, parti
+				régionaliste de gauche d'un ou deux sièges, n'apparaît donc pas séparément — y compris dans
+				la coalition « Au pouvoir », où il figurait pourtant (gouvernement Verhofstadt II). Idem pour
+				d'autres micro-listes. C'est un choix de lisibilité : le cartel était un bloc électoral unique.
+			</li>
+			<li>
 				<strong>Le pourcentage de voix</strong> est calculé sur les suffrages des partis affichés
 				(hors votes blancs/nuls et hors petites listes regroupées en « autres »), à partir des voix
 				officielles de l'IBZ.
