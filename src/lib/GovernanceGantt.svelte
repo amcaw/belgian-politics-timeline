@@ -102,21 +102,23 @@
 		});
 	}
 
-	// Portraits stack on multiple rows, each aligned on its TRUE date (cx = x):
-	// a portrait that would overlap one already on a row climbs to the next row.
-	// Connectors route through a gutter below all photos, so vertical alignment is
-	// fine — no sideways fan needed.
+	// Portraits stack on multiple rows; within a cluster each higher row is nudged
+	// sideways (fan) so its vertical connector segment never runs through the photo
+	// below it. Connectors then route at right angles through a gutter under all
+	// photos. cx = displayed centre, x = true-date anchor on the axis.
 	const minGap = 2 * govR + 4;
+	const fanStep = govR * 0.85;
 	const govRows = (() => {
-		const lastXByRow: number[] = [];
+		const lastCxByRow: number[] = [];
 		const placed = GOVERNMENTS.map((g) => {
 			const x = xAt(govYear(g));
 			let row = 0;
-			while (row < lastXByRow.length && x - lastXByRow[row] < minGap) row++;
-			lastXByRow[row] = x;
-			return { g, x, cx: x, row };
+			while (row < lastCxByRow.length && x + row * fanStep - lastCxByRow[row] < minGap) row++;
+			const cx = x + row * fanStep;
+			lastCxByRow[row] = cx;
+			return { g, x, cx, row };
 		});
-		return { placed, rowCount: lastXByRow.length };
+		return { placed, rowCount: lastCxByRow.length };
 	})();
 	const govPositions = govRows.placed;
 	const pmRowH = 2 * govR + 10; // vertical step between portrait rows

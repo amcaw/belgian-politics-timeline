@@ -36,6 +36,7 @@
 	--chart-grid: rgba(255, 255, 255, 0.07);
 	--chart-cursor: rgba(240, 240, 241, 0.55);
 	--band-stroke: rgba(4, 25, 44, 0.7); /* separates adjacent bands (= bg-ish) */
+	--band-muted: rgba(255, 255, 255, 0.1); /* out-of-power band in the power-stream view */
 	--label-halo: rgba(0, 0, 0, 0.45);    /* outline behind on-band labels */
 
 	/* warning / note block */
@@ -76,6 +77,7 @@
 		--chart-grid: rgba(0, 0, 0, 0.06);
 		--chart-cursor: rgba(26, 26, 26, 0.45);
 		--band-stroke: #ffffff;
+		--band-muted: rgba(0, 0, 0, 0.08);
 		--label-halo: rgba(0, 0, 0, 0.14);
 
 		--warn-text: #b45309;

@@ -5,6 +5,7 @@
 		ELECTIONS,
 		share,
 		party,
+		isGoverning,
 		GOVERNMENTS,
 		govYear,
 		coalitionOf,
@@ -12,7 +13,7 @@
 		type Metric
 	} from './data';
 
-	let { metric = 'seats' }: { metric?: Metric } = $props();
+	let { metric = 'seats', powerMode = false }: { metric?: Metric; powerMode?: boolean } = $props();
 
 	// the government clicked in the frieze (null = none). Selecting one highlights
 	// its coalition and shows its details + Wikipedia link.
@@ -30,12 +31,15 @@
 	// Wide canvas: give each election generous room and let the container scroll
 	// horizontally. Bigger = more readable bands + a "grand frieze" feel.
 	const perElection = 82;
-	const pmBand = 62; // space at top for the prime-minister frieze
-	const margin = { top: 38 + pmBand, right: 150, bottom: 16, left: 56 };
+	const pmTop = 14; // padding above the first portrait row
+	const pmRowH = 2 * 15 + 8; // must match govR-based step below
+	const pmBandBase = 5 * pmRowH + pmTop + 14; // room for up to 5 stacked rows
+	const margin = { top: pmBandBase, right: 150, bottom: 16, left: 56 };
 	const innerW = (years.length - 1) * perElection;
 	const width = margin.left + innerW + margin.right;
-	const height = 660 + pmBand;
-	const innerH = height - margin.top - margin.bottom;
+	const innerH = 560;
+	const height = margin.top + innerH + margin.bottom;
+	const pmGutterY = margin.top - pmTop - 8; // shared gutter for PM connectors
 
 	// fixed family order (top -> bottom of the stack): left wing at top.
 	const FAMILY_ORDER = [
@@ -92,20 +96,26 @@
 		return xi(i) + t * (xi(i + 1) - xi(i));
 	}
 
-	// PM frieze layout: place every government at its start date, then nudge
-	// overlapping portraits rightwards so they stay legible.
+	// PM frieze layout: portraits stack on multiple rows at their true date; each
+	// higher row in a cluster fans sideways so its connector never runs through the
+	// photo below. cx = displayed centre, x = true-date anchor, row = stack level.
 	const govR = 15; // portrait radius in the frieze
-	type GovPos = { g: Government; x: number; cx: number };
-	const govPositions = $derived.by((): GovPos[] => {
-		const min = 2 * govR + 2;
-		let prev = -Infinity;
-		return GOVERNMENTS.map((g) => {
-			let cx = xFrac(govYear(g));
-			if (cx - prev < min) cx = prev + min;
-			prev = cx;
-			return { g, x: xFrac(govYear(g)), cx };
+	const fanStep = govR * 0.85;
+	type GovPos = { g: Government; x: number; cx: number; row: number };
+	const govLayout = $derived.by((): { placed: GovPos[]; rowCount: number } => {
+		const min = 2 * govR + 4;
+		const lastCxByRow: number[] = [];
+		const placed = GOVERNMENTS.map((g) => {
+			const x = xFrac(govYear(g));
+			let row = 0;
+			while (row < lastCxByRow.length && x + row * fanStep - lastCxByRow[row] < min) row++;
+			const cx = x + row * fanStep;
+			lastCxByRow[row] = cx;
+			return { g, x, cx, row };
 		});
+		return { placed, rowCount: lastCxByRow.length };
 	});
+	const govPositions = $derived(govLayout.placed);
 
 	// the government in office at a given election year (last one started by then)
 	function govAtYear(year: number): Government | undefined {
@@ -143,6 +153,34 @@
 			// linearly interpolated. Clearer than any curved interpolation.
 			.curve(d3.curveLinear)
 	);
+
+	// Power-stream mode: colour a party's band only over the legislatures it
+	// governed. The coalition formed after election i rules until election i+1, so
+	// we colour the span [i, i+1] when the party is in election i's coalition (and
+	// a half-span before the first governing election for a clean leading edge).
+	function governingRuns(s: d3.Series<Record<string, number>, string>): string[] {
+		const gov = ELECTIONS.map((e) => isGoverning(e.date, s.key));
+		const paths: string[] = [];
+		const pt = (i: number) => ({ x: x(years[i]), y0: yScale(s[i][0]), y1: yScale(s[i][1]) });
+		let i = 0;
+		while (i < ELECTIONS.length) {
+			if (!gov[i]) { i++; continue; }
+			const start = i;
+			while (i < ELECTIONS.length && gov[i]) i++;
+			const end = i - 1; // inclusive last governing election
+			// build a polygon from start..min(end+1, last) so the colour reaches into
+			// the next legislature it actually governed through
+			const lo = start;
+			const hi = Math.min(end + (end + 1 < ELECTIONS.length && gov[end] ? 1 : 0), ELECTIONS.length - 1);
+			const idx = [];
+			for (let k = lo; k <= hi; k++) idx.push(k);
+			if (idx.length === 1 && hi + 1 < ELECTIONS.length) idx.push(hi + 1); // ensure width
+			const top = idx.map((k) => { const q = pt(k); return `${q.x},${q.y1}`; });
+			const bot = idx.slice().reverse().map((k) => { const q = pt(k); return `${q.x},${q.y0}`; });
+			paths.push('M' + top.join(' L') + ' L' + bot.join(' L') + ' Z');
+		}
+		return paths;
+	}
 
 	// label anchor: place the label at the election where THIS band is thickest,
 	// but only among elections where the party actually has a non-zero share, and
@@ -294,19 +332,19 @@
 				<clipPath id="photo-clip"><circle cx="0" cy="0" r={govR} /></clipPath>
 			</defs>
 
-			<!-- prime-minister frieze: every government at its start date -->
-			<g transform="translate({margin.left},{16})">
-				<!-- leader line connecting the portraits -->
-				<line class="pm-axis" x1={govPositions[0]?.cx ?? 0} x2={govPositions.at(-1)?.cx ?? 0}
-					y1={govR + 2} y2={govR + 2} />
+			<!-- prime-minister frieze: portraits on multiple rows at their true date,
+			     connectors routed at right angles through a gutter under all photos. -->
+			<g transform="translate({margin.left},{pmTop})">
+				{#each govPositions as gp (gp.g.government + '-stem')}
+					{@const cy = (govLayout.rowCount - 1 - gp.row) * pmRowH + govR}
+					<path class="pm-stem" d="M{gp.cx},{cy + govR + 2} V{pmGutterY} H{gp.x} V{pmGutterY + 6}" />
+					<circle class="pm-dot" cx={gp.x} cy={pmGutterY + 6} r="2" fill={party(gp.g.partyId).color} />
+				{/each}
 				{#each govPositions as gp (gp.g.government)}
 					{@const selected = selectedGov?.government === gp.g.government}
 					{@const active = selected || govHover === gp.g.government || (govHover === null && !selectedGov && rankGov?.government === gp.g.government)}
-					<!-- tick from the real date position down to the (possibly nudged) portrait -->
-					{#if Math.abs(gp.cx - gp.x) > 1}
-						<line class="pm-tick" x1={gp.x} y1={govR + 2} x2={gp.cx} y2={govR + 2} />
-					{/if}
-					<g transform="translate({gp.cx},{govR + 2})" role="button" tabindex="0"
+					{@const cy = (govLayout.rowCount - 1 - gp.row) * pmRowH + govR}
+					<g transform="translate({gp.cx},{cy})" role="button" tabindex="0"
 						aria-label="Gouvernement {gp.g.government}"
 						class="pm-hit"
 						onmouseenter={() => (govHover = gp.g.government)}
@@ -348,15 +386,27 @@
 						(selectedCoalition && !selectedCoalition.has(s.key))}
 					<path
 						d={area(s)}
-						fill="url(#grad-{s.key})"
+						fill={powerMode ? 'var(--band-muted)' : `url(#grad-${s.key})`}
 						class="band"
-						class:dim={dimmed}
+						class:dim={dimmed && !powerMode}
 						class:in-coalition={selectedCoalition && selectedCoalition.has(s.key)}
 						role="img"
 						aria-label={p.fullName}
 						onmousemove={(ev) => move(s.key, ev)}
 					/>
 				{/each}
+
+				<!-- power-stream overlay: colour only the legislatures each party governed -->
+				{#if powerMode}
+					{#each stacked as s (s.key + '-gov')}
+						{@const p = party(s.key)}
+						{#each governingRuns(s) as d, i (i)}
+							<path d={d} fill={p.color} class="band gov-run"
+								class:dim={hovered && hovered !== s.key}
+								role="presentation" onmousemove={(ev) => move(s.key, ev)} />
+						{/each}
+					{/each}
+				{/if}
 
 				<!-- inline labels on thick bands -->
 				{#each stacked as s (s.key)}
@@ -481,6 +531,7 @@
 
 	.band { stroke: var(--band-stroke); stroke-width: 0.6; cursor: pointer; transition: opacity 0.15s; }
 	.band.dim { opacity: 0.16; }
+	.gov-run { stroke: none; transition: opacity 0.15s; }
 	.band-label {
 		font-size: 12px; font-weight: 700; text-anchor: middle; dominant-baseline: middle;
 		pointer-events: none; transition: opacity 0.15s;
@@ -489,8 +540,8 @@
 	.band-label.dim { opacity: 0.12; }
 
 	/* PM frieze — inner group's local origin (0,0) is the portrait centre. */
-	.pm-axis { stroke: var(--border); stroke-width: 1; }
-	.pm-tick { stroke: var(--border-strong); stroke-width: 1; }
+	.pm-stem { fill: none; stroke: var(--border-strong); stroke-width: 1; }
+	.pm-dot { opacity: 0.9; }
 	.pm-hit { cursor: pointer; outline: none; }
 	.pm { transition: transform 0.15s ease; }
 	.pm-ring { fill: var(--surface); stroke-width: 2; transition: stroke-width 0.15s; }

@@ -457,16 +457,16 @@
       {
         "id": "rw",
         "seats": 18,
-        "votes": 306606,
+        "votes": 449926,
         "seatShare": 0.08490566037735849,
-        "voteShare": 0.058051386020719735
+        "voteShare": 0.08518694319993199
       },
       {
         "id": "fdf",
         "seats": 6,
-        "votes": 286639,
+        "votes": 143320,
         "seatShare": 0.02830188679245283,
-        "voteShare": 0.05427092502297112
+        "voteShare": 0.027135557179212254
       },
       {
         "id": "kpb",
@@ -620,16 +620,16 @@
       {
         "id": "fdf",
         "seats": 11,
-        "votes": 263104,
+        "votes": 131552,
         "seatShare": 0.05188679245283019,
-        "voteShare": 0.04719305162385755
+        "voteShare": 0.023596525811928774
       },
       {
         "id": "rw",
         "seats": 5,
-        "votes": 132773,
+        "votes": 264325,
         "seatShare": 0.02358490566037736,
-        "voteShare": 0.023815536986341666
+        "voteShare": 0.04741206279827044
       },
       {
         "id": "kpb",
@@ -698,9 +698,16 @@
       {
         "id": "fdf",
         "seats": 11,
-        "votes": 259019,
+        "votes": 129510,
         "seatShare": 0.05188679245283019,
-        "voteShare": 0.04684524911886752
+        "voteShare": 0.02342271498764389
+      },
+      {
+        "id": "rw",
+        "seats": 4,
+        "votes": 257663,
+        "seatShare": 0.018867924528301886,
+        "voteShare": 0.046600007812997356
       },
       {
         "id": "kpb",
@@ -708,13 +715,6 @@
         "votes": 180234,
         "seatShare": 0.018867924528301886,
         "voteShare": 0.03259647604882255
-      },
-      {
-        "id": "rw",
-        "seats": 4,
-        "votes": 128153,
-        "seatShare": 0.018867924528301886,
-        "voteShare": 0.023177292825353465
       },
       {
         "id": "vlaamsblok",
@@ -797,16 +797,16 @@
       {
         "id": "fdf",
         "seats": 4,
-        "votes": 253720,
+        "votes": 126860,
         "seatShare": 0.018867924528301886,
-        "voteShare": 0.0421110146062416
+        "voteShare": 0.0210555073031208
       },
       {
         "id": "rw",
         "seats": 4,
-        "votes": 0,
+        "votes": 126860,
         "seatShare": 0.018867924528301886,
-        "voteShare": 0
+        "voteShare": 0.0210555073031208
       },
       {
         "id": "udrt",
@@ -1193,9 +1193,9 @@
       {
         "id": "prl",
         "seats": 14,
-        "votes": 0,
+        "votes": 498600,
         "seatShare": 0.09333333333333334,
-        "voteShare": 0
+        "voteShare": 0.08247014798975293
       },
       {
         "id": "psc",
@@ -1235,9 +1235,9 @@
       {
         "id": "fdf",
         "seats": 4,
-        "votes": 0,
+        "votes": 124650,
         "seatShare": 0.02666666666666667,
-        "voteShare": 0
+        "voteShare": 0.02061753699743823
       },
       {
         "id": "fn",
@@ -1249,9 +1249,9 @@
       {
         "id": "other",
         "seats": 0,
-        "votes": 835778,
+        "votes": 212528,
         "seatShare": 0,
-        "voteShare": 0.13824054421696694
+        "voteShare": 0.03515285922977579
       }
     ]
   },
@@ -1299,9 +1299,9 @@
       {
         "id": "prl",
         "seats": 14,
-        "votes": 0,
+        "votes": 504175,
         "seatShare": 0.09333333333333334,
-        "voteShare": 0
+        "voteShare": 0.08210138509396776
       },
       {
         "id": "ecolo",
@@ -1334,9 +1334,9 @@
       {
         "id": "fdf",
         "seats": 4,
-        "votes": 0,
+        "votes": 126044,
         "seatShare": 0.02666666666666667,
-        "voteShare": 0
+        "voteShare": 0.02052538698424966
       },
       {
         "id": "fn",
@@ -1348,9 +1348,9 @@
       {
         "id": "other",
         "seats": 0,
-        "votes": 1167613,
+        "votes": 537394,
         "seatShare": 0,
-        "voteShare": 0.19013763981499077
+        "voteShare": 0.08751086773677336
       }
     ]
   },
@@ -1384,9 +1384,9 @@
       {
         "id": "spa",
         "seats": 23,
-        "votes": 0,
+        "votes": 979750,
         "seatShare": 0.15333333333333332,
-        "voteShare": 0
+        "voteShare": 0.14918057648338556
       },
       {
         "id": "cdv",
@@ -1433,9 +1433,9 @@
       {
         "id": "other",
         "seats": 0,
-        "votes": 1250541,
+        "votes": 270791,
         "seatShare": 0,
-        "voteShare": 0.19041227588273485
+        "voteShare": 0.041231699399349286
       },
       {
         "id": "agalev",
@@ -1455,9 +1455,9 @@
       {
         "id": "cdv",
         "seats": 24,
-        "votes": 0,
+        "votes": 987960,
         "seatShare": 0.16,
-        "voteShare": 0
+        "voteShare": 0.14808974481964696
       },
       {
         "id": "mr",
@@ -1490,9 +1490,9 @@
       {
         "id": "spa",
         "seats": 14,
-        "votes": 0,
+        "votes": 684390,
         "seatShare": 0.09333333333333334,
-        "voteShare": 0
+        "voteShare": 0.10258627925940138
       },
       {
         "id": "cdh",
@@ -1511,9 +1511,9 @@
       {
         "id": "nva",
         "seats": 6,
-        "votes": 0,
+        "votes": 246990,
         "seatShare": 0.04,
-        "voteShare": 0
+        "voteShare": 0.03702243620491174
       },
       {
         "id": "ld",
@@ -1539,9 +1539,9 @@
       {
         "id": "other",
         "seats": 0,
-        "votes": 2092566,
+        "votes": 173226,
         "seatShare": 0,
-        "voteShare": 0.3136640804873369
+        "voteShare": 0.025965620203376824
       }
     ]
   },

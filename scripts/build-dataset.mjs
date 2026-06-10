@@ -129,16 +129,31 @@ const out = wikiYears.map((dt) => {
 	}
 
 	// --- VOTES from API ---
+	// Cartels in the API bundle votes under one label; split them across wings the
+	// same way as seats so each party gets a coherent vote share (e.g. the 2007
+	// "CD&V NVA" cartel votes split 80/20, "sp.a-spirit" → sp.a).
+	const VOTE_CARTELS = {
+		'CD&V NVA': [{ id: 'cdv', share: 0.8 }, { id: 'nva', share: 0.2 }],
+		'sp.a-spirit': [{ id: 'spa', share: 1.0 }],
+		'PRL-FDF': [{ id: 'prl', share: 0.8 }, { id: 'fdf', share: 0.2 }],
+		'FDF-RW': [{ id: 'fdf', share: 0.5 }, { id: 'rw', share: 0.5 }]
+	};
 	const voteAgg = new Map();
 	const apiE = apiByYear[String(year)];
 	let totalVotes = 0;
+	const addVote = (id, v) => voteAgg.set(id, (voteAgg.get(id) ?? 0) + v);
 	if (apiE) {
 		for (const p of apiE.parties) {
+			totalVotes += p.votes;
+			const cartel = VOTE_CARTELS[p.partyLabel];
+			if (cartel) {
+				for (const c of cartel) addVote(c.id, Math.round(p.votes * c.share));
+				continue;
+			}
 			let id = normApi(p.partyLabel);
 			if (cdUnitaryYears.has(year) && (id === 'cvp' || id === 'psc')) id = 'cd-unitary';
 			if (spUnitaryYears.has(year) && (id === 'sp' || id === 'ps')) id = 'sp-unitary';
-			voteAgg.set(id, (voteAgg.get(id) ?? 0) + p.votes);
-			totalVotes += p.votes;
+			addVote(id, p.votes);
 		}
 	}
 

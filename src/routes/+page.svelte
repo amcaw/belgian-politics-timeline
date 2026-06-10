@@ -6,7 +6,7 @@
 	import { METRIC_LABELS, type Metric } from '$lib/data';
 
 	let metric = $state<Metric>('votes');
-	let view = $state<'results' | 'power'>('power');
+	let view = $state<'results' | 'power' | 'powerStream'>('power');
 
 	const metrics: Metric[] = ['seats', 'votes'];
 </script>
@@ -29,9 +29,10 @@
 			<span class="toggle-label">Vue&nbsp;:</span>
 			<button class:active={view === 'results'} onclick={() => (view = 'results')}>Résultats</button>
 			<button class:active={view === 'power'} onclick={() => (view = 'power')}>Au pouvoir</button>
+			<button class:active={view === 'powerStream'} onclick={() => (view = 'powerStream')}>Au pouvoir (flux)</button>
 		</div>
 
-		{#if view === 'results'}
+		{#if view !== 'power'}
 			<div class="toggle-group">
 				<span class="toggle-label">Mesure&nbsp;:</span>
 				{#each metrics as m}
@@ -43,10 +44,10 @@
 		{/if}
 	</div>
 
-	{#if view === 'results'}
-		<Timeline {metric} />
-	{:else}
+	{#if view === 'power'}
 		<GovernanceGantt />
+	{:else}
+		<Timeline {metric} powerMode={view === 'powerStream'} />
 	{/if}
 
 	<Legend />
