@@ -2,19 +2,22 @@
 	import { base } from '$app/paths';
 	import {
 		ELECTIONS,
+		GOVERNMENTS,
 		party,
 		totalCoalitionSeats,
 		yearsInPower,
 		type Government
 	} from './data';
 
-	// `featured` = government to describe. `isCurrent` = it's the latest (not an
-	// explicit selection), shown with an "(actuel)" tag.
-	let { featured, isCurrent = false }: { featured: Government; isCurrent?: boolean } = $props();
+	// `featured` = government to describe.
+	let { featured }: { featured: Government } = $props();
 
 	const chamberTotal = $derived(
 		ELECTIONS.find((e) => e.date === featured.electionDate)?.totalSeats ?? 150
 	);
+	// "(actuel)" only when this really is the most recent government in the data.
+	const latest = GOVERNMENTS[GOVERNMENTS.length - 1];
+	const isCurrent = $derived(featured.government === latest.government);
 	const fmtDate = (iso: string) => { const [y, m, d] = iso.split('-'); return `${d}/${m}/${y}`; };
 </script>
 

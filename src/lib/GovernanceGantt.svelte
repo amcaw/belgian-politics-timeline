@@ -149,7 +149,7 @@
 </script>
 
 {#if featured}
-	<CoalitionHeader {featured} isCurrent={!selectedGov} />
+	<CoalitionHeader {featured} />
 {/if}
 
 <div class="gantt-col">

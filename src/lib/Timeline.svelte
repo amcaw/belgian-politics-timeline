@@ -330,7 +330,7 @@
 </script>
 
 {#if powerMode && (selectedGov ?? rankGov)}
-	<CoalitionHeader featured={(selectedGov ?? rankGov)!} isCurrent={!selectedGov} />
+	<CoalitionHeader featured={(selectedGov ?? rankGov)!} />
 {/if}
 
 <div class="layout">
