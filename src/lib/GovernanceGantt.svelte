@@ -9,6 +9,7 @@
 		coalitionOf,
 		coalitionSeats,
 		governingSpells,
+		renameChainOf,
 		ANNOTATIONS,
 		type Government,
 		type Spell
@@ -46,17 +47,38 @@
 	}
 
 	const spells = governingSpells();
-	// parties that ever governed, ordered by family
-	const partyIds = [...new Set(spells.map((s) => s.partyId))].sort(
-		(a, b) => rank(a) - rank(b) || a.localeCompare(b)
-	);
+	// One row per PARTY LINEAGE: a rename chain (SP · sp.a · Vooruit) collapses to a
+	// single continuous row, so the timeline reads ~13 dense rows instead of ~24
+	// mostly-empty ones. Splits stay on their own rows (the wings are distinct).
+	interface GRow { ids: string[]; label: string; latest: string; former: string }
+	const rows: GRow[] = (() => {
+		const governedIds = [...new Set(spells.map((s) => s.partyId))];
+		const byRoot = new Map<string, { chain: string[]; ids: Set<string> }>();
+		for (const id of governedIds) {
+			const chain = renameChainOf(id);
+			const root = chain[0];
+			if (!byRoot.has(root)) byRoot.set(root, { chain, ids: new Set() });
+			byRoot.get(root)!.ids.add(id);
+		}
+		return [...byRoot.values()]
+			.map(({ chain, ids }) => {
+				const latest = chain[chain.length - 1];
+				return {
+					ids: [...ids],
+					latest,
+					label: party(latest).label,
+					former: chain.slice(0, -1).map((c) => party(c).label).join(' · ')
+				};
+			})
+			.sort((a, b) => rank(a.latest) - rank(b.latest) || a.label.localeCompare(b.label));
+	})();
 
 	const rowH = 30;
 	const rowGap = 6;
 	const perElection = 82;
 	const govR = 15;
 	const innerW = (years.length - 1) * perElection + perElection; // +1 slot for post-2024 tail
-	const innerH = partyIds.length * (rowH + rowGap);
+	const innerH = rows.length * (rowH + rowGap);
 
 	const lastElecYear = years[years.length - 1];
 	const yearMax = 2026.0; // end of the post-2024 tail slot
@@ -124,7 +146,7 @@
 	const pmRowH = 2 * govR + 10; // vertical step between portrait rows
 	const pmTop = 14; // top padding before the first portrait row
 	const pmBand = pmTop + govRows.rowCount * pmRowH + 16; // dynamic band height
-	const margin = { top: pmBand, right: 90, bottom: 52, left: 132 };
+	const margin = { top: pmBand, right: 90, bottom: 52, left: 150 };
 	const width = margin.left + innerW + margin.right;
 	const height = margin.top + innerH + margin.bottom;
 
@@ -144,17 +166,45 @@
 	}
 	function annoLeave() { annoTip = null; }
 
-	// horizontal-scroll hint (same pattern as the streamgraph)
+	// horizontal-scroll hint + auto-scroll
 	let wrapEl = $state<HTMLDivElement | null>(null);
 	let canScroll = $state(false);
 	let scrolled = $state(0);
+	let maxScroll = $state(0);
+	let userScrolled = $state(false);
 	function onScroll() {
 		if (!wrapEl) return;
 		scrolled = wrapEl.scrollLeft;
-		canScroll = wrapEl.scrollWidth - wrapEl.clientWidth > 8;
+		maxScroll = wrapEl.scrollWidth - wrapEl.clientWidth;
+		canScroll = maxScroll > 8;
 	}
+	function onUserScroll() { userScrolled = true; onScroll(); }
 	$effect(() => { queueMicrotask(onScroll); });
-	const showHint = $derived(canScroll && scrolled < 24);
+
+	// Auto-scroll: on load, jump to the recent era so the viewport matches the
+	// default header (De Wever). When a government is selected, centre it.
+	let didInit = false;
+	$effect(() => {
+		const target = selectedGov; // reactive dependency
+		if (!wrapEl) return;
+		queueMicrotask(() => {
+			if (!wrapEl) return;
+			if (target) {
+				const cx = margin.left + xAt(govYear(target));
+				wrapEl.scrollTo({ left: Math.max(0, cx - wrapEl.clientWidth / 2), behavior: didInit ? 'smooth' : 'auto' });
+			} else if (!didInit) {
+				wrapEl.scrollTo({ left: wrapEl.scrollWidth, behavior: 'auto' });
+			}
+			didInit = true;
+			onScroll();
+		});
+	});
+
+	// show a hint toward whichever edge still has content, until the user scrolls
+	const hintDir = $derived<'left' | 'right'>(scrolled > maxScroll / 2 ? 'left' : 'right');
+	const showHint = $derived(
+		!userScrolled && canScroll && (scrolled < 24 || scrolled > maxScroll - 24)
+	);
 </script>
 
 {#if featured}
@@ -163,12 +213,17 @@
 
 <div class="gantt-col">
 	{#if showHint}
-		<div class="scroll-hint" aria-hidden="true">
-			<span>faites défiler</span>
-			<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		<div class="scroll-hint" class:hint-left={hintDir === 'left'} aria-hidden="true">
+			{#if hintDir === 'left'}
+				<svg viewBox="0 0 24 24" width="18" height="18"><path d="M19 12H6M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				<span>faites défiler</span>
+			{:else}
+				<span>faites défiler</span>
+				<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			{/if}
 		</div>
 	{/if}
-	<div class="gantt-wrap" bind:this={wrapEl} onscroll={onScroll}>
+	<div class="gantt-wrap" bind:this={wrapEl} onscroll={onUserScroll}>
 	<svg viewBox="0 0 {width} {height}" {width} {height} role="img"
 		aria-label="Partis au gouvernement fédéral 1946-2024">
 		<defs><clipPath id="g-photo"><circle cx="0" cy="0" r={govR} /></clipPath></defs>
@@ -221,19 +276,20 @@
 					y1={-26} y2={innerH + 6} />
 			{/if}
 
-			<!-- one row per party -->
-			{#each partyIds as id, i (id)}
-				{@const p = party(id)}
+			<!-- one row per party lineage -->
+			{#each rows as row, i (row.latest)}
 				{@const y = rowY(i)}
-				{@const rowDim = hoverParty && hoverParty !== id}
-				<text class="row-label" x={-12} y={y + rowH / 2} class:dim={rowDim}>{p.label}</text>
+				{@const rowDim = hoverParty != null && !row.ids.includes(hoverParty)}
+				{@const selCoal = selectedGov ? coalitionOf(selectedGov) : null}
+				{@const selDim = selCoal && !row.ids.some((id) => selCoal.includes(id))}
 				<line class="row-base" x1={0} x2={innerW} y1={y + rowH / 2} y2={y + rowH / 2} />
-				{#each spells.filter((s) => s.partyId === id) as s (s.start)}
+				{#each spells.filter((s) => row.ids.includes(s.partyId)) as s (s.partyId + s.start)}
+					{@const p = party(s.partyId)}
 					{#each segmentsOf(s) as seg (seg.gov)}
 						{@const isSelGovSeg = selectedGov && seg.gov === selectedGov.government}
 						<rect
 							class="bar"
-							class:dim={rowDim || (selectedGov && !coalitionOf(selectedGov).includes(id))}
+							class:dim={rowDim || selDim}
 							class:sel={isSelGovSeg}
 							x={seg.x}
 							y={y + (rowH - seg.h) / 2}
@@ -263,6 +319,23 @@
 					<text class="anno-num" y="0.5">{i + 1}</text>
 				</g>
 			{/each}
+		</g>
+
+		<!-- sticky left labels: counter-scroll so they stay pinned while the chart scrolls -->
+		<g class="sticky-labels" transform="translate({scrolled},{margin.top})">
+			<rect x="0" y={-6} width={margin.left - 4} height={innerH + 12} class="label-bg" />
+			{#each rows as row, i (row.latest)}
+				{@const y = rowY(i)}
+				{@const rowDim = hoverParty != null && !row.ids.includes(hoverParty)}
+				<text class="row-label" x={margin.left - 12}
+					y={row.former ? y + rowH / 2 - 5 : y + rowH / 2} class:dim={rowDim}>{row.label}</text>
+				{#if row.former}
+					<text class="row-former" x={margin.left - 12} y={y + rowH / 2 + 7}
+						class:dim={rowDim}>ex-{row.former}</text>
+				{/if}
+			{/each}
+			<!-- caption for the numbered story markers below the chart -->
+			<text class="anno-caption" x={margin.left - 12} y={innerH + 24}>repères ‹ survolez</text>
 		</g>
 	</svg>
 	</div>
@@ -294,9 +367,13 @@
 		color: var(--text); font-size: 0.74rem; font-weight: 600;
 		box-shadow: 0 4px 14px rgba(0,0,0,.25); animation: nudge 1.4s ease-in-out infinite;
 	}
+	.scroll-hint.hint-left { right: auto; left: 14px; animation: nudge-left 1.4s ease-in-out infinite; }
 	.scroll-hint svg { color: var(--accent); }
 	@keyframes nudge { 0%,100% { transform: translate(0,-50%); } 50% { transform: translate(6px,-50%); } }
-	@media (prefers-reduced-motion: reduce) { .scroll-hint { animation: none; transform: translateY(-50%); } }
+	@keyframes nudge-left { 0%,100% { transform: translate(0,-50%); } 50% { transform: translate(-6px,-50%); } }
+	@media (prefers-reduced-motion: reduce) {
+		.scroll-hint, .scroll-hint.hint-left { animation: none; transform: translateY(-50%); }
+	}
 	.grid { stroke: var(--chart-grid); stroke-width: 1; }
 	.year { fill: var(--text-muted); font-size: 10px; font-weight: 600; text-anchor: middle;
 		font-family: var(--font-mono); }
@@ -308,6 +385,13 @@
 	.row-label { fill: var(--text-secondary); font-size: 12px; font-weight: 600;
 		text-anchor: end; dominant-baseline: middle; transition: opacity 0.15s; }
 	.row-label.dim { opacity: 0.3; }
+	.row-former { fill: var(--text-muted); font-size: 9px; text-anchor: end;
+		dominant-baseline: middle; transition: opacity 0.15s; }
+	.row-former.dim { opacity: 0.3; }
+	.sticky-labels { pointer-events: none; }
+	.label-bg { fill: var(--chart-bg); }
+	.anno-caption { fill: var(--accent); font-size: 10px; font-weight: 700; text-anchor: end;
+		dominant-baseline: middle; letter-spacing: 0.02em; }
 	.row-base { stroke: var(--divider); stroke-width: 1; }
 	.bar { cursor: pointer; transition: opacity 0.15s; stroke: var(--chart-bg); stroke-width: 0.5; }
 	.bar:hover { filter: brightness(1.1); }

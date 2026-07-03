@@ -140,11 +140,14 @@ export function govYear(g: Government): number {
 	return y + ((m - 1) * 30 + (d - 1)) / 365;
 }
 
-// ---- party lineage (same "line" across renames/successions) ----
+// ---- party lineage (same political family across renames/splits) ----
 import filiationData from './filiation.json';
 const FILIATION = filiationData as { from: string; to: string; year: number; type: string }[];
-// undirected lineage groups: a rename/succession/split links ids into one line so
-// "years in power" follows a party through its name changes.
+// The lineage of a party = every id in the SAME political family: renames and
+// successions (same party, new name) and splits (a unitary party that became two
+// linguistic wings). We deliberately do NOT follow `merge` edges — those cross
+// family lines (e.g. FDF→MR merges a regionalist into the liberals), which would
+// wrongly credit the FDF with the liberals' decades in power.
 function lineageOf(id: string): Set<string> {
 	const adj = new Map<string, Set<string>>();
 	const link = (a: string, b: string) => {
@@ -152,7 +155,7 @@ function lineageOf(id: string): Set<string> {
 		adj.get(a)!.add(b);
 	};
 	for (const f of FILIATION) {
-		// follow renames + successions + splits (a split child continues the line)
+		if (f.type === 'merge') continue; // crosses families — not part of a lineage
 		link(f.from, f.to);
 		link(f.to, f.from);
 	}
@@ -165,17 +168,19 @@ function lineageOf(id: string): Set<string> {
 	return seen;
 }
 
-// total years a party (and its lineage) has spent in federal government, and the
-// earliest year its line first entered power. Used to show "it's always roughly
-// the same parties".
-export function yearsInPower(partyId: string): { years: number; since: number } {
+// Total years a party's lineage has spent in federal government, and the year its
+// line first entered power. `asOf` caps the count at a point in time so a
+// historical government's card shows the tally AS IT STOOD THEN, not through 2025.
+export function yearsInPower(partyId: string, asOf = Infinity): { years: number; since: number } {
 	const line = lineageOf(partyId);
-	const spells = governingSpells().filter((s) => line.has(s.partyId));
-	if (!spells.length) return { years: 0, since: 0 };
-	// merge overlapping spans across the whole lineage to avoid double counting
-	const spans = spells.map((s) => [s.start, s.end] as [number, number]).sort((a, b) => a[0] - b[0]);
+	const spans = governingSpells()
+		.filter((s) => line.has(s.partyId))
+		.map((s) => [s.start, Math.min(s.end, asOf)] as [number, number])
+		.filter(([a, b]) => b > a)
+		.sort((a, b) => a[0] - b[0]);
+	if (!spans.length) return { years: 0, since: 0 };
 	let total = 0;
-	let since = spans[0][0];
+	const since = spans[0][0];
 	let [cs, ce] = spans[0];
 	for (let i = 1; i < spans.length; i++) {
 		if (spans[i][0] <= ce + 0.01) ce = Math.max(ce, spans[i][1]);
@@ -183,6 +188,44 @@ export function yearsInPower(partyId: string): { years: number; since: number } 
 	}
 	total += ce - cs;
 	return { years: Math.round(total), since: Math.floor(since) };
+}
+
+// End of a government's term (start of the next government, or ~now for the
+// latest). Used to cap yearsInPower on a government card.
+export function govTermEnd(g: Government): number {
+	const sorted = [...GOVERNMENTS].sort((a, b) => a.startDate.localeCompare(b.startDate));
+	const i = sorted.findIndex((x) => x.government === g.government);
+	return i >= 0 && i < sorted.length - 1 ? govYear(sorted[i + 1]) : 2025.4;
+}
+
+// The successive NAMES of one and the same party, oldest → newest, following
+// rename/succession edges only (splits are NOT merged — the two linguistic wings
+// are distinct parties). Lets the timeline put SP · sp.a · Vooruit on one row.
+const RENAME_TYPES = new Set(['rename', 'succession']);
+export function renameChainOf(id: string): string[] {
+	// walk backward to the oldest name
+	let root = id;
+	const guard = new Set<string>();
+	let moved = true;
+	while (moved && !guard.has(root)) {
+		guard.add(root);
+		moved = false;
+		for (const f of FILIATION)
+			if (RENAME_TYPES.has(f.type) && f.to === root) { root = f.from; moved = true; break; }
+	}
+	// walk forward, collecting the chain in order
+	const chain = [root];
+	const seen = new Set([root]);
+	let cur = root;
+	let adv = true;
+	while (adv) {
+		adv = false;
+		for (const f of FILIATION)
+			if (RENAME_TYPES.has(f.type) && f.from === cur && !seen.has(f.to)) {
+				cur = f.to; chain.push(cur); seen.add(cur); adv = true; break;
+			}
+	}
+	return chain;
 }
 
 // Key narrative moments to annotate on the timeline.

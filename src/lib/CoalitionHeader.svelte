@@ -6,6 +6,7 @@
 		party,
 		totalCoalitionSeats,
 		yearsInPower,
+		govTermEnd,
 		type Government
 	} from './data';
 
@@ -26,11 +27,12 @@
 </script>
 
 {#snippet chips(gov: Government)}
+	{@const asOf = govTermEnd(gov)}
 	{#each gov.coalition as c (c.id)}
 		{@const p = party(c.id)}
-		{@const power = yearsInPower(c.id)}
+		{@const power = yearsInPower(c.id, asOf)}
 		<span class="coal-chip" style:border-color={p.color}
-			title="{p.fullName} — {c.seats} sièges · ~{power.years} ans au pouvoir depuis {power.since}">
+			title="{p.fullName} — {c.seats} sièges · ~{power.years} ans au pouvoir">
 			<span class="sw" style:background={p.color}></span>{p.label}
 			<b>{c.seats}</b>
 			<span class="chip-power">~{power.years} ans au pouvoir</span>
@@ -56,8 +58,9 @@
 			<div class="coal-chips">{@render chips(featured)}</div>
 		</div>
 		<div class="coal-foot">
-			L'ancienneté au pouvoir cumule toute la lignée du parti, changements de nom inclus
-			(ex.&nbsp;PSC → cdH → Les Engagés).
+			L'ancienneté cumule les années au gouvernement de toute la famille — ailes
+			linguistiques et changements de nom inclus (ex.&nbsp;PSC → cdH → Les Engagés),
+			jusqu'à ce gouvernement.
 		</div>
 	</div>
 	<a class="wiki-link" href={featured.wikiUrl} target="_blank" rel="noreferrer">Wikipédia ↗</a>

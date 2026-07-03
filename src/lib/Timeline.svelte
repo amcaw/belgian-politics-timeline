@@ -177,9 +177,18 @@
 	});
 	const govPositions = $derived(govLayout.placed);
 
-	// the government in office at a given election year (last one started by then)
+	// the government ISSUED from the election held that year (its principal/first
+	// government), so 2024 shows De Wever — the government the election produced —
+	// even though it was only sworn in in early 2025 after the formation talks.
 	function govAtYear(year: number): Government | undefined {
-		const cutoff = year + 0.96; // ~end of the election year
+		const e = ELECTIONS.find((x) => x.year === year);
+		if (e) {
+			const fromElection = GOVERNMENTS.filter((g) => g.electionDate === e.date).sort(
+				(a, b) => govYear(a) - govYear(b)
+			)[0];
+			if (fromElection) return fromElection;
+		}
+		const cutoff = year + 0.96;
 		let found: Government | undefined;
 		for (const g of GOVERNMENTS) if (govYear(g) <= cutoff) found = g;
 		return found;
@@ -693,7 +702,7 @@
 
 	/* live ranking panel (design system: card-outlined) */
 	.rank {
-		width: 234px; flex-shrink: 0; background: var(--surface);
+		width: 250px; flex-shrink: 0; background: var(--surface);
 		border: 1px solid var(--border); border-radius: 14px; padding: 18px;
 		align-self: flex-start; position: sticky; top: 1rem;
 	}
@@ -703,7 +712,7 @@
 	.rank-pm-name { font-weight: 700; font-size: 0.85rem; color: var(--text); }
 	.rank-pm-role { font-size: 0.72rem; color: var(--text-muted); }
 	.rank-bars { display: flex; flex-direction: column; gap: 6px; }
-	.rank-row { display: grid; grid-template-columns: 58px 1fr 34px; align-items: center; gap: 7px; font-size: 0.76rem; transition: opacity 0.15s; }
+	.rank-row { display: grid; grid-template-columns: 96px 1fr 28px; align-items: center; gap: 6px; font-size: 0.7rem; transition: opacity 0.15s; }
 	.rank-row.dim { opacity: 0.3; }
 	.rank-name { font-weight: 600; color: var(--text-secondary); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 	.rank-bar-wrap { background: var(--surface-2); border-radius: 3px; height: 14px; overflow: hidden; }

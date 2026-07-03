@@ -27,11 +27,11 @@ export interface Party {
 
 // Canonical party registry. Colors follow Belgian conventions:
 // christian-dem = orange, socialist = red, liberal = blue, green = green,
-// flemish-nationalist = yellow, far-right = dark navy, far-left = dark red,
+// flemish-nationalist = yellow, far-right = dark brown, far-left = dark red,
 // francophone-regionalist = magenta/pink.
 export const PARTIES: Record<string, Party> = {
 	// --- Christian democrats ---
-	'cd-unitary': { id: 'cd-unitary', label: 'PSC-CVP', fullName: 'Parti social-chrétien / Christelijke Volkspartij (unitary)', color: '#e8821e', family: 'christian-democrat', wing: 'national' },
+	'cd-unitary': { id: 'cd-unitary', label: 'PSC-CVP', fullName: 'Parti social-chrétien / Christelijke Volkspartij (unitaire)', color: '#e8821e', family: 'christian-democrat', wing: 'national' },
 	cvp: { id: 'cvp', label: 'CVP', fullName: 'Christelijke Volkspartij', color: '#ed8b00', family: 'christian-democrat', wing: 'flemish' },
 	cdv: { id: 'cdv', label: 'CD&V', fullName: 'Christen-Democratisch en Vlaams', color: '#f5822a', family: 'christian-democrat', wing: 'flemish' },
 	psc: { id: 'psc', label: 'PSC', fullName: 'Parti social-chrétien', color: '#d4711a', family: 'christian-democrat', wing: 'francophone' },
@@ -39,14 +39,14 @@ export const PARTIES: Record<string, Party> = {
 	engages: { id: 'engages', label: 'Les Engagés', fullName: 'Les Engagés', color: '#00b3a4', family: 'christian-democrat', wing: 'francophone' },
 
 	// --- Socialists ---
-	'sp-unitary': { id: 'sp-unitary', label: 'BSP-PSB', fullName: 'Belgische Socialistische Partij / Parti Socialiste Belge (unitary)', color: '#e30613', family: 'socialist', wing: 'national' },
+	'sp-unitary': { id: 'sp-unitary', label: 'BSP-PSB', fullName: 'Belgische Socialistische Partij / Parti Socialiste Belge (unitaire)', color: '#e30613', family: 'socialist', wing: 'national' },
 	sp: { id: 'sp', label: 'SP', fullName: 'Socialistische Partij', color: '#e30613', family: 'socialist', wing: 'flemish' },
 	spa: { id: 'spa', label: 'sp.a', fullName: 'Socialistische Partij Anders', color: '#fa1e29', family: 'socialist', wing: 'flemish' },
 	vooruit: { id: 'vooruit', label: 'Vooruit', fullName: 'Vooruit', color: '#c1124a', family: 'socialist', wing: 'flemish' },
 	ps: { id: 'ps', label: 'PS', fullName: 'Parti Socialiste', color: '#e8112d', family: 'socialist', wing: 'francophone' },
 
 	// --- Liberals ---
-	'lib-unitary': { id: 'lib-unitary', label: 'Liberals/PVV-PLP', fullName: 'Parti de la Liberté et du Progrès / Partij voor Vrijheid en Vooruitgang (unitary)', color: '#1f6fc4', family: 'liberal', wing: 'national' },
+	'lib-unitary': { id: 'lib-unitary', label: 'Libéraux/PVV-PLP', fullName: 'Parti de la Liberté et du Progrès / Partij voor Vrijheid en Vooruitgang (unitaire)', color: '#1f6fc4', family: 'liberal', wing: 'national' },
 	pvv: { id: 'pvv', label: 'PVV', fullName: 'Partij voor Vrijheid en Vooruitgang', color: '#1f6fc4', family: 'liberal', wing: 'flemish' },
 	vld: { id: 'vld', label: 'VLD', fullName: 'Vlaamse Liberalen en Democraten', color: '#1f78d1', family: 'liberal', wing: 'flemish' },
 	openvld: { id: 'openvld', label: 'Open Vld', fullName: 'Open Vlaamse Liberalen en Democraten', color: '#0166b1', family: 'liberal', wing: 'flemish' },
@@ -62,10 +62,11 @@ export const PARTIES: Record<string, Party> = {
 	groen: { id: 'groen', label: 'Groen', fullName: 'Groen', color: '#48a23f', family: 'green', wing: 'flemish' },
 	ecolo: { id: 'ecolo', label: 'Ecolo', fullName: 'Ecolo', color: '#9bca3c', family: 'green', wing: 'francophone' },
 
-	// --- Far right ---
-	vlaamsblok: { id: 'vlaamsblok', label: 'Vlaams Blok', fullName: 'Vlaams Blok', color: '#33342e', family: 'far-right', wing: 'flemish' },
-	vlaamsbelang: { id: 'vlaamsbelang', label: 'Vlaams Belang', fullName: 'Vlaams Belang', color: '#fcd003', family: 'far-right', wing: 'flemish' },
-	fn: { id: 'fn', label: 'FN', fullName: 'Front National', color: '#1c1c2b', family: 'far-right', wing: 'francophone' },
+	// --- Far right (dark brown, kept distinct from the nationalist yellows and
+	//     visible on both light and dark chart surfaces) ---
+	vlaamsblok: { id: 'vlaamsblok', label: 'Vlaams Blok', fullName: 'Vlaams Blok', color: '#8a5a2a', family: 'far-right', wing: 'flemish' },
+	vlaamsbelang: { id: 'vlaamsbelang', label: 'Vlaams Belang', fullName: 'Vlaams Belang', color: '#a8722e', family: 'far-right', wing: 'flemish' },
+	fn: { id: 'fn', label: 'FN', fullName: 'Front National', color: '#6d5a48', family: 'far-right', wing: 'francophone' },
 
 	// --- Far left / communist ---
 	kpb: { id: 'kpb', label: 'KPB-PCB', fullName: 'Kommunistische Partij van België / Parti Communiste de Belgique', color: '#8c1010', family: 'far-left', wing: 'national' },
@@ -81,5 +82,5 @@ export const PARTIES: Record<string, Party> = {
 	pp: { id: 'pp', label: 'PP', fullName: 'Parti Populaire', color: '#6b4f9e', family: 'other', wing: 'francophone' },
 	udrt: { id: 'udrt', label: 'UDRT-RAD', fullName: 'Union Démocratique pour le Respect du Travail', color: '#9aa0a6', family: 'other', wing: 'national' },
 	udb: { id: 'udb', label: 'UDB', fullName: 'Union Démocratique Belge', color: '#9aa0a6', family: 'other', wing: 'national' },
-	other: { id: 'other', label: 'Other', fullName: 'Other / minor parties', color: '#bdbdbd', family: 'other', wing: 'national' }
+	other: { id: 'other', label: 'Autres', fullName: 'Autres / petits partis', color: '#bdbdbd', family: 'other', wing: 'national' }
 };

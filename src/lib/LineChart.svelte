@@ -132,13 +132,32 @@
 	}
 	function leave() { hovered = null; tip = null; hoverYear = null; }
 	const pct = (s: number) => (s * 100).toFixed(1) + '%';
+
+	// horizontal-scroll hint
+	let wrapEl = $state<HTMLDivElement | null>(null);
+	let canScroll = $state(false);
+	let scrolled = $state(0);
+	function onScroll() {
+		if (!wrapEl) return;
+		scrolled = wrapEl.scrollLeft;
+		canScroll = wrapEl.scrollWidth - wrapEl.clientWidth > 8;
+	}
+	$effect(() => { queueMicrotask(onScroll); });
+	const showHint = $derived(canScroll && scrolled < 24);
 </script>
 
 {#if powerMode && featured}
 	<CoalitionHeader {featured} />
 {/if}
 
-<div class="line-wrap">
+<div class="line-col">
+	{#if showHint}
+		<div class="scroll-hint" aria-hidden="true">
+			<span>faites défiler</span>
+			<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</div>
+	{/if}
+	<div class="line-wrap" bind:this={wrapEl} onscroll={onScroll}>
 	<svg viewBox="0 0 {width} {height}" {width} {height} role="img"
 		aria-label="Évolution des partis en lignes, 1946-2024" onmouseleave={leave}>
 		<g transform="translate({margin.left},{margin.top})">
@@ -194,6 +213,7 @@
 			{/each}
 		</g>
 	</svg>
+	</div>
 
 	{#if tip}
 		{@const p = party(tip.id)}
@@ -205,9 +225,20 @@
 </div>
 
 <style>
+	.line-col { position: relative; }
 	.line-wrap { position: relative; overflow-x: auto; border-radius: 14px;
 		border: 1px solid var(--border); background: var(--chart-bg); }
 	svg { display: block; }
+	.scroll-hint {
+		position: absolute; top: 50%; right: 14px; z-index: 5; pointer-events: none;
+		display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px;
+		border-radius: 999px; background: var(--surface); border: 1px solid var(--border-strong);
+		color: var(--text); font-size: 0.74rem; font-weight: 600;
+		box-shadow: 0 4px 14px rgba(0,0,0,.25); animation: nudge 1.4s ease-in-out infinite;
+	}
+	.scroll-hint svg { color: var(--accent); }
+	@keyframes nudge { 0%,100% { transform: translate(0,-50%); } 50% { transform: translate(6px,-50%); } }
+	@media (prefers-reduced-motion: reduce) { .scroll-hint { animation: none; transform: translateY(-50%); } }
 	.grid { stroke: var(--chart-grid); stroke-width: 1; }
 	.vgrid { stroke: var(--chart-grid); stroke-width: 1; opacity: 0.5; }
 	.ytick { fill: var(--text-muted); font-size: 10px; text-anchor: end; dominant-baseline: middle;

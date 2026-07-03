@@ -146,16 +146,15 @@
 			<text x={x(2011) - 10} y={chartTop - 24} font-family={FONT} font-size="18"
 				font-weight="600" fill="#c2c9d4" text-anchor="end">541 jours sans gouvernement (2010-11) →</text>
 
-			<!-- family rows -->
+			<!-- family rows: name + party-chain on two lines (no collision) -->
 			{#each rows as r, i (r.fam)}
 				{@const ty = chartTop + i * rowStep}
-				{@const by = ty + 36}
-				<text x={PAD} y={ty + 14} font-family={FONT} font-size="25" font-weight="800"
+				{@const by = ty + 44}
+				<text x={PAD} y={ty + 8} font-family={FONT} font-size="25" font-weight="800"
 					fill={r.meta.color}>{r.meta.label}</text>
-				<text x={PAD + 6 + r.meta.label.length * 13.6} y={ty + 13} font-family={FONT}
-					font-size="17" fill="#788294">{r.meta.sub}</text>
-				<text x={W - PAD} y={ty + 14} font-family={FONT} font-size="23" font-weight="700"
-					fill="#d7dce4" text-anchor="end">{r.years} ans</text>
+				<text x={PAD} y={ty + 32} font-family={FONT} font-size="17" fill="#788294">{r.meta.sub}</text>
+				<text x={W - PAD} y={ty + 18} font-family={FONT} font-size="26" font-weight="800"
+					fill="#e8ecf2" text-anchor="end">{r.years} ans</text>
 				<line x1={PAD} x2={W - PAD} y1={by + barH / 2} y2={by + barH / 2}
 					stroke="#262b35" stroke-width="2" />
 				{#each r.spans as [s, e] (s)}
@@ -167,7 +166,7 @@
 			<!-- footer -->
 			<line x1={PAD} x2={W - PAD} y1={H - 84} y2={H - 84} stroke="#232833" stroke-width="1" />
 			<text x={PAD} y={H - 52} font-family={FONT} font-size="17" fill="#788294">
-				Données : SPF Intérieur (electionresults.belgium.be) · Wikipédia — 50 gouvernements, de Van Acker II (1945) à De Wever (2025)
+				Données : SPF Intérieur · Wikipédia — 50 gouvernements (Van Acker II 1945 → De Wever 2025)
 			</text>
 			<text x={PAD} y={H - 26} font-family={FONT} font-size="17" fill="#586070">
 				Chambre des représentants · les familles suivent les partis à travers scissions et renommages
