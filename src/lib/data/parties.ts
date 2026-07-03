@@ -50,6 +50,7 @@ export const PARTIES: Record<string, Party> = {
 	pvv: { id: 'pvv', label: 'PVV', fullName: 'Partij voor Vrijheid en Vooruitgang', color: '#1f6fc4', family: 'liberal', wing: 'flemish' },
 	vld: { id: 'vld', label: 'VLD', fullName: 'Vlaamse Liberalen en Democraten', color: '#1f78d1', family: 'liberal', wing: 'flemish' },
 	openvld: { id: 'openvld', label: 'Open Vld', fullName: 'Open Vlaamse Liberalen en Democraten', color: '#0166b1', family: 'liberal', wing: 'flemish' },
+	anders: { id: 'anders', label: 'Anders', fullName: 'Anders (ex-Open Vld)', color: '#0a7bd4', family: 'liberal', wing: 'flemish' },
 	prl: { id: 'prl', label: 'PRL', fullName: 'Parti Réformateur Libéral', color: '#1e5fae', family: 'liberal', wing: 'francophone' },
 	mr: { id: 'mr', label: 'MR', fullName: 'Mouvement Réformateur', color: '#143d8c', family: 'liberal', wing: 'francophone' },
 

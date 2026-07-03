@@ -112,7 +112,7 @@
 			<li>
 				<strong>La filiation des partis est suivie explicitement.</strong> Une table de filiation
 				relie chaque parti à ses ancêtres et successeurs&nbsp;: renommages (PSC → cdH → Les Engagés ;
-				SP → sp.a → Vooruit ; PVV → VLD → Open Vld), scissions (le parti chrétien unitaire → CVP +
+				SP → sp.a → Vooruit ; PVV → VLD → Open Vld → Anders), scissions (le parti chrétien unitaire → CVP +
 				PSC en 1968) et fusions (FDF → MR). C'est ce qui permet de voir Les Engagés comme la suite
 				naturelle du cdH, lui-même issu du PSC — et de calculer l'« ancienneté au pouvoir » d'un
 				parti en additionnant les années de toute sa lignée, malgré les changements de nom.

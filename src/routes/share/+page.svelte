@@ -10,7 +10,7 @@
 	const FAMILY_META: Partial<Record<Family, { label: string; sub: string; color: string }>> = {
 		'christian-democrat': { label: 'Chrétiens-démocrates', sub: 'PSC-CVP → CD&V · cdH · Les Engagés', color: '#e8821e' },
 		socialist: { label: 'Socialistes', sub: 'PSB-BSP → PS · sp.a / Vooruit', color: '#e8112d' },
-		liberal: { label: 'Libéraux', sub: 'PVV-PLP → MR · Open Vld', color: '#1f6fc4' },
+		liberal: { label: 'Libéraux', sub: 'PVV-PLP → MR · Anders (ex-Open Vld)', color: '#1f6fc4' },
 		nationalist: { label: 'Nationalistes flamands', sub: 'Volksunie → N-VA', color: '#f3c300' },
 		green: { label: 'Écologistes', sub: 'Ecolo · Agalev / Groen', color: '#48a23f' },
 		regionalist: { label: 'Régionalistes', sub: 'FDF · Rassemblement wallon', color: '#e6007e' },

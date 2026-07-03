@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ELECTIONS, party } from './data';
+	import { ELECTIONS, party, renameChainOf } from './data';
 
 	// Families in the same left-to-right order the bars use, with plain-language
 	// names so non-political readers grasp the spectrum at a glance.
@@ -15,8 +15,8 @@
 		{ key: 'other', label: 'Autres' }
 	];
 
-	// only parties that actually appear
 	const present = new Set(ELECTIONS.flatMap((e) => e.parties.map((p) => p.id)));
+	for (const id of [...present]) present.add(renameChainOf(id).at(-1)!);
 	const groups = FAMILIES.map((f) => ({
 		...f,
 		parties: [...present]
